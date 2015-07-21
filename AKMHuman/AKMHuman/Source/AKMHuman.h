@@ -15,11 +15,11 @@ typedef enum {
 } AKMCreatureGender;
 
 @interface AKMCreature : NSObject
-@property (nonatomic, copy)            NSString            *name;
-@property (nonatomic, assign)               uint8_t             age;
-@property (nonatomic, assign)               uint8_t             weight;
-@property (nonatomic, assign)               AKMCreatureGender   gender;
-@property (nonatomic, readonly)             NSArray             *children;
+@property (nonatomic, copy)         NSString            *name;
+@property (nonatomic, assign)       uint8_t             age;
+@property (nonatomic, assign)       uint8_t             weight;
+@property (nonatomic, assign)       AKMCreatureGender   gender;
+@property (nonatomic, readonly)     NSArray             *children;
 
 - (instancetype)initWithGender:(AKMCreatureGender)aGender;
 - (instancetype)initWithName:(NSString *)aName gender:(AKMCreatureGender)aGender;
