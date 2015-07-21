@@ -31,6 +31,10 @@
 		71B8DCFA1B5988C800F2FCF5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
 		71B8DCFC1B59891B00F2FCF5 /* AKMHuman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMHuman.h; path = Source/AKMHuman.h; sourceTree = "<group>"; };
 		71B8DCFD1B59891B00F2FCF5 /* AKMHuman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMHuman.m; path = Source/AKMHuman.m; sourceTree = "<group>"; };
+		71D4DF8F1B5EEE2F007CC278 /* AKMFemale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMFemale.h; path = Source/AKMFemale.h; sourceTree = "<group>"; };
+		71D4DF901B5EEE2F007CC278 /* AKMFemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMFemale.m; path = Source/AKMFemale.m; sourceTree = "<group>"; };
+		71D4DF931B5EEE74007CC278 /* AKMMale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMMale.h; path = Source/AKMMale.h; sourceTree = "<group>"; };
+		71D4DF941B5EEE74007CC278 /* AKMMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMMale.m; path = Source/AKMMale.m; sourceTree = "<group>"; };
 		71DE7F061B5A886B00C0040B /* plan.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = plan.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,8 +90,28 @@
 			children = (
 				71B8DCFC1B59891B00F2FCF5 /* AKMHuman.h */,
 				71B8DCFD1B59891B00F2FCF5 /* AKMHuman.m */,
+				71D4DF921B5EEE4A007CC278 /* AKMFemale */,
+				71D4DF961B5EEE79007CC278 /* AKMMale */,
 			);
 			name = AKMHuman;
+			sourceTree = "<group>";
+		};
+		71D4DF921B5EEE4A007CC278 /* AKMFemale */ = {
+			isa = PBXGroup;
+			children = (
+				71D4DF8F1B5EEE2F007CC278 /* AKMFemale.h */,
+				71D4DF901B5EEE2F007CC278 /* AKMFemale.m */,
+			);
+			name = AKMFemale;
+			sourceTree = "<group>";
+		};
+		71D4DF961B5EEE79007CC278 /* AKMMale */ = {
+			isa = PBXGroup;
+			children = (
+				71D4DF931B5EEE74007CC278 /* AKMMale.h */,
+				71D4DF941B5EEE74007CC278 /* AKMMale.m */,
+			);
+			name = AKMMale;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

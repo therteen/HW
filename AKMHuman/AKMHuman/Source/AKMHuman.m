@@ -66,21 +66,27 @@
 }
 
 - (void)addChild:(id)child {
+    if (nil == self.mutableChildren) {
+        [self.mutableChildren init];
+    }
     if (![self.mutableChildren containsObject:child]) {
+
         [self.mutableChildren addObject:child];
     }
 }
 
 - (void)removeChild:(AKMCreature *)child {
-    NSLog(@"%@ says Hello", self.name);
+    if ([self.mutableChildren containsObject:child]) {
+        [self.mutableChildren removeObject:child];
+    }
 }
 
 - (void)makeWar {
-    NSLog(@"%@ says KillemAll", self.name);
+    NSLog(@"%@ says KillemAll", self.class);
 }
 
 - (AKMCreature *)giveBirth {
-    return [[[AKMCreature alloc] initWithGender:(arc4random_uniform(2)+1)] autorelease];
+    return [[[AKMCreature alloc] initWithGender:(arc4random_uniform(2))] autorelease];
 }
 
 

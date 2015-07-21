@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    GenderUndefined,
     AKMCreatureMale,
     AKMCreatureFemale
 } AKMCreatureGender;
