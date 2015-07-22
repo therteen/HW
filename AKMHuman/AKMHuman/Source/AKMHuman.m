@@ -31,7 +31,8 @@
 - (instancetype)initWithGender:(AKMCreatureGender)aGender {
     self = [super init];
     if (self) {
-        _gender = aGender;
+        self.gender = aGender;
+        self.mutableChildren = [NSMutableArray array];
     }
     
     return self;
@@ -40,7 +41,7 @@
 - (instancetype)initWithName:(NSString *)aName gender:(AKMCreatureGender)aGender {
     self = [self initWithGender:aGender];
     if (self) {
-        _name = [aName copy];
+        self.name = [aName copy];
     }
     
     return self;
@@ -59,18 +60,14 @@
 - (void)sayHello {
     NSLog(@"%@ says Hello", self.name);
     
-    long count = self.children.count;
+    long count = [self.children count];
     for (int index =0; index < count; index++) {
-        [self.children[index] sayHello];
+        [[self.mutableChildren objectAtIndex:index] sayHello];
     }
 }
 
 - (void)addChild:(id)child {
-    if (nil == self.mutableChildren) {
-        [self.mutableChildren init];
-    }
     if (![self.mutableChildren containsObject:child]) {
-
         [self.mutableChildren addObject:child];
     }
 }
