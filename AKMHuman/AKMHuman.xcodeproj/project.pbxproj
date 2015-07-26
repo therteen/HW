@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		715CD3911B5D968900AF953D /* AKMCreatureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 715CD3901B5D968900AF953D /* AKMCreatureTest.m */; };
+		716407F11B63DA7B00C8C626 /* AKMFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D4DF901B5EEE2F007CC278 /* AKMFemale.m */; };
+		716407F21B63DAC300C8C626 /* AKMMale.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D4DF941B5EEE74007CC278 /* AKMMale.m */; };
 		71B8DCFB1B5988C800F2FCF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8DCFA1B5988C800F2FCF5 /* main.m */; };
 		71B8DCFE1B59891B00F2FCF5 /* AKMHuman.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B8DCFD1B59891B00F2FCF5 /* AKMHuman.m */; };
 /* End PBXBuildFile section */
@@ -31,10 +33,10 @@
 		71B8DCFA1B5988C800F2FCF5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
 		71B8DCFC1B59891B00F2FCF5 /* AKMHuman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMHuman.h; path = Source/AKMHuman.h; sourceTree = "<group>"; };
 		71B8DCFD1B59891B00F2FCF5 /* AKMHuman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMHuman.m; path = Source/AKMHuman.m; sourceTree = "<group>"; };
-		71D4DF8F1B5EEE2F007CC278 /* AKMFemale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMFemale.h; path = Source/AKMFemale.h; sourceTree = "<group>"; };
-		71D4DF901B5EEE2F007CC278 /* AKMFemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMFemale.m; path = Source/AKMFemale.m; sourceTree = "<group>"; };
-		71D4DF931B5EEE74007CC278 /* AKMMale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMMale.h; path = Source/AKMMale.h; sourceTree = "<group>"; };
-		71D4DF941B5EEE74007CC278 /* AKMMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMMale.m; path = Source/AKMMale.m; sourceTree = "<group>"; };
+		71D4DF8F1B5EEE2F007CC278 /* AKMFemale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMFemale.h; path = ../AKMFemale/AKMFemale.h; sourceTree = "<group>"; };
+		71D4DF901B5EEE2F007CC278 /* AKMFemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMFemale.m; path = ../AKMFemale/AKMFemale.m; sourceTree = "<group>"; };
+		71D4DF931B5EEE74007CC278 /* AKMMale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMMale.h; path = Source/AKMMale/AKMMale.h; sourceTree = "<group>"; };
+		71D4DF941B5EEE74007CC278 /* AKMMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMMale.m; path = Source/AKMMale/AKMMale.m; sourceTree = "<group>"; };
 		71DE7F061B5A886B00C0040B /* plan.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = plan.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				71D4DF901B5EEE2F007CC278 /* AKMFemale.m */,
 			);
 			name = AKMFemale;
+			path = Source/AKMFemale.h;
 			sourceTree = "<group>";
 		};
 		71D4DF961B5EEE79007CC278 /* AKMMale */ = {
@@ -171,6 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				71B8DCFB1B5988C800F2FCF5 /* main.m in Sources */,
+				716407F21B63DAC300C8C626 /* AKMMale.m in Sources */,
+				716407F11B63DA7B00C8C626 /* AKMFemale.m in Sources */,
 				71B8DCFE1B59891B00F2FCF5 /* AKMHuman.m in Sources */,
 				715CD3911B5D968900AF953D /* AKMCreatureTest.m in Sources */,
 			);

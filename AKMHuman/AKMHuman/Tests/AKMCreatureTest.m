@@ -8,28 +8,31 @@
 
 #import "AKMCreatureTest.h"
 #import "AKMHuman.h"
+#import "AKMFemale.h"
+#import "AKMMale.h"
 
 @implementation AKMCreatureTest
 
 
 + (void)testCreature {
-    
-    AKMCreature *mother = [[[AKMCreature alloc] initWithGender:AKMCreatureFemale] autorelease];
-    AKMCreature *child1 = [mother giveBirth];
+    AKMFemale *mother = [[[AKMFemale alloc] initWithGender:AKMCreatureFemale] autorelease];
+    id child1 = [mother performGenderSpecificOperation];
     [mother addChild:child1];
-    AKMCreature *child2 = [mother giveBirth];
+    id child2 = [mother performGenderSpecificOperation];
     [mother addChild:child2];
-    AKMCreature *child3 = [mother giveBirth];
+    id child3 = [mother performGenderSpecificOperation];
     [mother addChild:child3];
     
     for (long index = 0; [mother.children count] > index; index++) {
-        if (AKMCreatureFemale == [[mother.children objectAtIndex:index] gender]) {
-            AKMCreature *temp = [[mother.children objectAtIndex:index] giveBirth];
+        if (AKMFemale.class == [[mother.children objectAtIndex:index] class]) {
+            id temp = [[mother.children objectAtIndex:index] performGenderSpecificOperation];
             [[mother.children objectAtIndex:index] addChild:temp];
-        } else [[mother.children objectAtIndex:index] makeWar];
+        } else [[mother.children objectAtIndex:index] performGenderSpecificOperation];
     }
     
     [mother sayHello];
 }
 
 @end
+
+

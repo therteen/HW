@@ -10,4 +10,9 @@
 
 @implementation AKMMale
 
+- (id)performGenderSpecificOperation {
+    NSLog(@"%@ says KillemAll", self.class);
+    return nil;
+}
+
 @end

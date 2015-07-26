@@ -9,5 +9,5 @@
 #import "AKMHuman.h"
 
 @interface AKMFemale : AKMCreature
-performGenderSpecificOperation
+
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "AKMHuman.h"
+#import "AKMFemale.h"
+#import "AKMMale.h"
 
 @interface AKMCreature ()
 
@@ -17,6 +19,13 @@
 @implementation AKMCreature
 
 @dynamic children;
+
+#pragma mark -
+#pragma mark Class methods
+
++ (Class)classByGender: (AKMCreatureGender)aGender {
+    return aGender == AKMCreatureFemale ? AKMFemale.class: AKMMale.class;
+}
 
 #pragma mark -
 #pragma mark Initializations and Deallocations
@@ -31,7 +40,11 @@
 - (instancetype)initWithGender:(AKMCreatureGender)aGender {
     self = [super init];
     if (self) {
-        self.gender = aGender;
+       Class creatureClass = [self.class classByGender:aGender];
+        [self release];
+        
+        self = [[creatureClass alloc] init];
+        
         self.mutableChildren = [NSMutableArray array];
     }
     
@@ -78,13 +91,15 @@
     }
 }
 
-- (void)makeWar {
-    NSLog(@"%@ says KillemAll", self.class);
+- (id)performGenderSpecificOperation {
+    return nil;
 }
 
-- (AKMCreature *)giveBirth {
-    return [[[AKMCreature alloc] initWithGender:(arc4random_uniform(2))] autorelease];
-}
+//- (void)makeWar {
+//    NSLog(@"%@ says KillemAll", self.class);
+//}
+
+
 
 
 

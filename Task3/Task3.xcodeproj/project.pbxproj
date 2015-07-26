@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		715D8FF51B64FE570078DF1C /* WashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D8FF41B64FE570078DF1C /* WashTest.m */; };
+		715D8FF81B6516900078DF1C /* AKMCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D8FF71B6516900078DF1C /* AKMCar.m */; };
+		715D8FFC1B651A1A0078DF1C /* AKMWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D8FFB1B651A1A0078DF1C /* AKMWasher.m */; };
+		715D90001B655E010078DF1C /* AKMBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D8FFF1B655E010078DF1C /* AKMBuilding.m */; };
+		715D90041B655F7C0078DF1C /* AKMRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D90031B655F7C0078DF1C /* AKMRoom.m */; };
+		715D900F1B6591950078DF1C /* AKMQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D900E1B6591950078DF1C /* AKMQueue.m */; };
+		717079421B641F3B00BD181B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 717079411B641F3B00BD181B /* main.m */; };
+		717079451B64216C00BD181B /* AKMStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = 717079441B64216C00BD181B /* AKMStaff.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		717079351B641EBB00BD181B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		715D8FF31B64FE570078DF1C /* WashTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WashTest.h; path = Tests/WashTest.h; sourceTree = SOURCE_ROOT; };
+		715D8FF41B64FE570078DF1C /* WashTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WashTest.m; path = Tests/WashTest.m; sourceTree = SOURCE_ROOT; };
+		715D8FF61B6516900078DF1C /* AKMCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMCar.h; path = Source/AKMCar/AKMCar.h; sourceTree = SOURCE_ROOT; };
+		715D8FF71B6516900078DF1C /* AKMCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMCar.m; path = Source/AKMCar/AKMCar.m; sourceTree = SOURCE_ROOT; };
+		715D8FFA1B651A1A0078DF1C /* AKMWasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMWasher.h; path = Source/AKMWasher/AKMWasher.h; sourceTree = SOURCE_ROOT; };
+		715D8FFB1B651A1A0078DF1C /* AKMWasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMWasher.m; path = Source/AKMWasher/AKMWasher.m; sourceTree = SOURCE_ROOT; };
+		715D8FFE1B655E010078DF1C /* AKMBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMBuilding.h; path = Source/AKMBuilding/AKMBuilding.h; sourceTree = SOURCE_ROOT; };
+		715D8FFF1B655E010078DF1C /* AKMBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMBuilding.m; path = Source/AKMBuilding/AKMBuilding.m; sourceTree = SOURCE_ROOT; };
+		715D90021B655F7C0078DF1C /* AKMRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMRoom.h; path = Source/AKMRoom/AKMRoom.h; sourceTree = SOURCE_ROOT; };
+		715D90031B655F7C0078DF1C /* AKMRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMRoom.m; path = Source/AKMRoom/AKMRoom.m; sourceTree = SOURCE_ROOT; };
+		715D900D1B6591950078DF1C /* AKMQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMQueue.h; path = Source/AKMQueue/AKMQueue.h; sourceTree = SOURCE_ROOT; };
+		715D900E1B6591950078DF1C /* AKMQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMQueue.m; path = Source/AKMQueue/AKMQueue.m; sourceTree = SOURCE_ROOT; };
+		717079371B641EBB00BD181B /* Task3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Task3; sourceTree = BUILT_PRODUCTS_DIR; };
+		717079411B641F3B00BD181B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = SOURCE_ROOT; };
+		717079431B64216C00BD181B /* AKMStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMStaff.h; path = Source/AKMStaff/AKMStaff.h; sourceTree = SOURCE_ROOT; };
+		717079441B64216C00BD181B /* AKMStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMStaff.m; path = Source/AKMStaff/AKMStaff.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		717079341B641EBB00BD181B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		715D8FF91B6516940078DF1C /* AKMCar */ = {
+			isa = PBXGroup;
+			children = (
+				715D8FF61B6516900078DF1C /* AKMCar.h */,
+				715D8FF71B6516900078DF1C /* AKMCar.m */,
+			);
+			name = AKMCar;
+			sourceTree = "<group>";
+		};
+		715D8FFD1B651A1E0078DF1C /* aKMWasher */ = {
+			isa = PBXGroup;
+			children = (
+				715D8FFA1B651A1A0078DF1C /* AKMWasher.h */,
+				715D8FFB1B651A1A0078DF1C /* AKMWasher.m */,
+			);
+			name = aKMWasher;
+			sourceTree = "<group>";
+		};
+		715D90011B655E060078DF1C /* AKMBuilding */ = {
+			isa = PBXGroup;
+			children = (
+				715D8FFE1B655E010078DF1C /* AKMBuilding.h */,
+				715D8FFF1B655E010078DF1C /* AKMBuilding.m */,
+			);
+			name = AKMBuilding;
+			sourceTree = "<group>";
+		};
+		715D90051B655F810078DF1C /* AKMRoom */ = {
+			isa = PBXGroup;
+			children = (
+				715D90021B655F7C0078DF1C /* AKMRoom.h */,
+				715D90031B655F7C0078DF1C /* AKMRoom.m */,
+			);
+			name = AKMRoom;
+			sourceTree = "<group>";
+		};
+		715D90091B65912C0078DF1C /* AKMQueue */ = {
+			isa = PBXGroup;
+			children = (
+				715D900D1B6591950078DF1C /* AKMQueue.h */,
+				715D900E1B6591950078DF1C /* AKMQueue.m */,
+			);
+			name = AKMQueue;
+			sourceTree = "<group>";
+		};
+		7170792E1B641EBB00BD181B = {
+			isa = PBXGroup;
+			children = (
+				717079391B641EBB00BD181B /* Task3 */,
+				717079381B641EBB00BD181B /* Products */,
+				7170794F1B64392D00BD181B /* Tests */,
+			);
+			sourceTree = "<group>";
+		};
+		717079381B641EBB00BD181B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				717079371B641EBB00BD181B /* Task3 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		717079391B641EBB00BD181B /* Task3 */ = {
+			isa = PBXGroup;
+			children = (
+				717079411B641F3B00BD181B /* main.m */,
+				717079461B64217200BD181B /* AKMStaff */,
+				715D8FF91B6516940078DF1C /* AKMCar */,
+				715D8FFD1B651A1E0078DF1C /* aKMWasher */,
+				715D90011B655E060078DF1C /* AKMBuilding */,
+				715D90051B655F810078DF1C /* AKMRoom */,
+				715D90091B65912C0078DF1C /* AKMQueue */,
+			);
+			path = Task3;
+			sourceTree = "<group>";
+		};
+		717079461B64217200BD181B /* AKMStaff */ = {
+			isa = PBXGroup;
+			children = (
+				717079431B64216C00BD181B /* AKMStaff.h */,
+				717079441B64216C00BD181B /* AKMStaff.m */,
+			);
+			name = AKMStaff;
+			sourceTree = "<group>";
+		};
+		7170794F1B64392D00BD181B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				715D8FF31B64FE570078DF1C /* WashTest.h */,
+				715D8FF41B64FE570078DF1C /* WashTest.m */,
+			);
+			name = Tests;
+			path = Task3;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		717079361B641EBB00BD181B /* Task3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7170793E1B641EBB00BD181B /* Build configuration list for PBXNativeTarget "Task3" */;
+			buildPhases = (
+				717079331B641EBB00BD181B /* Sources */,
+				717079341B641EBB00BD181B /* Frameworks */,
+				717079351B641EBB00BD181B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Task3;
+			productName = Task3;
+			productReference = 717079371B641EBB00BD181B /* Task3 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7170792F1B641EBB00BD181B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Anton Kostenko";
+				TargetAttributes = {
+					717079361B641EBB00BD181B = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 717079321B641EBB00BD181B /* Build configuration list for PBXProject "Task3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7170792E1B641EBB00BD181B;
+			productRefGroup = 717079381B641EBB00BD181B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				717079361B641EBB00BD181B /* Task3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		717079331B641EBB00BD181B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				715D8FF51B64FE570078DF1C /* WashTest.m in Sources */,
+				715D8FFC1B651A1A0078DF1C /* AKMWasher.m in Sources */,
+				717079451B64216C00BD181B /* AKMStaff.m in Sources */,
+				715D900F1B6591950078DF1C /* AKMQueue.m in Sources */,
+				715D8FF81B6516900078DF1C /* AKMCar.m in Sources */,
+				715D90041B655F7C0078DF1C /* AKMRoom.m in Sources */,
+				717079421B641F3B00BD181B /* main.m in Sources */,
+				715D90001B655E010078DF1C /* AKMBuilding.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7170793C1B641EBB00BD181B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7170793D1B641EBB00BD181B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7170793F1B641EBB00BD181B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		717079401B641EBB00BD181B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		717079321B641EBB00BD181B /* Build configuration list for PBXProject "Task3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7170793C1B641EBB00BD181B /* Debug */,
+				7170793D1B641EBB00BD181B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7170793E1B641EBB00BD181B /* Build configuration list for PBXNativeTarget "Task3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7170793F1B641EBB00BD181B /* Debug */,
+				717079401B641EBB00BD181B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7170792F1B641EBB00BD181B /* Project object */;
+}

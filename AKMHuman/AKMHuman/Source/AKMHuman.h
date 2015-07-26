@@ -17,16 +17,16 @@ typedef enum {
 @property (nonatomic, copy)         NSString            *name;
 @property (nonatomic, assign)       uint8_t             age;
 @property (nonatomic, assign)       uint8_t             weight;
-@property (nonatomic, assign)       AKMCreatureGender   gender;
+//@property (nonatomic, assign)       AKMCreatureGender   gender;
 @property (nonatomic, readonly)     NSArray             *children;
 
-- (instancetype)initWithGender:(AKMCreatureGender)aGender;
+- (instancetype)initWithGender:(AKMCreatureGender)aGender NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithName:(NSString *)aName gender:(AKMCreatureGender)aGender;
 
 - (void)sayHello;
 - (void)addChild:(AKMCreature *)child;
 - (void)removeChild:(AKMCreature *)child;
-- (void)makeWar;
-- (AKMCreature *)giveBirth;
+
+- (id)performGenderSpecificOperation;
 
 @end

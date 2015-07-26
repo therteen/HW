@@ -10,4 +10,8 @@
 
 @implementation AKMFemale
 
+- (id)performGenderSpecificOperation {
+    return [[[AKMCreature alloc] initWithGender:(arc4random_uniform(2))] autorelease];
+}
+
 @end
