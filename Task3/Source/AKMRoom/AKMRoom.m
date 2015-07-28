@@ -10,11 +10,11 @@
 
 @implementation AKMRoom
 
-- (instancetype)initWithCapacity:(UInt32)capacity :(BOOL)containWashBox {
+- (instancetype)initWithCapacity:(UInt32)capacity containWashBox:(BOOL)isContainWashBox {
     self = [super init];
     if (self) {
         self.capacity = capacity;
-        self.isWashBox = containWashBox;
+        self.isWashBox = isContainWashBox;
         self.cellmates = [NSMutableArray array];
         
         return self;

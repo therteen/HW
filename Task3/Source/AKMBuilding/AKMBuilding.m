@@ -10,8 +10,24 @@
 
 @implementation AKMBuilding
 
-- (instancetype)initWithRooms:(UInt32)quantity {
+- (instancetype)initWithRooms:(UInt32)quantity1 washBoxes:(UInt32)quantity2 {
+    self = [super init];
+    if (self) {
+        self.rooms = [NSMutableArray array];
+        self.washBoxes = [NSMutableArray array];
+        
+        for (int index = 0; index < quantity1; index++) {
+            [self.rooms addObject:[[AKMRoom alloc] initWithCapacity:1 containWashBox:NO]];
+        }
+        
+        for (int index = 0; index < quantity2; index++) {
+            [self.washBoxes addObject:[[AKMRoom alloc] initWithCapacity:1 containWashBox:YES]];
+        }
+        
+        return self;
+    }
     
+    return nil;
 }
 
 @end

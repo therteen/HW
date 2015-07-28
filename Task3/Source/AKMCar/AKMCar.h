@@ -12,6 +12,4 @@
 
 @property (nonatomic, assign, getter=isClean)   BOOL    clean;
 
-//- (instancetype)init;
-
 @end

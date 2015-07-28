@@ -23,20 +23,21 @@
 }
 
 - (instancetype)initWithBoss:(AKMStaff *)boss {
-    self = [[AKMStaff alloc] initWithCash];
+    self = [self initWithCash];
     if (self) {
         self.boss = boss;
     }
+    
     return self;
 }
 
 #pragma mark -
 #pragma mark Public
 
-- (void)payCash:(AKMStaff *) contragent : (NSDecimalNumber *)amount {
-    if ([self.cash decimalNumberBySubtracting:amount]) {                //not work
-        self.cash = [self.cash decimalNumberBySubtracting:amount];
-        contragent.cash = [contragent.cash decimalNumberByAdding:amount];
+- (void)payCash:(AKMStaff *) contragent amount:(NSDecimalNumber *)value {
+    if (NSOrderedDescending == [self.cash compare:value]) {
+        self.cash = [self.cash decimalNumberBySubtracting:value];
+        contragent.cash = [contragent.cash decimalNumberByAdding:value];
     }
 }
 

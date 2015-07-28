@@ -8,10 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AKMBuilding : NSObject
-//@property (nonatomic, copy)     NSString    *name;
-@property (nonatomic,readonly)    NSArray     *rooms;
+#import "AKMRoom.h"
 
-- (instancetype)initWithRooms:(UInt32)quantity;
+
+@interface AKMBuilding : NSObject
+
+@property (nonatomic,retain)    NSMutableArray    *rooms;
+@property (nonatomic,retain)    NSMutableArray    *washBoxes;
+
+- (instancetype)initWithRooms:(UInt32)quantity1 washBoxes:(UInt32)quantity2;
 
 @end

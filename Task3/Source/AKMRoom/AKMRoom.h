@@ -19,7 +19,7 @@
 @property (nonatomic, retain) NSMutableArray    *cellmates;
 @property (nonatomic, retain) AKMCar            *car;
 
-- (instancetype)initWithCapacity:(UInt32)capacity :(BOOL)containWashBox;
+- (instancetype)initWithCapacity:(UInt32)capacity containWashBox:(BOOL)isContainWashBox;
 
 - (void)addWorker:(AKMStaff *) worker;
 - (void)removeWorker:(AKMStaff *)worker;

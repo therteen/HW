@@ -19,7 +19,7 @@
 - (instancetype)initWithCash NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithBoss:(AKMStaff *)boss;
 
-- (void)payCash:(AKMStaff *)contragent : (NSDecimalNumber *)amount;
+- (void)payCash:(AKMStaff *)contragent amount:(NSDecimalNumber *)value;
 - (void)doJob;
 
 @end
