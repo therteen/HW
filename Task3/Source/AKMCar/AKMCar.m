@@ -8,11 +8,17 @@
 
 #import "AKMCar.h"
 
+const uint8_t carStartingCash = 50;
+
 @implementation AKMCar
 
-//- (instancetype)init {
-//    self = [super init];
-//    return (self) ? self : nil;
-//}
+- (instancetype)initWithCash {
+    self = [super init];
+    if (self) {
+        self.cash = carStartingCash;
+    }
+    
+    return self;
+}
 
 @end

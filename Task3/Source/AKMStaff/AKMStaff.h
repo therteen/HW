@@ -11,15 +11,14 @@
 
 @interface AKMStaff : NSObject
 
-@property (nonatomic, assign) UInt32 experience;
-@property (nonatomic, assign) UInt32 salary;
-@property (nonatomic, assign) id boss;
-@property (nonatomic, copy) NSDecimalNumber *cash;
+@property (nonatomic, assign)   UInt32 experience;
+@property (nonatomic, assign)   UInt32 salary;
+@property (nonatomic, assign)   id boss;
+@property (nonatomic, assign)     uint8_t cash;
 
-- (instancetype)initWithCash NS_DESIGNATED_INITIALIZER;
 - (instancetype)initWithBoss:(AKMStaff *)boss;
 
-- (void)payCash:(AKMStaff *)contragent amount:(NSDecimalNumber *)value;
+- (void)payCash:(AKMStaff *)contragent amount:(uint8_t)value;
 - (void)doJob;
 
 @end

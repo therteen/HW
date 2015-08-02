@@ -7,14 +7,42 @@
 //
 
 #import "WashTest.h"
+#import "AKMBoss.h"
+#import "AKMWasher.h"
+#import "AKMAccountant.h"
+#import "AKMCar.h"
+#import "AKMQueue.h"
+#import "AKMBuilding.h"
+
 
 @implementation WashTest
 
 + (void)cashFlowTest {
-    AKMStaff *first = [[[AKMStaff alloc] initWithCash] autorelease];
-    AKMStaff *second = [[[AKMStaff alloc] initWithCash] autorelease];
-    [first payCash:second : [[[NSDecimalNumber alloc] initWithInt:10] autorelease]];
-    NSLog(@"%@ %@", first.cash , second.cash);
+    AKMBuilding *office = [[[AKMBuilding alloc] initWithRooms:1 washBoxes:0] autorelease];
+    AKMBuilding *moika = [[[AKMBuilding alloc] initWithRooms:0 washBoxes:1] autorelease];
+    AKMBoss *boss = [[[AKMBoss alloc] init] autorelease];
+    AKMAccountant *buh = [[[AKMAccountant alloc] initWithBoss:boss]autorelease];
+    [[office.rooms firstObject] addWorker:boss];
+    [[office.rooms firstObject] addWorker:buh];
+    
+    AKMWasher *mokryi = [[[AKMWasher alloc] initWithBoss:buh] autorelease];
+    [[moika.washBoxes firstObject] addWorker:mokryi];
+    
+    AKMCar *tachila = [[[AKMCar alloc] initWithCash] autorelease];
+    AKMCar *tachila2 = [[[AKMCar alloc] initWithCash] autorelease];
+    AKMQueue *ochered = [[[AKMQueue alloc] init] autorelease];
+    [mokryi setQueue:ochered];
+    [ochered putCar:tachila];
+    [ochered putCar:tachila2];
+    
+    [mokryi doJob];
+    [buh doJob];
+    [boss doJob];
+    
+    [mokryi doJob];
+    [buh doJob];
+    [boss doJob];
+    
 }
 
 @end

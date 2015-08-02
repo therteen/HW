@@ -13,17 +13,9 @@
 #pragma mark -
 #pragma mark Initialization and deallocation
 
-- (instancetype)initWithCash {
-    self = [super init];
-    if (self) {
-        self.cash = [[[NSDecimalNumber alloc] initWithInt:50] autorelease];
-    }
-    
-    return self;
-}
 
 - (instancetype)initWithBoss:(AKMStaff *)boss {
-    self = [self initWithCash];
+    self = [self init];
     if (self) {
         self.boss = boss;
     }
@@ -34,10 +26,10 @@
 #pragma mark -
 #pragma mark Public
 
-- (void)payCash:(AKMStaff *) contragent amount:(NSDecimalNumber *)value {
-    if (NSOrderedDescending == [self.cash compare:value]) {
-        self.cash = [self.cash decimalNumberBySubtracting:value];
-        contragent.cash = [contragent.cash decimalNumberByAdding:value];
+- (void)payCash:(AKMStaff *) contragent amount:(uint8_t)value {
+    if (!(self.cash < value)) {
+        self.cash -= value;
+        contragent.cash += value;
     }
 }
 

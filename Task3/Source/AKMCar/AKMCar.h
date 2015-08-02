@@ -8,8 +8,12 @@
 
 #import "AKMStaff.h"
 
+FOUNDATION_EXPORT const uint8_t carStaringCash;
+
 @interface AKMCar : AKMStaff
 
 @property (nonatomic, assign, getter=isClean)   BOOL    clean;
+
+- (instancetype)initWithCash;
 
 @end

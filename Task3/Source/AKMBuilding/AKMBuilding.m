@@ -8,6 +8,8 @@
 
 #import "AKMBuilding.h"
 
+uint8_t kRoomCapacity = 5;
+
 @implementation AKMBuilding
 
 - (instancetype)initWithRooms:(UInt32)quantity1 washBoxes:(UInt32)quantity2 {
@@ -17,11 +19,11 @@
         self.washBoxes = [NSMutableArray array];
         
         for (int index = 0; index < quantity1; index++) {
-            [self.rooms addObject:[[AKMRoom alloc] initWithCapacity:1 containWashBox:NO]];
+            [self.rooms addObject:[[[AKMRoom alloc] initWithCapacity:kRoomCapacity containWashBox:NO] autorelease]];
         }
         
         for (int index = 0; index < quantity2; index++) {
-            [self.washBoxes addObject:[[AKMRoom alloc] initWithCapacity:1 containWashBox:YES]];
+            [self.washBoxes addObject:[[[AKMRoom alloc] initWithCapacity:kRoomCapacity containWashBox:YES] autorelease]];
         }
         
         return self;
