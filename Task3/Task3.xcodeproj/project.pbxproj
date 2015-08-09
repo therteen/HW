@@ -12,11 +12,10 @@
 		715D8FF51B64FE570078DF1C /* WashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D8FF41B64FE570078DF1C /* WashTest.m */; };
 		715D8FF81B6516900078DF1C /* AKMCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D8FF71B6516900078DF1C /* AKMCar.m */; };
 		715D8FFC1B651A1A0078DF1C /* AKMWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D8FFB1B651A1A0078DF1C /* AKMWasher.m */; };
-		715D90001B655E010078DF1C /* AKMBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D8FFF1B655E010078DF1C /* AKMBuilding.m */; };
-		715D90041B655F7C0078DF1C /* AKMRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D90031B655F7C0078DF1C /* AKMRoom.m */; };
 		715D900F1B6591950078DF1C /* AKMQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D900E1B6591950078DF1C /* AKMQueue.m */; };
 		717079421B641F3B00BD181B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 717079411B641F3B00BD181B /* main.m */; };
 		717079451B64216C00BD181B /* AKMStaff.m in Sources */ = {isa = PBXBuildFile; fileRef = 717079441B64216C00BD181B /* AKMStaff.m */; };
+		71EAFFCC1B7018C100445D35 /* AKMEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EAFFCB1B7018C100445D35 /* AKMEnterprise.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,16 +41,16 @@
 		715D8FF71B6516900078DF1C /* AKMCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMCar.m; path = Source/AKMCar/AKMCar.m; sourceTree = SOURCE_ROOT; };
 		715D8FFA1B651A1A0078DF1C /* AKMWasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMWasher.h; path = Source/AKMWasher/AKMWasher.h; sourceTree = SOURCE_ROOT; };
 		715D8FFB1B651A1A0078DF1C /* AKMWasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMWasher.m; path = Source/AKMWasher/AKMWasher.m; sourceTree = SOURCE_ROOT; };
-		715D8FFE1B655E010078DF1C /* AKMBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMBuilding.h; path = Source/AKMBuilding/AKMBuilding.h; sourceTree = SOURCE_ROOT; };
-		715D8FFF1B655E010078DF1C /* AKMBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMBuilding.m; path = Source/AKMBuilding/AKMBuilding.m; sourceTree = SOURCE_ROOT; };
-		715D90021B655F7C0078DF1C /* AKMRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMRoom.h; path = Source/AKMRoom/AKMRoom.h; sourceTree = SOURCE_ROOT; };
-		715D90031B655F7C0078DF1C /* AKMRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMRoom.m; path = Source/AKMRoom/AKMRoom.m; sourceTree = SOURCE_ROOT; };
 		715D900D1B6591950078DF1C /* AKMQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMQueue.h; path = Source/AKMQueue/AKMQueue.h; sourceTree = SOURCE_ROOT; };
 		715D900E1B6591950078DF1C /* AKMQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMQueue.m; path = Source/AKMQueue/AKMQueue.m; sourceTree = SOURCE_ROOT; };
 		717079371B641EBB00BD181B /* Task3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Task3; sourceTree = BUILT_PRODUCTS_DIR; };
 		717079411B641F3B00BD181B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = SOURCE_ROOT; };
 		717079431B64216C00BD181B /* AKMStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMStaff.h; path = Source/AKMStaff/AKMStaff.h; sourceTree = SOURCE_ROOT; };
 		717079441B64216C00BD181B /* AKMStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMStaff.m; path = Source/AKMStaff/AKMStaff.m; sourceTree = SOURCE_ROOT; };
+		71EAFFC61B6FB11D00445D35 /* IDPStudyPlan */ = {isa = PBXFileReference; lastKnownFileType = text; path = IDPStudyPlan; sourceTree = "<group>"; };
+		71EAFFC81B6FB36400445D35 /* AKMPayCash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMPayCash.h; path = Source/AKMPayCash/AKMPayCash.h; sourceTree = SOURCE_ROOT; };
+		71EAFFCA1B7018C100445D35 /* AKMEnterprise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMEnterprise.h; path = Source/AKMEnterprise/AKMEnterprise.h; sourceTree = SOURCE_ROOT; };
+		71EAFFCB1B7018C100445D35 /* AKMEnterprise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMEnterprise.m; path = Source/AKMEnterprise/AKMEnterprise.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,31 +91,13 @@
 			name = AKMCar;
 			sourceTree = "<group>";
 		};
-		715D8FFD1B651A1E0078DF1C /* aKMWasher */ = {
+		715D8FFD1B651A1E0078DF1C /* AKMWasher */ = {
 			isa = PBXGroup;
 			children = (
 				715D8FFA1B651A1A0078DF1C /* AKMWasher.h */,
 				715D8FFB1B651A1A0078DF1C /* AKMWasher.m */,
 			);
-			name = aKMWasher;
-			sourceTree = "<group>";
-		};
-		715D90011B655E060078DF1C /* AKMBuilding */ = {
-			isa = PBXGroup;
-			children = (
-				715D8FFE1B655E010078DF1C /* AKMBuilding.h */,
-				715D8FFF1B655E010078DF1C /* AKMBuilding.m */,
-			);
-			name = AKMBuilding;
-			sourceTree = "<group>";
-		};
-		715D90051B655F810078DF1C /* AKMRoom */ = {
-			isa = PBXGroup;
-			children = (
-				715D90021B655F7C0078DF1C /* AKMRoom.h */,
-				715D90031B655F7C0078DF1C /* AKMRoom.m */,
-			);
-			name = AKMRoom;
+			name = AKMWasher;
 			sourceTree = "<group>";
 		};
 		715D90091B65912C0078DF1C /* AKMQueue */ = {
@@ -131,6 +112,8 @@
 		7170792E1B641EBB00BD181B = {
 			isa = PBXGroup;
 			children = (
+				71EAFFC61B6FB11D00445D35 /* IDPStudyPlan */,
+				717079411B641F3B00BD181B /* main.m */,
 				717079391B641EBB00BD181B /* Task3 */,
 				717079381B641EBB00BD181B /* Products */,
 				7170794F1B64392D00BD181B /* Tests */,
@@ -148,15 +131,14 @@
 		717079391B641EBB00BD181B /* Task3 */ = {
 			isa = PBXGroup;
 			children = (
-				717079411B641F3B00BD181B /* main.m */,
+				71EAFFC91B70188900445D35 /* AKMEnterprise */,
 				717079461B64217200BD181B /* AKMStaff */,
 				715D8FF91B6516940078DF1C /* AKMCar */,
-				715D8FFD1B651A1E0078DF1C /* aKMWasher */,
+				715D8FFD1B651A1E0078DF1C /* AKMWasher */,
 				71331DB61B6E6B3B00436BF8 /* AKMAccountant */,
 				71331DBA1B6E91FB00436BF8 /* AKMBoss */,
-				715D90011B655E060078DF1C /* AKMBuilding */,
-				715D90051B655F810078DF1C /* AKMRoom */,
 				715D90091B65912C0078DF1C /* AKMQueue */,
+				71EAFFC81B6FB36400445D35 /* AKMPayCash.h */,
 			);
 			path = Task3;
 			sourceTree = "<group>";
@@ -178,6 +160,15 @@
 			);
 			name = Tests;
 			path = Task3;
+			sourceTree = "<group>";
+		};
+		71EAFFC91B70188900445D35 /* AKMEnterprise */ = {
+			isa = PBXGroup;
+			children = (
+				71EAFFCA1B7018C100445D35 /* AKMEnterprise.h */,
+				71EAFFCB1B7018C100445D35 /* AKMEnterprise.m */,
+			);
+			name = AKMEnterprise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71EAFFCC1B7018C100445D35 /* AKMEnterprise.m in Sources */,
 				715D8FF51B64FE570078DF1C /* WashTest.m in Sources */,
 				715D8FFC1B651A1A0078DF1C /* AKMWasher.m in Sources */,
 				71331DB91B6E6B5D00436BF8 /* AKMAccountant.m in Sources */,
@@ -243,9 +235,7 @@
 				71331DBD1B6E922F00436BF8 /* AKMBoss.m in Sources */,
 				715D900F1B6591950078DF1C /* AKMQueue.m in Sources */,
 				715D8FF81B6516900078DF1C /* AKMCar.m in Sources */,
-				715D90041B655F7C0078DF1C /* AKMRoom.m in Sources */,
 				717079421B641F3B00BD181B /* main.m in Sources */,
-				715D90001B655E010078DF1C /* AKMBuilding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

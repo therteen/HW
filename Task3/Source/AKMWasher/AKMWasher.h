@@ -15,6 +15,8 @@ FOUNDATION_EXPORT uint8_t washPrice;
 @interface AKMWasher : AKMStaff
 
 @property (nonatomic, retain) AKMCar    *car;
-@property (nonatomic, retain) AKMQueue  *queue;
+@property (nonatomic,retain) AKMQueue   *queue;
+
+- (void)setQueue:(AKMQueue *)queue;
 
 @end

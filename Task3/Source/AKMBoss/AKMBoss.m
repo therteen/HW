@@ -10,8 +10,11 @@
 
 @implementation AKMBoss
 
-- (void)doJob {
+- (void)doRealJobWithObject:(AKMStaff *)object {
+    [object payCash:self amount:(object.cash)];
+    object.state = freeState;
     NSLog(@"babla - %hhu",self.cash);
+    self.state = freeState;
 }
 
 @end

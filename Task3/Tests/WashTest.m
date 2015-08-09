@@ -7,41 +7,22 @@
 //
 
 #import "WashTest.h"
-#import "AKMBoss.h"
-#import "AKMWasher.h"
-#import "AKMAccountant.h"
 #import "AKMCar.h"
-#import "AKMQueue.h"
-#import "AKMBuilding.h"
-
+//#import "AKMQueue.h"
+#import "AKMEnterprise.h"
 
 @implementation WashTest
 
 + (void)cashFlowTest {
-    AKMBuilding *office = [[[AKMBuilding alloc] initWithRooms:1 washBoxes:0] autorelease];
-    AKMBuilding *moika = [[[AKMBuilding alloc] initWithRooms:0 washBoxes:1] autorelease];
-    AKMBoss *boss = [[[AKMBoss alloc] init] autorelease];
-    AKMAccountant *buh = [[[AKMAccountant alloc] initWithBoss:boss]autorelease];
-    [[office.rooms firstObject] addWorker:boss];
-    [[office.rooms firstObject] addWorker:buh];
-    
-    AKMWasher *mokryi = [[[AKMWasher alloc] initWithBoss:buh] autorelease];
-    [[moika.washBoxes firstObject] addWorker:mokryi];
-    
-    AKMCar *tachila = [[[AKMCar alloc] initWithCash] autorelease];
-    AKMCar *tachila2 = [[[AKMCar alloc] initWithCash] autorelease];
-    AKMQueue *ochered = [[[AKMQueue alloc] init] autorelease];
-    [mokryi setQueue:ochered];
-    [ochered putCar:tachila];
-    [ochered putCar:tachila2];
-    
-    [mokryi doJob];
-    [buh doJob];
-    [boss doJob];
-    
-    [mokryi doJob];
-    [buh doJob];
-    [boss doJob];
+   
+    AKMEnterprise *pomoika = [[[AKMEnterprise alloc] initWithQueue] autorelease];
+    [pomoika hireStaff];
+    AKMCar *car = [[AKMCar alloc] initWithCash];
+    AKMCar *car1 = [[AKMCar alloc] initWithCash];
+    AKMCar *car2 = [[AKMCar alloc] initWithCash];
+    [pomoika cleanCar:car];
+    [pomoika cleanCar:car1];
+    [pomoika cleanCar:car2];
     
 }
 

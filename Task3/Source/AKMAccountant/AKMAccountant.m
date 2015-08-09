@@ -12,8 +12,9 @@ const   uint8_t netProfit = 20;
 
 @implementation AKMAccountant
 
-- (void)doJob {
-    [self payCash:self.boss amount:(self.cash*netProfit/100)];
-    self.cash = 0;
+- (void)doRealJobWithObject:(AKMStaff *)object {
+    [object payCash:self amount:(object.cash)];
+    object.state = freeState;
+    self.cash = self.cash*netProfit/100;
 }
 @end

@@ -12,14 +12,12 @@ uint8_t washPrice = 10;
 
 @implementation AKMWasher
 
-- (void)doJob {
+- (void)doRealJobWithObject:(id)object {
     //берет машину из очереди, кладет в бокс, моет, отбирает деньги и передает бухгалтеру.
-    self.car = [self.queue getCar];
-    [self.car payCash:self amount:washPrice];
+    self.car = object;
     [self.car setClean:YES];
+    [self.car payCash:self amount:washPrice];
     [self setCar:nil];
-    [self payCash:self.boss amount:[self cash]];
-        
 }
 
 @end

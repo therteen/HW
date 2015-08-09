@@ -8,17 +8,34 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum  {
+    director,
+    accountant,
+    washer
+} AKMEnterprisePositions;
+
+typedef enum  {
+    freeState,
+    busyState,
+    finishedState
+} AKMEmployeeState;
 
 @interface AKMStaff : NSObject
 
-@property (nonatomic, assign)   UInt32 experience;
-@property (nonatomic, assign)   UInt32 salary;
-@property (nonatomic, assign)   id boss;
-@property (nonatomic, assign)     uint8_t cash;
+@property (nonatomic, assign)   UInt32              experience;
+@property (nonatomic, assign)   UInt32              salary;
+@property (nonatomic, assign)   uint8_t             cash;
+@property (nonatomic, assign)   AKMEmployeeState    state;
+@property (nonatomic, readonly) NSArray *observers;
 
-- (instancetype)initWithBoss:(AKMStaff *)boss;
+- (instancetype)initWithVacancy:(AKMEnterprisePositions)vacancy NS_DESIGNATED_INITIALIZER;
 
 - (void)payCash:(AKMStaff *)contragent amount:(uint8_t)value;
-- (void)doJob;
+- (void)doJobWithObject:(id)object;
+
+- (void)addObserver:(id)observer;
+- (void)removeObserver:(id)observer;
+
+- (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object;
 
 @end
