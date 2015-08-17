@@ -14,6 +14,7 @@
 @property (nonatomic, retain) NSMutableArray    *mutableWashers;
 @property (nonatomic, retain) NSMutableArray    *mutableAccountants;
 @property (nonatomic, retain) AKMBoss           *director;
+@property (nonatomic, assign) UInt              freeWashersCount;
 
 @end
 
@@ -22,7 +23,7 @@
 #pragma mark -
 #pragma mark Init and dealloc
 
-- (instancetype)initWithQueue {
+- (instancetype)init {
     self = [super init];
     self.queue = [AKMQueue new];
     self.mutableWashers = [NSMutableArray array];
@@ -35,6 +36,7 @@
     self.queue = nil;
     self.mutableWashers = nil;
     self.mutableAccountants = nil;
+    self.director = nil;
     [super dealloc];
 }
 
@@ -43,16 +45,18 @@
 
 - (void)hireStaff {
     self.director = [[[AKMBoss alloc] init] autorelease];
-    [self.mutableAccountants addObject:[[[AKMStaff alloc] initWithVacancy:accountant] autorelease]];
+    [self.mutableAccountants addObject:[[[AKMStaff alloc] initWithVacancy:AKMaccountant] autorelease]];
     [self.mutableAccountants makeObjectsPerformSelector:@selector(addObserver:) withObject:self.director];
     
-    int washersCount = arc4random_uniform(8) + 2;
-    for (int index = 0; index < washersCount; index++) {
-        [self.mutableWashers  addObject:[[[AKMStaff alloc] initWithVacancy:washer] autorelease]];
+    for (int index = 0; index < kWashersCount; index++) {
+        [self.mutableWashers  addObject:[[[AKMStaff alloc] initWithVacancy:AKMwasher] autorelease]];
     }
+    [self.mutableWashers makeObjectsPerformSelector:@selector(addObserver:) withObject:self];
+    self.freeWashersCount = kWashersCount;
   
     NSUInteger accountantsCount = self.mutableAccountants.count;
-    for (int index = 0; index < washersCount ; index++) {
+    
+    for (int index = 0; index < kWashersCount ; index++) {
         [self.mutableWashers[index] addObserver:self.mutableAccountants[(accountantsCount + index) % accountantsCount]];
     }
 }
@@ -60,8 +64,29 @@
 
 
 - (void)cleanCar:(AKMCar *)car {
-//    [self.queue putCar:car];
-    [self.mutableWashers[arc4random_uniform((uint32_t) self.mutableWashers.count)] doJobWithObject:car];
+    if (self.freeWashersCount > 0) {
+        for (id washer in self.mutableWashers) {
+            if (AKMfree == ((AKMWasher *)washer).state) {
+                [washer doJobWithObject:car];
+                self.freeWashersCount--;
+                return;
+            }
+        }
+    } else {
+        [self.queue putCar:car];
+    }
 }
+
+#pragma mark -
+#pragma mark Private methods
+
+- (void)getFreeWasher:(AKMWasher *)washer {
+    if (self.queue.count > 0) {
+        [washer doJobWithObject:[self.queue getCar]];
+    } else {
+        self.freeWashersCount++;
+    }
+}
+
 
 @end

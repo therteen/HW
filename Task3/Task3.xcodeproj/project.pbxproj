@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		71331DB91B6E6B5D00436BF8 /* AKMAccountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 71331DB81B6E6B5D00436BF8 /* AKMAccountant.m */; };
 		71331DBD1B6E922F00436BF8 /* AKMBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 71331DBC1B6E922F00436BF8 /* AKMBoss.m */; };
+		714157401B7CA395002D1857 /* AKMConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141573F1B7CA395002D1857 /* AKMConst.m */; };
 		715D8FF51B64FE570078DF1C /* WashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D8FF41B64FE570078DF1C /* WashTest.m */; };
 		715D8FF81B6516900078DF1C /* AKMCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D8FF71B6516900078DF1C /* AKMCar.m */; };
 		715D8FFC1B651A1A0078DF1C /* AKMWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 715D8FFB1B651A1A0078DF1C /* AKMWasher.m */; };
@@ -35,6 +36,8 @@
 		71331DB81B6E6B5D00436BF8 /* AKMAccountant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMAccountant.m; path = Source/AKMAccountant/AKMAccountant.m; sourceTree = SOURCE_ROOT; };
 		71331DBB1B6E922F00436BF8 /* AKMBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMBoss.h; path = Source/AKMBoss/AKMBoss.h; sourceTree = SOURCE_ROOT; };
 		71331DBC1B6E922F00436BF8 /* AKMBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMBoss.m; path = Source/AKMBoss/AKMBoss.m; sourceTree = SOURCE_ROOT; };
+		7141573E1B7CA022002D1857 /* AKMConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMConst.h; path = Source/AKMConst.h; sourceTree = SOURCE_ROOT; };
+		7141573F1B7CA395002D1857 /* AKMConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMConst.m; path = Source/AKMConst.m; sourceTree = SOURCE_ROOT; };
 		715D8FF31B64FE570078DF1C /* WashTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WashTest.h; path = Tests/WashTest.h; sourceTree = SOURCE_ROOT; };
 		715D8FF41B64FE570078DF1C /* WashTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WashTest.m; path = Tests/WashTest.m; sourceTree = SOURCE_ROOT; };
 		715D8FF61B6516900078DF1C /* AKMCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMCar.h; path = Source/AKMCar/AKMCar.h; sourceTree = SOURCE_ROOT; };
@@ -47,6 +50,7 @@
 		717079411B641F3B00BD181B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = SOURCE_ROOT; };
 		717079431B64216C00BD181B /* AKMStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMStaff.h; path = Source/AKMStaff/AKMStaff.h; sourceTree = SOURCE_ROOT; };
 		717079441B64216C00BD181B /* AKMStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMStaff.m; path = Source/AKMStaff/AKMStaff.m; sourceTree = SOURCE_ROOT; };
+		7175C7A91B81374800E1C418 /* AKMEnterprisePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AKMEnterprisePrivate.h; path = Source/AKMEnterprise/AKMEnterprisePrivate.h; sourceTree = SOURCE_ROOT; };
 		71EAFFC61B6FB11D00445D35 /* IDPStudyPlan */ = {isa = PBXFileReference; lastKnownFileType = text; path = IDPStudyPlan; sourceTree = "<group>"; };
 		71EAFFC81B6FB36400445D35 /* AKMPayCash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMPayCash.h; path = Source/AKMPayCash/AKMPayCash.h; sourceTree = SOURCE_ROOT; };
 		71EAFFCA1B7018C100445D35 /* AKMEnterprise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMEnterprise.h; path = Source/AKMEnterprise/AKMEnterprise.h; sourceTree = SOURCE_ROOT; };
@@ -139,6 +143,8 @@
 				71331DBA1B6E91FB00436BF8 /* AKMBoss */,
 				715D90091B65912C0078DF1C /* AKMQueue */,
 				71EAFFC81B6FB36400445D35 /* AKMPayCash.h */,
+				7141573E1B7CA022002D1857 /* AKMConst.h */,
+				7141573F1B7CA395002D1857 /* AKMConst.m */,
 			);
 			path = Task3;
 			sourceTree = "<group>";
@@ -167,6 +173,7 @@
 			children = (
 				71EAFFCA1B7018C100445D35 /* AKMEnterprise.h */,
 				71EAFFCB1B7018C100445D35 /* AKMEnterprise.m */,
+				7175C7A91B81374800E1C418 /* AKMEnterprisePrivate.h */,
 			);
 			name = AKMEnterprise;
 			sourceTree = "<group>";
@@ -232,6 +239,7 @@
 				715D8FFC1B651A1A0078DF1C /* AKMWasher.m in Sources */,
 				71331DB91B6E6B5D00436BF8 /* AKMAccountant.m in Sources */,
 				717079451B64216C00BD181B /* AKMStaff.m in Sources */,
+				714157401B7CA395002D1857 /* AKMConst.m in Sources */,
 				71331DBD1B6E922F00436BF8 /* AKMBoss.m in Sources */,
 				715D900F1B6591950078DF1C /* AKMQueue.m in Sources */,
 				715D8FF81B6516900078DF1C /* AKMCar.m in Sources */,

@@ -8,17 +8,25 @@
 
 #import "AKMCar.h"
 
-const uint8_t carStartingCash = 50;
-
 @implementation AKMCar
 
 - (instancetype)initWithCash {
     self = [super init];
     if (self) {
-        self.cash = carStartingCash;
+        self.cash = kCarStartingCash;
     }
     
     return self;
 }
 
+- (void)payCash:(AKMCar *)contragent amount:(uint8_t)value {
+    if (!(self.cash < value && [contragent respondsToSelector:@selector(payCash:amount:)]))
+    {
+        self.cash -= value;
+        contragent.cash += value;
+    }
+}
+
 @end
+
+

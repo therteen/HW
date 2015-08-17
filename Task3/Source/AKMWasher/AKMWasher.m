@@ -7,17 +7,28 @@
 //
 
 #import "AKMWasher.h"
-
-uint8_t washPrice = 10;
+#import "AKMEnterprisePrivate.h"
 
 @implementation AKMWasher
 
 - (void)doRealJobWithObject:(id)object {
-    //берет машину из очереди, кладет в бокс, моет, отбирает деньги и передает бухгалтеру.
     self.car = object;
     [self.car setClean:YES];
-    [self.car payCash:self amount:washPrice];
+    [self.car payCash:self amount:kWashPrice];
     [self setCar:nil];
+    sleep(0.1 * arc4random_uniform(kSleepTimer));
+    [self setState:AKMfinished];
 }
+
+//- (void)setState:(AKMEmployeeState)state {
+//    if (self.state != state) {
+//        [super setState:state];
+//        if (state == AKMfree) {
+//            [self notifyObserversWithSelector:@selector(getFreeWasher:) withObject:self];
+//        }
+//        
+//    }
+//}
+
 
 @end

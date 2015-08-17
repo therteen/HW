@@ -10,9 +10,11 @@
 #import "AKMWasher.h"
 #import "AKMAccountant.h"
 #import "AKMBoss.h"
+#import "AKMEnterprisePrivate.h"
 
 @interface AKMStaff ()
-@property   (nonatomic, retain) NSHashTable  *mutableObservers;
+@property   (nonatomic, retain) NSHashTable *mutableObservers;
+@property                       NSLock      *AKMStafflock;
 @end
 
 
@@ -21,13 +23,13 @@
 @dynamic observers;
 
 + (Class)classByVacancy:(AKMEnterprisePositions)vacancy {
-    if (washer == vacancy) {
+    if (AKMwasher == vacancy) {
         return AKMWasher.class;
     }
-    if (accountant == vacancy) {
+    if (AKMaccountant == vacancy) {
         return AKMAccountant.class;
     }
-    if (director == vacancy) {
+    if (AKMdirector == vacancy) {
         return AKMBoss.class;
     }
     
@@ -38,13 +40,12 @@
 #pragma mark Initialization and deallocation
 
 - (instancetype)initWithVacancy:(AKMEnterprisePositions)vacancy {
-    self = [super init];
     Class EmployeeClass = [[self class] classByVacancy:vacancy];
-    [self release];
     self = [[EmployeeClass alloc] init];
     
     if (self) {
         self.mutableObservers = [NSHashTable weakObjectsHashTable];
+        self.AKMStafflock = [NSLock new];
         return self;
     }
     
@@ -55,17 +56,18 @@
 #pragma mark -
 #pragma mark Public
 
-- (void)payCash:(AKMStaff *) contragent amount:(uint8_t)value {
-    if (!(self.cash < value)) {
+- (void)payCash:(AKMStaff *)contragent amount:(uint8_t)value {
+    if (!(self.cash < value && [contragent respondsToSelector:@selector(payCash:amount:)]))
+    {
         self.cash -= value;
         contragent.cash += value;
     }
 }
 
 - (void)doJobWithObject:(id)object {
-    self.state = busyState;
-    [self doRealJobWithObject:object];
-    self.state = finishedState;
+    [self startingJob];
+    [self performSelectorInBackground:@selector(doRealJobWithObject:) withObject:object];
+//    [self finishingJob];
 }
 
 - (NSArray *)observers {
@@ -86,18 +88,23 @@
 }
 
 - (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object{
-    [self.observers makeObjectsPerformSelector:selector withObject:object];
+    for (id observer in self.observers) {
+        if ([observer respondsToSelector:selector]) {
+            [observer performSelectorOnMainThread:selector withObject:object waitUntilDone:YES];
+        }
+    }
 }
 
-
-#pragma mark Private methods
 #pragma mark-
+#pragma mark Private methods
 
 - (void)setState:(AKMEmployeeState)state {
     if (state != _state) {
         _state = state;
-        if (state == finishedState) {
+        if (state == AKMfinished) {
             [self notifyObserversWithSelector:@selector(doJobWithObject:) withObject:self];
+        } else     if (state == AKMfree) {
+            [self notifyObserversWithSelector:@selector(getFreeWasher:) withObject:self];
         }
     }
 }
@@ -106,5 +113,12 @@
     
 }
 
+- (void)startingJob{
+    self.state = AKMbusy;
+}
+
+- (void)finishingJob {
+    self.state = AKMfinished;
+}
 
 @end

@@ -20,8 +20,7 @@
 //@property (nonatomic, readonly) NSArray   *accountants;
 //@property (nonatomic, readonly) AKMBoss   *director;
 
-- (instancetype)initWithQueue NS_DESIGNATED_INITIALIZER;
-- (void)dealloc;
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 
 - (void)hireStaff;
 - (void)cleanCar:(AKMCar *)car;

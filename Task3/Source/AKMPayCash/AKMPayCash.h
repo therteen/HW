@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol AKMPayCash <NSObject>
+@protocol AKMPayCash
+
+- (void)payCash:(id)contragent amount:(uint8_t)value;
 
 @end

@@ -8,7 +8,18 @@
 
 #import "AKMQueue.h"
 
+@interface AKMQueue ()
+
+@property   (nonatomic, retain)   NSMutableArray  *carsQueue;
+
+@end
+
 @implementation AKMQueue
+
+@dynamic    count;
+
+#pragma -
+#pragma mark Public
 
 - (id)getCar {
     id car = [self.carsQueue firstObject];
@@ -21,6 +32,13 @@
     [self.carsQueue addObject:car];
 }
 
+- (NSUInteger)getCount {
+    return self.carsQueue.count;
+}
+
+#pragma -
+#pragma mark Private
+
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -30,5 +48,11 @@
     
     return nil;
 }
+
+- (void)dealloc {
+    self.carsQueue = nil;
+    [super dealloc];
+}
+
 
 @end

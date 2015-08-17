@@ -13,8 +13,15 @@ const   uint8_t netProfit = 20;
 @implementation AKMAccountant
 
 - (void)doRealJobWithObject:(AKMStaff *)object {
-    [object payCash:self amount:(object.cash)];
-    object.state = freeState;
-    self.cash = self.cash*netProfit/100;
+    //    [self.AKMStafflock lock];
+    @synchronized (self) {
+        [object payCash:self amount:(object.cash)];
+        self.cash = self.cash * netProfit / 100;
+        sleep(0.1 * arc4random_uniform(kSleepTimer));
+        object.state = AKMfree;
+        self.state = AKMfinished;
+        //    [self.AKMStafflock unlock];
+    }
 }
+
 @end

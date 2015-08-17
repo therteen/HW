@@ -10,11 +10,12 @@
 
 @implementation AKMBoss
 
-- (void)doRealJobWithObject:(AKMStaff *)object {
+- (void)doJobWithObject:(AKMStaff *)object {
+    self.state = AKMbusy;
     [object payCash:self amount:(object.cash)];
-    object.state = freeState;
     NSLog(@"babla - %hhu",self.cash);
-    self.state = freeState;
+    self.state = AKMfree;
+    object.state = AKMfree;
 }
 
 @end

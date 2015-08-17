@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Anton Kostenko. All rights reserved.
 //
 
-#import "AKMStaff.h"
+#import "AKMPayCash.h"
+#import "AKMConst.h"
 
-FOUNDATION_EXPORT const uint8_t carStaringCash;
+@interface AKMCar : NSObject <AKMPayCash>
 
-@interface AKMCar : AKMStaff
-
-@property (nonatomic, assign, getter=isClean)   BOOL    clean;
+@property (nonatomic, assign, getter=isClean)   BOOL        clean;
+@property (nonatomic, assign)                   uint8_t     cash;
 
 - (instancetype)initWithCash;
 

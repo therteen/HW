@@ -10,11 +10,9 @@
 
 @interface AKMQueue : NSObject
 
-@property (nonatomic, retain)   NSMutableArray  *carsQueue;
+@property (nonatomic, readonly, getter=getCount) NSUInteger count;
 
 - (id)getCar;
 - (void)putCar:(id)car ;
-
-- (instancetype)init;
 
 @end

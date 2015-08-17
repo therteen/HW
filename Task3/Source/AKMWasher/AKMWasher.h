@@ -10,8 +10,6 @@
 #import "AKMCar.h"
 #import "AKMQueue.h"
 
-FOUNDATION_EXPORT uint8_t washPrice;
-
 @interface AKMWasher : AKMStaff
 
 @property (nonatomic, retain) AKMCar    *car;

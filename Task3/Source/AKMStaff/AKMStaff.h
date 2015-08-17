@@ -8,29 +8,32 @@
 
 #import <Foundation/Foundation.h>
 
+#import "AKMPayCash.h"
+#import "AKMConst.h"
+
 typedef enum  {
-    director,
-    accountant,
-    washer
+    AKMdirector,
+    AKMaccountant,
+    AKMwasher
 } AKMEnterprisePositions;
 
 typedef enum  {
-    freeState,
-    busyState,
-    finishedState
+    AKMfree,
+    AKMbusy,
+    AKMfinished
 } AKMEmployeeState;
 
-@interface AKMStaff : NSObject
+@interface AKMStaff : NSObject <AKMPayCash>
 
 @property (nonatomic, assign)   UInt32              experience;
 @property (nonatomic, assign)   UInt32              salary;
 @property (nonatomic, assign)   uint8_t             cash;
 @property (nonatomic, assign)   AKMEmployeeState    state;
-@property (nonatomic, readonly) NSArray *observers;
+@property (nonatomic, readonly) NSArray             *observers;
+@property (nonatomic,readonly)  NSLock              *AKMStafflock;
 
 - (instancetype)initWithVacancy:(AKMEnterprisePositions)vacancy NS_DESIGNATED_INITIALIZER;
 
-- (void)payCash:(AKMStaff *)contragent amount:(uint8_t)value;
 - (void)doJobWithObject:(id)object;
 
 - (void)addObserver:(id)observer;
