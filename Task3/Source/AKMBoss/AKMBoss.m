@@ -13,7 +13,7 @@
 - (void)doJobWithObject:(AKMStaff *)object {
     self.state = AKMbusy;
     [object payCash:self amount:(object.cash)];
-    NSLog(@"babla - %hhu",self.cash);
+    NSLog(@"babla - %u",self.cash);
     self.state = AKMfree;
     object.state = AKMfree;
 }

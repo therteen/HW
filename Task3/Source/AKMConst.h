@@ -11,6 +11,7 @@
 
 FOUNDATION_EXPORT const uint8_t kWashPrice;
 FOUNDATION_EXPORT const uint8_t kCarStartingCash;
+FOUNDATION_EXPORT const BOOL kWaitEndOfWork;
 FOUNDATION_EXPORT const int kSleepTimer;
 FOUNDATION_EXPORT const int kWashersCount;
 

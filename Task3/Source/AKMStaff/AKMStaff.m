@@ -67,14 +67,9 @@
 }
 
 - (void)doJobWithObject:(id)object {
-//    @synchronized(self) {
-//        if (self.state == AKMbusy) {
-//            return;
-//        }
-        [self startingJob];
-        [self performSelectorInBackground:@selector(doRealJobWithObject:) withObject:object];
-    }
-//}
+    [self startingJob];
+    [self performSelectorInBackground:@selector(doRealJobWithObject:) withObject:object];
+}
 
 - (NSArray *)observers {
     return self.mutableObservers.allObjects;
@@ -96,7 +91,7 @@
 - (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object{
     for (id observer in self.observers) {
         if ([observer respondsToSelector:selector]) {
-            [observer performSelectorOnMainThread:selector withObject:object waitUntilDone:NO];
+            [observer performSelectorOnMainThread:selector withObject:object waitUntilDone:kWaitEndOfWork];
         }
         
     }
@@ -107,14 +102,14 @@
 #pragma mark Setters
 
 - (void)setState:(AKMEmployeeState)state {
-    @synchronized(self){
+//    @synchronized(self){
         if (state != _state) {
             _state = state;
             if (state == AKMfree) {
                 [self notifyObserversWithSelector:@selector(getFreeWasher:) withObject:self];
             } else if (state == AKMfinished){
                 [self notifyObserversWithSelector:@selector(doJobWithObject:) withObject:self];
-            }
+//            }
         }
     }
 }

@@ -14,7 +14,6 @@
 @property (nonatomic, retain) NSMutableArray    *mutableWashers;
 @property (nonatomic, retain) NSMutableArray    *mutableAccountants;
 @property (nonatomic, retain) AKMBoss           *director;
-@property (nonatomic, assign) UInt              freeWashersCount;
 
 @end
 
@@ -52,7 +51,6 @@
         [self.mutableWashers  addObject:[[[AKMStaff alloc] initWithVacancy:AKMwasher] autorelease]];
     }
     [self.mutableWashers makeObjectsPerformSelector:@selector(addObserver:) withObject:self];
-    self.freeWashersCount = kWashersCount;
   
     NSUInteger accountantsCount = self.mutableAccountants.count;
     

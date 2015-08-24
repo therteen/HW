@@ -27,7 +27,7 @@ typedef enum  {
 
 @property (nonatomic, assign)   UInt32              experience;
 @property (nonatomic, assign)   UInt32              salary;
-@property (nonatomic, assign)   uint8_t             cash;
+@property (nonatomic, assign)   UInt                cash;
 @property (nonatomic, assign)   AKMEmployeeState    state;
 @property (nonatomic, readonly) NSArray             *observers;
 @property (nonatomic,readonly)  NSLock              *AKMStafflock;

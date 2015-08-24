@@ -18,7 +18,7 @@
 @property (nonatomic, readonly) AKMQueue  *queue;
 //@property (nonatomic, readonly) NSArray   *washers;
 //@property (nonatomic, readonly) NSArray   *accountants;
-//@property (nonatomic, readonly) AKMBoss   *director;
+@property (nonatomic, readonly) AKMBoss   *director;
 
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 

@@ -12,13 +12,14 @@
 @implementation AKMWasher
 
 - (void)doRealJobWithObject:(id)object {
-    self.car = object;
-    [self.car setClean:YES];
-    [self.car payCash:self amount:kWashPrice];
-    [self setCar:nil];
-    sleep(0.1 * arc4random_uniform(kSleepTimer));
-    [super doRealJobWithObject:object];
+    @autoreleasepool {
+        self.car = object;
+        [self.car setClean:YES];
+        [self.car payCash:self amount:kWashPrice];
+        [self setCar:nil];
+        sleep(0.1 * arc4random_uniform(kSleepTimer));
+        [super doRealJobWithObject:object];
+    }
 }
-
 
 @end

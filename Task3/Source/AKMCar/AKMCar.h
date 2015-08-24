@@ -12,7 +12,7 @@
 @interface AKMCar : NSObject <AKMPayCash>
 
 @property (nonatomic, assign, getter=isClean)   BOOL        clean;
-@property (nonatomic, assign)                   uint8_t     cash;
+@property (nonatomic, assign)                   UInt        cash;
 
 - (instancetype)initWithCash;
 
