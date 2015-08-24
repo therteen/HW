@@ -64,15 +64,14 @@
 
 
 - (void)cleanCar:(AKMCar *)car {
-    if (self.freeWashersCount > 0) {
+    @synchronized(self){
         for (id washer in self.mutableWashers) {
             if (AKMfree == ((AKMWasher *)washer).state) {
                 [washer doJobWithObject:car];
-                self.freeWashersCount--;
                 return;
             }
         }
-    } else {
+        
         [self.queue putCar:car];
     }
 }
@@ -83,10 +82,7 @@
 - (void)getFreeWasher:(AKMWasher *)washer {
     if (self.queue.count > 0) {
         [washer doJobWithObject:[self.queue getCar]];
-    } else {
-        self.freeWashersCount++;
     }
 }
-
 
 @end

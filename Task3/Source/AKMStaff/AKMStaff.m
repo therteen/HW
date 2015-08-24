@@ -57,7 +57,9 @@
 #pragma mark Public
 
 - (void)payCash:(AKMStaff *)contragent amount:(uint8_t)value {
-    if (!(self.cash < value && [contragent respondsToSelector:@selector(payCash:amount:)]))
+    if (!(self.cash < value &&
+          contragent != nil &&
+          [contragent respondsToSelector:@selector(payCash:amount:)]))
     {
         self.cash -= value;
         contragent.cash += value;
@@ -65,10 +67,14 @@
 }
 
 - (void)doJobWithObject:(id)object {
-    [self startingJob];
-    [self performSelectorInBackground:@selector(doRealJobWithObject:) withObject:object];
-//    [self finishingJob];
-}
+//    @synchronized(self) {
+//        if (self.state == AKMbusy) {
+//            return;
+//        }
+        [self startingJob];
+        [self performSelectorInBackground:@selector(doRealJobWithObject:) withObject:object];
+    }
+//}
 
 - (NSArray *)observers {
     return self.mutableObservers.allObjects;
@@ -90,7 +96,25 @@
 - (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object{
     for (id observer in self.observers) {
         if ([observer respondsToSelector:selector]) {
-            [observer performSelectorOnMainThread:selector withObject:object waitUntilDone:YES];
+            [observer performSelectorOnMainThread:selector withObject:object waitUntilDone:NO];
+        }
+        
+    }
+}
+
+
+#pragma mark-
+#pragma mark Setters
+
+- (void)setState:(AKMEmployeeState)state {
+    @synchronized(self){
+        if (state != _state) {
+            _state = state;
+            if (state == AKMfree) {
+                [self notifyObserversWithSelector:@selector(getFreeWasher:) withObject:self];
+            } else if (state == AKMfinished){
+                [self notifyObserversWithSelector:@selector(doJobWithObject:) withObject:self];
+            }
         }
     }
 }
@@ -98,19 +122,8 @@
 #pragma mark-
 #pragma mark Private methods
 
-- (void)setState:(AKMEmployeeState)state {
-    if (state != _state) {
-        _state = state;
-        if (state == AKMfinished) {
-            [self notifyObserversWithSelector:@selector(doJobWithObject:) withObject:self];
-        } else     if (state == AKMfree) {
-            [self notifyObserversWithSelector:@selector(getFreeWasher:) withObject:self];
-        }
-    }
-}
-
 - (void)doRealJobWithObject:(id)object {
-    
+    [self finishingJob];
 }
 
 - (void)startingJob{
@@ -119,6 +132,7 @@
 
 - (void)finishingJob {
     self.state = AKMfinished;
+    
 }
 
 @end

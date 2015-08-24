@@ -20,7 +20,9 @@
 }
 
 - (void)payCash:(AKMCar *)contragent amount:(uint8_t)value {
-    if (!(self.cash < value && [contragent respondsToSelector:@selector(payCash:amount:)]))
+    if (!(self.cash < value &&
+          contragent != nil &&
+          [contragent respondsToSelector:@selector(payCash:amount:)]))
     {
         self.cash -= value;
         contragent.cash += value;

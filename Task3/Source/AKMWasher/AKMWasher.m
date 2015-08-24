@@ -17,18 +17,8 @@
     [self.car payCash:self amount:kWashPrice];
     [self setCar:nil];
     sleep(0.1 * arc4random_uniform(kSleepTimer));
-    [self setState:AKMfinished];
+    [super doRealJobWithObject:object];
 }
-
-//- (void)setState:(AKMEmployeeState)state {
-//    if (self.state != state) {
-//        [super setState:state];
-//        if (state == AKMfree) {
-//            [self notifyObserversWithSelector:@selector(getFreeWasher:) withObject:self];
-//        }
-//        
-//    }
-//}
 
 
 @end

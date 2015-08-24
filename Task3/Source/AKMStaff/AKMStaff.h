@@ -35,6 +35,8 @@ typedef enum  {
 - (instancetype)initWithVacancy:(AKMEnterprisePositions)vacancy NS_DESIGNATED_INITIALIZER;
 
 - (void)doJobWithObject:(id)object;
+- (void)doRealJobWithObject:(id)object;
+- (void)finishingJob;
 
 - (void)addObserver:(id)observer;
 - (void)removeObserver:(id)observer;
