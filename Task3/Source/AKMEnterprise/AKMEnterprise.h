@@ -7,20 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AKMHandleFreeState.h"
 
 #import "AKMBoss.h"
-#import "AKMWasher.h"
-#import "AKMAccountant.h"
-#import "AKMCar.h"
-#import "AKMQueue.h"
 
-@interface AKMEnterprise : NSObject
-@property (nonatomic, readonly) AKMQueue  *queue;
-//@property (nonatomic, readonly) NSArray   *washers;
-//@property (nonatomic, readonly) NSArray   *accountants;
+@class AKMCar;
+
+@interface AKMEnterprise : NSObject <AKMHandleFreeState>
 @property (nonatomic, readonly) AKMBoss   *director;
 
-- (instancetype)init NS_DESIGNATED_INITIALIZER;
+- (instancetype)init;
 
 - (void)hireStaff;
 - (void)cleanCar:(AKMCar *)car;

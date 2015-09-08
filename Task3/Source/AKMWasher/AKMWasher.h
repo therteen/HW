@@ -8,13 +8,9 @@
 
 #import "AKMStaff.h"
 #import "AKMCar.h"
-#import "AKMQueue.h"
+
 
 @interface AKMWasher : AKMStaff
 
-@property (nonatomic, retain) AKMCar    *car;
-@property (nonatomic,retain) AKMQueue   *queue;
-
-- (void)setQueue:(AKMQueue *)queue;
 
 @end

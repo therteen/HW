@@ -12,6 +12,5 @@
 
 const uint8_t kWashPrice = 10;
 const uint8_t kCarStartingCash = 50;
-const BOOL kWaitEndOfWork = NO;
 const int kSleepTimer = 11;
 const int kWashersCount = 10;

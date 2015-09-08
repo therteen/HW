@@ -10,7 +10,6 @@
 #import "AKMWasher.h"
 #import "AKMAccountant.h"
 #import "AKMBoss.h"
-#import "AKMEnterprisePrivate.h"
 
 @interface AKMStaff ()
 @property   (nonatomic, retain) NSHashTable *mutableObservers;
@@ -57,7 +56,7 @@
 #pragma mark Public
 
 - (void)payCash:(AKMStaff *)contragent amount:(uint8_t)value {
-    if (!(self.cash < value &&
+    if ((self.cash >= value &&
           contragent != nil &&
           [contragent respondsToSelector:@selector(payCash:amount:)]))
     {
@@ -91,9 +90,8 @@
 - (void)notifyObserversWithSelector:(SEL)selector withObject:(id)object{
     for (id observer in self.observers) {
         if ([observer respondsToSelector:selector]) {
-            [observer performSelectorOnMainThread:selector withObject:object waitUntilDone:kWaitEndOfWork];
+            [observer performSelectorOnMainThread:selector withObject:object waitUntilDone:YES];
         }
-        
     }
 }
 
@@ -102,14 +100,10 @@
 #pragma mark Setters
 
 - (void)setState:(AKMEmployeeState)state {
-//    @synchronized(self){
-        if (state != _state) {
-            _state = state;
-            if (state == AKMfree) {
-                [self notifyObserversWithSelector:@selector(getFreeWasher:) withObject:self];
-            } else if (state == AKMfinished){
-                [self notifyObserversWithSelector:@selector(doJobWithObject:) withObject:self];
-//            }
+    if (state != _state) {
+        _state = state;
+        if (state != AKMbusy) {
+            [self notifyObserversWithSelector:[self selectorForState:state] withObject:self];
         }
     }
 }
@@ -129,5 +123,18 @@
     self.state = AKMfinished;
     
 }
+
+- (void)handleFreeState:(id)worker {
+}
+
+- (SEL)selectorForState:(AKMEmployeeState)state {
+    if (state == AKMfree) {
+        return @selector(handleFreeState:);
+    }else if (state == AKMfinished) {
+        return @selector(doJobWithObject:);
+    }
+    return nil;
+}
+
 
 @end

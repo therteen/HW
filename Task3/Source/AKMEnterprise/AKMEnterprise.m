@@ -8,6 +8,12 @@
 
 #import "AKMEnterprise.h"
 
+#import "AKMBoss.h"
+#import "AKMWasher.h"
+#import "AKMAccountant.h"
+#import "AKMCar.h"
+#import "AKMQueue.h"
+
 @interface AKMEnterprise ()
 
 @property (nonatomic, retain) AKMQueue          *queue;
@@ -62,22 +68,24 @@
 
 
 - (void)cleanCar:(AKMCar *)car {
-    @synchronized(self){
+    @synchronized(self.mutableWashers){
         for (id washer in self.mutableWashers) {
             if (AKMfree == ((AKMWasher *)washer).state) {
                 [washer doJobWithObject:car];
                 return;
             }
         }
-        
+    }
+    @synchronized(self.queue){
         [self.queue putCar:car];
     }
 }
 
+
 #pragma mark -
 #pragma mark Private methods
 
-- (void)getFreeWasher:(AKMWasher *)washer {
+- (void)handleFreeState:(AKMWasher *)washer {
     if (self.queue.count > 0) {
         [washer doJobWithObject:[self.queue getCar]];
     }

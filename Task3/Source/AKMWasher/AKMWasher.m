@@ -7,16 +7,15 @@
 //
 
 #import "AKMWasher.h"
-#import "AKMEnterprisePrivate.h"
 
 @implementation AKMWasher
 
-- (void)doRealJobWithObject:(id)object {
+- (void)doRealJobWithObject:(AKMCar *)object {
     @autoreleasepool {
-        self.car = object;
-        [self.car setClean:YES];
-        [self.car payCash:self amount:kWashPrice];
-        [self setCar:nil];
+        [object retain];
+        object.clean = YES;
+        [object payCash:self amount:kWashPrice];
+        [object release];
         sleep(0.1 * arc4random_uniform(kSleepTimer));
         [super doRealJobWithObject:object];
     }

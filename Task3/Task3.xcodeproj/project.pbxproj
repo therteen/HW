@@ -50,7 +50,7 @@
 		717079411B641F3B00BD181B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = SOURCE_ROOT; };
 		717079431B64216C00BD181B /* AKMStaff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMStaff.h; path = Source/AKMStaff/AKMStaff.h; sourceTree = SOURCE_ROOT; };
 		717079441B64216C00BD181B /* AKMStaff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMStaff.m; path = Source/AKMStaff/AKMStaff.m; sourceTree = SOURCE_ROOT; };
-		7175C7A91B81374800E1C418 /* AKMEnterprisePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AKMEnterprisePrivate.h; path = Source/AKMEnterprise/AKMEnterprisePrivate.h; sourceTree = SOURCE_ROOT; };
+		71B39C0F1B9C74DF004FD618 /* AKMHandleFreeState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AKMHandleFreeState.h; path = Source/AKMHandleFreeState/AKMHandleFreeState.h; sourceTree = SOURCE_ROOT; };
 		71EAFFC61B6FB11D00445D35 /* IDPStudyPlan */ = {isa = PBXFileReference; lastKnownFileType = text; path = IDPStudyPlan; sourceTree = "<group>"; };
 		71EAFFC81B6FB36400445D35 /* AKMPayCash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMPayCash.h; path = Source/AKMPayCash/AKMPayCash.h; sourceTree = SOURCE_ROOT; };
 		71EAFFCA1B7018C100445D35 /* AKMEnterprise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMEnterprise.h; path = Source/AKMEnterprise/AKMEnterprise.h; sourceTree = SOURCE_ROOT; };
@@ -143,6 +143,7 @@
 				71331DBA1B6E91FB00436BF8 /* AKMBoss */,
 				715D90091B65912C0078DF1C /* AKMQueue */,
 				71EAFFC81B6FB36400445D35 /* AKMPayCash.h */,
+				71B39C0F1B9C74DF004FD618 /* AKMHandleFreeState.h */,
 				7141573E1B7CA022002D1857 /* AKMConst.h */,
 				7141573F1B7CA395002D1857 /* AKMConst.m */,
 			);
@@ -173,7 +174,6 @@
 			children = (
 				71EAFFCA1B7018C100445D35 /* AKMEnterprise.h */,
 				71EAFFCB1B7018C100445D35 /* AKMEnterprise.m */,
-				7175C7A91B81374800E1C418 /* AKMEnterprisePrivate.h */,
 			);
 			name = AKMEnterprise;
 			sourceTree = "<group>";

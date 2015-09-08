@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "AKMPayCash.h"
+#import "AKMHandleFreeState.h"
 #import "AKMConst.h"
 
 typedef enum  {
@@ -23,7 +24,7 @@ typedef enum  {
     AKMfinished
 } AKMEmployeeState;
 
-@interface AKMStaff : NSObject <AKMPayCash>
+@interface AKMStaff : NSObject <AKMPayCash, AKMHandleFreeState>
 
 @property (nonatomic, assign)   UInt32              experience;
 @property (nonatomic, assign)   UInt32              salary;
