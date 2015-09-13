@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		71501A9F1B9F6B6A00795AC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501A9E1B9F6B6A00795AC4 /* main.m */; };
 		71501AB91B9F6B6B00795AC4 /* UIHomeWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501AB81B9F6B6B00795AC4 /* UIHomeWorkTests.m */; };
-		71501AC71B9F772900795AC4 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 71501AC21B9F772900795AC4 /* Contents.json */; };
 		71501AC81B9F772900795AC4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71501AC51B9F772900795AC4 /* LaunchScreen.xib */; };
 		71501AD01B9F7D9800795AC4 /* AKMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501ACF1B9F7D9800795AC4 /* AKMAppDelegate.m */; };
-		71501AD31B9F903D00795AC4 /* AKMMovingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501AD21B9F903D00795AC4 /* AKMMovingView.m */; };
-		71501AD71B9F967400795AC4 /* AKMMovingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501AD51B9F967400795AC4 /* AKMMovingViewController.m */; };
-		71501AD81B9F967400795AC4 /* AKMMovingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71501AD61B9F967400795AC4 /* AKMMovingViewController.xib */; };
+		71B9EA261BA4DECB009E248A /* AKMMovingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */; };
+		71B9EA271BA4DECB009E248A /* AKMMovingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B9EA251BA4DECB009E248A /* AKMMovingViewController.xib */; };
+		71B9EA2A1BA4E077009E248A /* AKMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9EA291BA4E077009E248A /* AKMView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,15 +33,14 @@
 		71501AB21B9F6B6B00795AC4 /* UIHomeWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIHomeWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71501AB71B9F6B6B00795AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71501AB81B9F6B6B00795AC4 /* UIHomeWorkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIHomeWorkTests.m; sourceTree = "<group>"; };
-		71501AC21B9F772900795AC4 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		71501AC51B9F772900795AC4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		71501ACE1B9F7D9800795AC4 /* AKMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMAppDelegate.h; sourceTree = "<group>"; };
 		71501ACF1B9F7D9800795AC4 /* AKMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMAppDelegate.m; sourceTree = "<group>"; };
-		71501AD11B9F903D00795AC4 /* AKMMovingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMMovingView.h; path = AKMMovingView/AKMMovingView.h; sourceTree = "<group>"; };
-		71501AD21B9F903D00795AC4 /* AKMMovingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMMovingView.m; path = AKMMovingView/AKMMovingView.m; sourceTree = "<group>"; };
-		71501AD41B9F967400795AC4 /* AKMMovingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMMovingViewController.h; path = AKMMovingViewController/AKMMovingViewController.h; sourceTree = "<group>"; };
-		71501AD51B9F967400795AC4 /* AKMMovingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMMovingViewController.m; path = AKMMovingViewController/AKMMovingViewController.m; sourceTree = "<group>"; };
-		71501AD61B9F967400795AC4 /* AKMMovingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AKMMovingViewController.xib; path = AKMMovingViewController/AKMMovingViewController.xib; sourceTree = "<group>"; };
+		71B9EA231BA4DECB009E248A /* AKMMovingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMMovingViewController.h; sourceTree = "<group>"; };
+		71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMMovingViewController.m; sourceTree = "<group>"; };
+		71B9EA251BA4DECB009E248A /* AKMMovingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKMMovingViewController.xib; sourceTree = "<group>"; };
+		71B9EA281BA4E077009E248A /* AKMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMView.h; sourceTree = "<group>"; };
+		71B9EA291BA4E077009E248A /* AKMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,26 +117,9 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		71501AC31B9F772900795AC4 /* AppIcon.appiconset */ = {
-			isa = PBXGroup;
-			children = (
-				71501AC21B9F772900795AC4 /* Contents.json */,
-			);
-			path = AppIcon.appiconset;
-			sourceTree = "<group>";
-		};
-		71501AC41B9F772900795AC4 /* Images.xcassets */ = {
-			isa = PBXGroup;
-			children = (
-				71501AC31B9F772900795AC4 /* AppIcon.appiconset */,
-			);
-			path = Images.xcassets;
-			sourceTree = "<group>";
-		};
 		71501AC61B9F772900795AC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				71501AC41B9F772900795AC4 /* Images.xcassets */,
 				71501AC51B9F772900795AC4 /* LaunchScreen.xib */,
 			);
 			name = Resources;
@@ -148,8 +129,6 @@
 		71501AC91B9F783900795AC4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				71501AD11B9F903D00795AC4 /* AKMMovingView.h */,
-				71501AD21B9F903D00795AC4 /* AKMMovingView.m */,
 				71501AD91B9F967B00795AC4 /* AKMMovingViewController */,
 			);
 			path = Source;
@@ -158,9 +137,11 @@
 		71501AD91B9F967B00795AC4 /* AKMMovingViewController */ = {
 			isa = PBXGroup;
 			children = (
-				71501AD41B9F967400795AC4 /* AKMMovingViewController.h */,
-				71501AD51B9F967400795AC4 /* AKMMovingViewController.m */,
-				71501AD61B9F967400795AC4 /* AKMMovingViewController.xib */,
+				71B9EA231BA4DECB009E248A /* AKMMovingViewController.h */,
+				71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */,
+				71B9EA251BA4DECB009E248A /* AKMMovingViewController.xib */,
+				71B9EA281BA4E077009E248A /* AKMView.h */,
+				71B9EA291BA4E077009E248A /* AKMView.m */,
 			);
 			name = AKMMovingViewController;
 			sourceTree = "<group>";
@@ -246,9 +227,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71B9EA271BA4DECB009E248A /* AKMMovingViewController.xib in Resources */,
 				71501AC81B9F772900795AC4 /* LaunchScreen.xib in Resources */,
-				71501AD81B9F967400795AC4 /* AKMMovingViewController.xib in Resources */,
-				71501AC71B9F772900795AC4 /* Contents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71501AD71B9F967400795AC4 /* AKMMovingViewController.m in Sources */,
-				71501AD31B9F903D00795AC4 /* AKMMovingView.m in Sources */,
+				71B9EA2A1BA4E077009E248A /* AKMView.m in Sources */,
+				71B9EA261BA4DECB009E248A /* AKMMovingViewController.m in Sources */,
 				71501A9F1B9F6B6A00795AC4 /* main.m in Sources */,
 				71501AD01B9F7D9800795AC4 /* AKMAppDelegate.m in Sources */,
 			);
@@ -445,6 +425,7 @@
 				71501ABE1B9F6B6B00795AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71501ABF1B9F6B6B00795AC4 /* Build configuration list for PBXNativeTarget "UIHomeWorkTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +434,7 @@
 				71501AC11B9F6B6B00795AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

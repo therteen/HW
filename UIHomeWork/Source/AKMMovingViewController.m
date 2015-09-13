@@ -2,7 +2,7 @@
 //  AKMMovingViewController.m
 //  UIHomeWork
 //
-//  Created by Anton Kostenko on 09.09.15.
+//  Created by Anton Kostenko on 13.09.15.
 //  Copyright (c) 2015 Anton Kostenko. All rights reserved.
 //
 
@@ -16,12 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+   //    [self.view addSubview:squareView];
+//    self.squareView = squareView;
+    
+
+
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+//    AKMView *squareView = [AKMView new];
+    [_squareView setSquarePosition:AKMSquareViewBottomRightPosition animation:NO completion:nil];
+ }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 
