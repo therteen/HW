@@ -26,7 +26,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 //    AKMView *squareView = [AKMView new];
-    [_squareView setSquarePosition:AKMSquareViewBottomRightPosition animation:NO completion:nil];
+    [self.mainView setSquarePosition:1 animation:YES completion:nil];
  }
 
 - (void)didReceiveMemoryWarning {

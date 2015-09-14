@@ -11,7 +11,7 @@
 #import "AKMView.h"
 
 @interface AKMMovingViewController : UIViewController
-@property (weak, nonatomic) IBOutlet AKMView *squareView;
+@property (nonatomic, readonly) AKMView *mainView;
 
 
 @end

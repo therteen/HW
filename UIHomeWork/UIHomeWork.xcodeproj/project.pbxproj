@@ -11,8 +11,8 @@
 		71501AB91B9F6B6B00795AC4 /* UIHomeWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501AB81B9F6B6B00795AC4 /* UIHomeWorkTests.m */; };
 		71501AC81B9F772900795AC4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71501AC51B9F772900795AC4 /* LaunchScreen.xib */; };
 		71501AD01B9F7D9800795AC4 /* AKMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501ACF1B9F7D9800795AC4 /* AKMAppDelegate.m */; };
+		7195FBB31BA77CE500D1E285 /* AKMMovingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7195FBB21BA77CE500D1E285 /* AKMMovingView.xib */; };
 		71B9EA261BA4DECB009E248A /* AKMMovingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */; };
-		71B9EA271BA4DECB009E248A /* AKMMovingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B9EA251BA4DECB009E248A /* AKMMovingViewController.xib */; };
 		71B9EA2A1BA4E077009E248A /* AKMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9EA291BA4E077009E248A /* AKMView.m */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +36,9 @@
 		71501AC51B9F772900795AC4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		71501ACE1B9F7D9800795AC4 /* AKMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMAppDelegate.h; sourceTree = "<group>"; };
 		71501ACF1B9F7D9800795AC4 /* AKMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMAppDelegate.m; sourceTree = "<group>"; };
+		7195FBB21BA77CE500D1E285 /* AKMMovingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKMMovingView.xib; sourceTree = "<group>"; };
 		71B9EA231BA4DECB009E248A /* AKMMovingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMMovingViewController.h; sourceTree = "<group>"; };
 		71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMMovingViewController.m; sourceTree = "<group>"; };
-		71B9EA251BA4DECB009E248A /* AKMMovingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKMMovingViewController.xib; sourceTree = "<group>"; };
 		71B9EA281BA4E077009E248A /* AKMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMView.h; sourceTree = "<group>"; };
 		71B9EA291BA4E077009E248A /* AKMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,9 +139,9 @@
 			children = (
 				71B9EA231BA4DECB009E248A /* AKMMovingViewController.h */,
 				71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */,
-				71B9EA251BA4DECB009E248A /* AKMMovingViewController.xib */,
 				71B9EA281BA4E077009E248A /* AKMView.h */,
 				71B9EA291BA4E077009E248A /* AKMView.m */,
+				7195FBB21BA77CE500D1E285 /* AKMMovingView.xib */,
 			);
 			name = AKMMovingViewController;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71B9EA271BA4DECB009E248A /* AKMMovingViewController.xib in Resources */,
+				7195FBB31BA77CE500D1E285 /* AKMMovingView.xib in Resources */,
 				71501AC81B9F772900795AC4 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
