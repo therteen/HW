@@ -14,24 +14,55 @@
 
 @implementation AKMMovingViewController
 
+@dynamic mainView;
+
+#pragma mark -
+#pragma mark Accessors
+
+- (AKMMovingView *)mainView {
+    if ([self isViewLoaded] && [self.view isKindOfClass:[AKMMovingView class]]) {
+        return (AKMMovingView *)self.view;
+    }
+    
+    return nil;
+}
+
+#pragma mark -
+#pragma mark Public
+
+- (IBAction)animationButton:(id)sender {
+    self.mainView.actionButton.selected = !self.mainView.actionButton.selected;
+    [self movingSquare];
+
+}
+
+#pragma mark -
+#pragma mark View Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-   //    [self.view addSubview:squareView];
-//    self.squareView = squareView;
-    
-
-
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-//    AKMView *squareView = [AKMView new];
-    [self.mainView setSquarePosition:1 animation:YES completion:nil];
- }
+    
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
 
+#pragma mark -
+#pragma mark Private
+
+- (void)movingSquare {
+    if (self.mainView.actionButton.isSelected) {
+        [self.mainView setSquarePosition:((self.mainView.squarePosition + 1) % AKMSquareViewPositionCount)
+                               animation:YES
+                              completion:^{
+                                  [self movingSquare];
+                              }];
+    }
 }
 
 

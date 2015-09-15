@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AKMView.h"
+#import "AKMMovingView.h"
 
 @interface AKMMovingViewController : UIViewController
-@property (nonatomic, readonly) AKMView *mainView;
+- (IBAction)animationButton:(id)sender;
+@property (nonatomic, readonly) AKMMovingView *mainView;
 
 
 @end
