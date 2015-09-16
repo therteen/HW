@@ -29,19 +29,20 @@
                 animation:(BOOL)animated
                completion:(void (^)(void))completionHandler {
     
-    [UIView animateWithDuration:(animationDuration * animated)
-                          delay:animationDelay
+    [UIView animateWithDuration:(kAKMAnimationDuration * animated)
+                          delay:kAKMAnimationDelay
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          self.squareView.frame = [self frameForSquarePosition:position];
+                         self.squareView.backgroundColor = [UIColor colorWithRed:(self.squareView.frame.origin.y / CGRectGetHeight(self.frame)) green:(self.squareView.frame.origin.x / CGRectGetWidth(self.frame)) blue:0.5 alpha:1];
                      }
                      completion:^(BOOL finished) {
+                         _squarePosition = position;
                          if (completionHandler && finished) {
                              completionHandler();
                          }
                      }
      ];
-    _squarePosition = position;
 }
 
 #pragma mark -
@@ -68,11 +69,19 @@
         default:
             break;
     }
-    
     square.origin = point;
     
     return square;
 }
 
-@end
+- (void)movingSquare {
+    if (self.actionButton.isSelected) {
+        [self setSquarePosition:arc4random_uniform(AKMSquareViewPositionCount)
+                      animation:YES
+                     completion:^{
+                         [self movingSquare];
+                     }];
+    }
+}
 
+@end

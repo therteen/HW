@@ -32,7 +32,7 @@
 
 - (IBAction)animationButton:(id)sender {
     self.mainView.actionButton.selected = !self.mainView.actionButton.selected;
-    [self movingSquare];
+    [self.mainView movingSquare];
 
 }
 
@@ -50,19 +50,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-#pragma mark -
-#pragma mark Private
-
-- (void)movingSquare {
-    if (self.mainView.actionButton.isSelected) {
-        [self.mainView setSquarePosition:((self.mainView.squarePosition + 1) % AKMSquareViewPositionCount)
-                               animation:YES
-                              completion:^{
-                                  [self movingSquare];
-                              }];
-    }
 }
 
 

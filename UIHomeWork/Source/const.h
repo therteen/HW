@@ -9,7 +9,7 @@
 #ifndef UIHomeWork_const_h
 #define UIHomeWork_const_h
 
-FOUNDATION_EXPORT NSTimeInterval const animationDuration = 5;
-FOUNDATION_EXPORT NSTimeInterval const animationDelay = 0;
+static const NSTimeInterval kAKMAnimationDuration = 1;
+static const NSTimeInterval kAKMAnimationDelay = 0;
 
 #endif
