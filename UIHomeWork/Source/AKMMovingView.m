@@ -7,7 +7,7 @@
 //
 
 #import "AKMMovingView.h"
-#import "const.h"
+#import "AKMMovingViewConst.h"
 
 @interface AKMMovingView ()
 
@@ -34,7 +34,6 @@
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          self.squareView.frame = [self frameForSquarePosition:position];
-                         self.squareView.backgroundColor = [UIColor colorWithRed:(self.squareView.frame.origin.y / CGRectGetHeight(self.frame)) green:(self.squareView.frame.origin.x / CGRectGetWidth(self.frame)) blue:0.5 alpha:1];
                      }
                      completion:^(BOOL finished) {
                          _squarePosition = position;
@@ -51,19 +50,22 @@
 - (CGRect)frameForSquarePosition:(AKMSquareViewPosition)position {
     CGRect square = self.squareView.frame;
     CGPoint point = CGPointZero;
+    CGFloat x = self.frame.size.width - square.size.width;
+    CGFloat y = self.frame.size.height - square.size.width;
+    
     
     switch (position) {
         case AKMSquareViewTopRightPosition:
-            point.x = CGRectGetWidth(self.frame) - CGRectGetWidth(square);
+            point.x = x;
             break;
             
         case AKMSquareViewBottomLeftPosition:
-            point.y = CGRectGetHeight(self.frame) - CGRectGetHeight(square);
+            point.y = y;
             break;
             
         case AKMSquareViewBottomRightPosition:
-            point.x = CGRectGetWidth(self.frame) - CGRectGetWidth(square);
-            point.y = CGRectGetHeight(self.frame) - CGRectGetHeight(square);
+            point.x = x;
+            point.y = y;
             break;
             
         default:
@@ -74,12 +76,15 @@
     return square;
 }
 
-- (void)movingSquare {
-    if (self.actionButton.isSelected) {
+- (void)movingCyclicSquare {
+     if (self.moving == YES) {
+         self.animating = YES;
+        AKMMovingView * __weak weakself = self;
         [self setSquarePosition:arc4random_uniform(AKMSquareViewPositionCount)
                       animation:YES
                      completion:^{
-                         [self movingSquare];
+                         weakself.animating = NO;
+                         [weakself movingCyclicSquare];
                      }];
     }
 }

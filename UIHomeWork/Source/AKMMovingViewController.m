@@ -31,9 +31,10 @@
 #pragma mark Public
 
 - (IBAction)animationButton:(id)sender {
-    self.mainView.actionButton.selected = !self.mainView.actionButton.selected;
-    [self.mainView movingSquare];
-
+    self.mainView.moving = !self.mainView.moving;
+    if (!self.mainView.animating) {
+        [self.mainView movingCyclicSquare];
+    }
 }
 
 #pragma mark -
