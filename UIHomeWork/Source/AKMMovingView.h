@@ -17,11 +17,11 @@ typedef NS_ENUM(NSUInteger, AKMSquareViewPosition) {
 };
 
 @interface AKMMovingView : UIView
-@property (nonatomic, assign)   AKMSquareViewPosition   squarePosition;
 @property (nonatomic, assign)   BOOL                    moving;
 @property (nonatomic, assign)   BOOL                    animating;
 @property (nonatomic, strong)   IBOutlet UIView         *squareView;
 @property (nonatomic, strong)   IBOutlet UIButton       *actionButton;
+@property (nonatomic, assign)   AKMSquareViewPosition   squarePosition;
 
 - (void)setSquarePosition:(AKMSquareViewPosition)position
                 animation:(BOOL)animated;

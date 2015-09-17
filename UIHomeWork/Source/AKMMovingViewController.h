@@ -11,7 +11,7 @@
 #import "AKMMovingView.h"
 
 @interface AKMMovingViewController : UIViewController
-@property (nonatomic, readonly) AKMMovingView *mainView;
 - (IBAction)animationButton:(id)sender;
+@property (nonatomic, readonly) AKMMovingView *mainView;
 
 @end

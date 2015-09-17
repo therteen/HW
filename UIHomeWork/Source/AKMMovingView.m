@@ -7,7 +7,9 @@
 //
 
 #import "AKMMovingView.h"
-#import "AKMMovingViewConst.h"
+
+static const NSTimeInterval kAKMAnimationDuration = 1;
+static const NSTimeInterval kAKMAnimationDelay = 0;
 
 @interface AKMMovingView ()
 
@@ -50,8 +52,9 @@
 - (CGRect)frameForSquarePosition:(AKMSquareViewPosition)position {
     CGRect square = self.squareView.frame;
     CGPoint point = CGPointZero;
+    
     CGFloat x = self.frame.size.width - square.size.width;
-    CGFloat y = self.frame.size.height - square.size.width;
+    CGFloat y = self.frame.size.height - square.size.height;
     
     
     switch (position) {
