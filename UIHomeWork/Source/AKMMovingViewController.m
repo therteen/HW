@@ -31,9 +31,10 @@
 #pragma mark Public
 
 - (IBAction)animationButton:(id)sender {
-    self.mainView.moving = !self.mainView.moving;
-    if (!self.mainView.animating) {
-        [self.mainView movingCyclicSquare];
+    AKMMovingView *view = self.mainView;
+    view.moving = !view.moving;
+    if (!view.animating) {
+        [view movingCyclicSquare];
     }
 }
 

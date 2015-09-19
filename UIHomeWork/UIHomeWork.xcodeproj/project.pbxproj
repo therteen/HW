@@ -11,7 +11,6 @@
 		71501AB91B9F6B6B00795AC4 /* UIHomeWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501AB81B9F6B6B00795AC4 /* UIHomeWorkTests.m */; };
 		71501AC81B9F772900795AC4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71501AC51B9F772900795AC4 /* LaunchScreen.xib */; };
 		71501AD01B9F7D9800795AC4 /* AKMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501ACF1B9F7D9800795AC4 /* AKMAppDelegate.m */; };
-		717897851BAA2D3100D8BF84 /* UIView+AKMViewOfClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 717897841BAA2D3100D8BF84 /* UIView+AKMViewOfClass.m */; };
 		7195FBB31BA77CE500D1E285 /* AKMMovingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7195FBB21BA77CE500D1E285 /* AKMMovingView.xib */; };
 		71B9EA261BA4DECB009E248A /* AKMMovingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */; };
 		71B9EA2A1BA4E077009E248A /* AKMMovingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9EA291BA4E077009E248A /* AKMMovingView.m */; };
@@ -37,8 +36,6 @@
 		71501AC51B9F772900795AC4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		71501ACE1B9F7D9800795AC4 /* AKMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMAppDelegate.h; sourceTree = "<group>"; };
 		71501ACF1B9F7D9800795AC4 /* AKMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMAppDelegate.m; sourceTree = "<group>"; };
-		717897831BAA2D3100D8BF84 /* UIView+AKMViewOfClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+AKMViewOfClass.h"; path = "UIView+AKMViewOfClass/UIView+AKMViewOfClass.h"; sourceTree = "<group>"; };
-		717897841BAA2D3100D8BF84 /* UIView+AKMViewOfClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+AKMViewOfClass.m"; path = "UIView+AKMViewOfClass/UIView+AKMViewOfClass.m"; sourceTree = "<group>"; };
 		7195FBB21BA77CE500D1E285 /* AKMMovingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKMMovingView.xib; sourceTree = "<group>"; };
 		71B9EA231BA4DECB009E248A /* AKMMovingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMMovingViewController.h; sourceTree = "<group>"; };
 		71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMMovingViewController.m; sourceTree = "<group>"; };
@@ -133,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				71501AD91B9F967B00795AC4 /* AKMMovingViewController */,
-				717897861BAA2D3E00D8BF84 /* UIView+AKMViewOfClass */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -148,15 +144,6 @@
 				7195FBB21BA77CE500D1E285 /* AKMMovingView.xib */,
 			);
 			name = AKMMovingViewController;
-			sourceTree = "<group>";
-		};
-		717897861BAA2D3E00D8BF84 /* UIView+AKMViewOfClass */ = {
-			isa = PBXGroup;
-			children = (
-				717897831BAA2D3100D8BF84 /* UIView+AKMViewOfClass.h */,
-				717897841BAA2D3100D8BF84 /* UIView+AKMViewOfClass.m */,
-			);
-			name = "UIView+AKMViewOfClass";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +249,6 @@
 				71B9EA2A1BA4E077009E248A /* AKMMovingView.m in Sources */,
 				71B9EA261BA4DECB009E248A /* AKMMovingViewController.m in Sources */,
 				71501A9F1B9F6B6A00795AC4 /* main.m in Sources */,
-				717897851BAA2D3100D8BF84 /* UIView+AKMViewOfClass.m in Sources */,
 				71501AD01B9F7D9800795AC4 /* AKMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

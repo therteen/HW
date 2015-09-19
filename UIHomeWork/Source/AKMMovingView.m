@@ -51,10 +51,11 @@ static const NSTimeInterval kAKMAnimationDelay = 0;
 
 - (CGRect)frameForSquarePosition:(AKMSquareViewPosition)position {
     CGRect square = self.squareView.frame;
+    CGRect view = self.frame;
     CGPoint point = CGPointZero;
     
-    CGFloat x = self.frame.size.width - square.size.width;
-    CGFloat y = self.frame.size.height - square.size.height;
+    CGFloat x = view.size.width - square.size.width;
+    CGFloat y = view.size.height - square.size.height;
     
     
     switch (position) {
