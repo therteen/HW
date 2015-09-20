@@ -31,19 +31,21 @@ static const NSTimeInterval kAKMAnimationDelay = 0;
                 animation:(BOOL)animated
                completion:(void (^)(void))completionHandler {
     
-    [UIView animateWithDuration:(kAKMAnimationDuration * animated)
+    NSTimeInterval duration = kAKMAnimationDuration;
+    if (!animated)  duration = 0;
+    [UIView animateWithDuration:duration
                           delay:kAKMAnimationDelay
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
-                         self.squareView.frame = [self frameForSquarePosition:position];
+                         UIView *square = self.squareView;
+                         square.frame = [self frameForSquarePosition:position];
                      }
                      completion:^(BOOL finished) {
                          _squarePosition = position;
                          if (completionHandler && finished) {
                              completionHandler();
                          }
-                     }
-     ];
+                     }];
 }
 
 #pragma mark -
@@ -84,7 +86,7 @@ static const NSTimeInterval kAKMAnimationDelay = 0;
      if (self.moving == YES) {
          self.animating = YES;
         AKMMovingView * __weak weakself = self;
-        [self setSquarePosition:arc4random_uniform(AKMSquareViewPositionCount)
+        [self setSquarePosition:((AKMSquareViewPositionCount + self.squarePosition + 1) % AKMSquareViewPositionCount)
                       animation:YES
                      completion:^{
                          weakself.animating = NO;

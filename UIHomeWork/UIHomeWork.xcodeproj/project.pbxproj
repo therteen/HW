@@ -12,6 +12,7 @@
 		71501AC81B9F772900795AC4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71501AC51B9F772900795AC4 /* LaunchScreen.xib */; };
 		71501AD01B9F7D9800795AC4 /* AKMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501ACF1B9F7D9800795AC4 /* AKMAppDelegate.m */; };
 		7195FBB31BA77CE500D1E285 /* AKMMovingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7195FBB21BA77CE500D1E285 /* AKMMovingView.xib */; };
+		71A1E69C1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A1E69B1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.m */; };
 		71B9EA261BA4DECB009E248A /* AKMMovingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */; };
 		71B9EA2A1BA4E077009E248A /* AKMMovingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9EA291BA4E077009E248A /* AKMMovingView.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,8 @@
 		71501ACE1B9F7D9800795AC4 /* AKMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMAppDelegate.h; sourceTree = "<group>"; };
 		71501ACF1B9F7D9800795AC4 /* AKMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMAppDelegate.m; sourceTree = "<group>"; };
 		7195FBB21BA77CE500D1E285 /* AKMMovingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKMMovingView.xib; sourceTree = "<group>"; };
+		71A1E69A1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWindow+AKMExtensions.h"; path = "Categories/UIWindow+AKMExtensions/UIWindow+AKMExtensions.h"; sourceTree = "<group>"; };
+		71A1E69B1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+AKMExtensions.m"; path = "Categories/UIWindow+AKMExtensions/UIWindow+AKMExtensions.m"; sourceTree = "<group>"; };
 		71B9EA231BA4DECB009E248A /* AKMMovingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMMovingViewController.h; sourceTree = "<group>"; };
 		71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMMovingViewController.m; sourceTree = "<group>"; };
 		71B9EA281BA4E077009E248A /* AKMMovingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMMovingView.h; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				71501AD91B9F967B00795AC4 /* AKMMovingViewController */,
+				71A1E69D1BAF353400C6B3C9 /* UIWindow+AKMExtensions */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -144,6 +148,15 @@
 				7195FBB21BA77CE500D1E285 /* AKMMovingView.xib */,
 			);
 			name = AKMMovingViewController;
+			sourceTree = "<group>";
+		};
+		71A1E69D1BAF353400C6B3C9 /* UIWindow+AKMExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				71A1E69A1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.h */,
+				71A1E69B1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.m */,
+			);
+			name = "UIWindow+AKMExtensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +261,7 @@
 			files = (
 				71B9EA2A1BA4E077009E248A /* AKMMovingView.m in Sources */,
 				71B9EA261BA4DECB009E248A /* AKMMovingViewController.m in Sources */,
+				71A1E69C1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.m in Sources */,
 				71501A9F1B9F6B6A00795AC4 /* main.m in Sources */,
 				71501AD01B9F7D9800795AC4 /* AKMAppDelegate.m in Sources */,
 			);
