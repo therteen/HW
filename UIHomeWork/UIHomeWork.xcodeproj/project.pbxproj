@@ -44,6 +44,7 @@
 		71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMMovingViewController.m; sourceTree = "<group>"; };
 		71B9EA281BA4E077009E248A /* AKMMovingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMMovingView.h; sourceTree = "<group>"; };
 		71B9EA291BA4E077009E248A /* AKMMovingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMMovingView.m; sourceTree = "<group>"; };
+		71EC0A6C1BB0B228002C417D /* AKMMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,7 @@
 			children = (
 				71501AD91B9F967B00795AC4 /* AKMMovingViewController */,
 				71A1E69D1BAF353400C6B3C9 /* UIWindow+AKMExtensions */,
+				71EC0A6C1BB0B228002C417D /* AKMMacros.h */,
 			);
 			path = Source;
 			sourceTree = "<group>";

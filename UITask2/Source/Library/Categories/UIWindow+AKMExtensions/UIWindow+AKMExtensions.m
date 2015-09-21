@@ -1,0 +1,17 @@
+//
+//  UIWindow+AKMExtensions.m
+//  UIHomeWork
+//
+//  Created by Anton Kostenko on 20.09.15.
+//  Copyright (c) 2015 Anton Kostenko. All rights reserved.
+//
+
+#import "UIWindow+AKMExtensions.h"
+
+@implementation UIWindow (UIWindow_AKMExtensions)
+
++ (instancetype)window {
+    return [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+}
+
+@end

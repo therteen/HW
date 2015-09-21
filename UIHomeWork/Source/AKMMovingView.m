@@ -7,6 +7,7 @@
 //
 
 #import "AKMMovingView.h"
+#import "AKMMacros.h"
 
 static const NSTimeInterval kAKMAnimationDuration = 1;
 static const NSTimeInterval kAKMAnimationDelay = 0;
@@ -83,14 +84,14 @@ static const NSTimeInterval kAKMAnimationDelay = 0;
 }
 
 - (void)movingCyclicSquare {
-     if (self.moving == YES) {
-         self.animating = YES;
-        AKMMovingView * __weak weakself = self;
+    if (self.moving == YES) {
+        self.animating = YES;
+        AKMweakify(self);
         [self setSquarePosition:((AKMSquareViewPositionCount + self.squarePosition + 1) % AKMSquareViewPositionCount)
                       animation:YES
                      completion:^{
-                         weakself.animating = NO;
-                         [weakself movingCyclicSquare];
+                         __AKMWeakself.animating = NO;
+                         [__AKMWeakself movingCyclicSquare];
                      }];
     }
 }
