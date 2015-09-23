@@ -7,18 +7,23 @@
 //
 
 #import "AKMMovingView.h"
+
 #import "AKMMacros.h"
 
 static const NSTimeInterval kAKMAnimationDuration = 1;
 static const NSTimeInterval kAKMAnimationDelay = 0;
 
 @interface AKMMovingView ()
+@property (nonatomic, assign)   BOOL    animating;
 
 - (CGRect)frameForSquarePosition:(AKMSquareViewPosition)position;
 
 @end
 
 @implementation AKMMovingView
+
+#pragma mark -
+#pragma mark Setters
 
 - (void)setSquarePosition:(AKMSquareViewPosition)position {
     [self setSquarePosition:position animation:NO];
@@ -32,9 +37,7 @@ static const NSTimeInterval kAKMAnimationDelay = 0;
                 animation:(BOOL)animated
                completion:(void (^)(void))completionHandler {
     
-    NSTimeInterval duration = kAKMAnimationDuration;
-    if (!animated)  duration = 0;
-    [UIView animateWithDuration:duration
+    [UIView animateWithDuration:animated ? kAKMAnimationDuration : 0
                           delay:kAKMAnimationDelay
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
@@ -48,6 +51,14 @@ static const NSTimeInterval kAKMAnimationDelay = 0;
                          }
                      }];
 }
+
+- (void)setMoving:(BOOL)moving {
+    _moving = moving;
+    if (!self.animating) {
+        [self movingCyclicSquare];
+    }
+}
+
 
 #pragma mark -
 #pragma mark Private
@@ -90,8 +101,9 @@ static const NSTimeInterval kAKMAnimationDelay = 0;
         [self setSquarePosition:((AKMSquareViewPositionCount + self.squarePosition + 1) % AKMSquareViewPositionCount)
                       animation:YES
                      completion:^{
-                         __AKMWeakself.animating = NO;
-                         [__AKMWeakself movingCyclicSquare];
+                         AKMstrongify(self);
+                         self.animating = NO;
+                         [self movingCyclicSquare];
                      }];
     }
 }

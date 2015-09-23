@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIWindow (UIWindow_AKMExtensions)
+@interface UIWindow (AKMExtensions)
 + (instancetype)window;
 
 @end

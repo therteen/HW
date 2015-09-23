@@ -33,9 +33,6 @@
 - (IBAction)animationButton:(id)sender {
     AKMMovingView *view = self.mainView;
     view.moving = !view.moving;
-    if (!view.animating) {
-        [view movingCyclicSquare];
-    }
 }
 
 #pragma mark -
@@ -47,12 +44,10 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end

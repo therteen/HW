@@ -12,6 +12,7 @@
 
 @interface AKMMovingViewController : UIViewController
 - (IBAction)animationButton:(id)sender;
+
 @property (nonatomic, readonly) AKMMovingView *mainView;
 
 @end

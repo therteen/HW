@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Anton Kostenko. All rights reserved.
 //
 
-#import "UIWindow+AKMExtensions.h"
+#import "UINib+AKMExtensions.h"
 
-@implementation UIWindow (UIWindow_AKMExtensions)
+@implementation UIWindow (AKMExtensions)
 
 + (instancetype)window {
     return [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
