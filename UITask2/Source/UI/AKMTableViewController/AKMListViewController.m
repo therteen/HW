@@ -6,13 +6,15 @@
 //  Copyright (c) 2015 Anton Kostenko. All rights reserved.
 //
 
-#import "AKMTableViewController.h"
+#import "AKMListViewController.h"
 
-@interface AKMTableViewController ()
+#import "AKMListCell.h"
+
+@interface AKMListViewController ()
 
 @end
 
-@implementation AKMTableViewController
+@implementation AKMListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,22 +27,30 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    NSString *cellclass = NSStringFromClass([AKMListCell class]);
+    AKMListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellclass forIndexPath:indexPath];
+    if (!cell) {
+        UINib *nib = [UINib nibWithNibName:cellclass bundle:nil];
+        NSArray *cells = [nib instantiateWithOwner:nil options:nil];
+        
+        cell = [cells firstObject];
+        cell.item = self.item;
+        
+    }
     
-    // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

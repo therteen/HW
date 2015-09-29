@@ -6,7 +6,9 @@
 //  Copyright (c) 2015 Anton Kostenko. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "AKMAppDelegate.h"
+
+#import "AKMListViewController.h"
 
 #import "UIWindow+AKMExtensions.h"
 
@@ -20,6 +22,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIWindow *window = [UIWindow window];
     self.window = window;
+    
+    window.rootViewController = [AKMListViewController new];
+    [window makeKeyAndVisible];
     
     return YES;
 }

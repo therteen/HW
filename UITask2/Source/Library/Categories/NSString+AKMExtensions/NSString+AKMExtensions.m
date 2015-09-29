@@ -15,10 +15,10 @@
 
 NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
-+ (NSString *)randomStringWithLength:(int) len {
-    NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
-    for (int i=0; i<len; i++) {
-        [randomString appendFormat: @"%C", [letters characterAtIndex: arc4random_uniform(((uint32_t)[letters length]))]];
++ (NSString *)randomStringWithLength:(int)len {
+    NSMutableString *randomString = [NSMutableString stringWithCapacity:len];
+    for (int i = 0; i < len; i++) {
+        [randomString appendFormat: @"%C", [letters characterAtIndex:arc4random_uniform(((uint32_t)[letters length]))]];
     }
     
     return randomString;

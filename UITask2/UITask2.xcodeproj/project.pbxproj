@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		71389B1E1BB046D90095313B /* UIWindow+AKMExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 71389B1D1BB046D90095313B /* UIWindow+AKMExtensions.m */; };
 		71389B211BB0493C0095313B /* NSString+AKMExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 71389B201BB0493C0095313B /* NSString+AKMExtensions.m */; };
+		713CA7771BB973EC007CE980 /* AKMListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CA76F1BB973EC007CE980 /* AKMListView.m */; };
+		713CA7781BB973EC007CE980 /* AKMListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CA7711BB973EC007CE980 /* AKMListViewController.m */; };
+		713CA7791BB973EC007CE980 /* AKMListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713CA7721BB973EC007CE980 /* AKMListViewController.xib */; };
+		713CA77A1BB973EC007CE980 /* AKMListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CA7751BB973EC007CE980 /* AKMListCell.m */; };
+		713CA77B1BB973EC007CE980 /* AKMListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713CA7761BB973EC007CE980 /* AKMListCell.xib */; };
+		713CA77F1BB977F3007CE980 /* AKMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CA77E1BB977F3007CE980 /* AKMTableViewCell.m */; };
+		713CA7841BB98689007CE980 /* AKMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CA7831BB98689007CE980 /* AKMItem.m */; };
+		713CA7881BB986C4007CE980 /* AKMItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CA7871BB986C4007CE980 /* AKMItems.m */; };
 		71A4B5FC1BB03F4A003DB838 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A4B5FB1BB03F4A003DB838 /* main.m */; };
-		71A4B5FF1BB03F4A003DB838 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A4B5FE1BB03F4A003DB838 /* AppDelegate.m */; };
+		71A4B5FF1BB03F4A003DB838 /* AKMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A4B5FE1BB03F4A003DB838 /* AKMAppDelegate.m */; };
 		71A4B6071BB03F4A003DB838 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71A4B6061BB03F4A003DB838 /* Images.xcassets */; };
 		71A4B6161BB03F4A003DB838 /* UITask2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A4B6151BB03F4A003DB838 /* UITask2Tests.m */; };
-		71EC0A6A1BB0AA93002C417D /* AKMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC0A681BB0AA93002C417D /* AKMTableViewController.m */; };
-		71EC0A6B1BB0AA93002C417D /* AKMTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71EC0A691BB0AA93002C417D /* AKMTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,18 +38,29 @@
 		71389B1D1BB046D90095313B /* UIWindow+AKMExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+AKMExtensions.m"; sourceTree = "<group>"; };
 		71389B1F1BB0493C0095313B /* NSString+AKMExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+AKMExtensions.h"; path = "Source/Library/Categories/NSString+AKMExtensions/NSString+AKMExtensions.h"; sourceTree = "<group>"; };
 		71389B201BB0493C0095313B /* NSString+AKMExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+AKMExtensions.m"; path = "Source/Library/Categories/NSString+AKMExtensions/NSString+AKMExtensions.m"; sourceTree = "<group>"; };
+		713CA76E1BB973EC007CE980 /* AKMListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMListView.h; sourceTree = "<group>"; };
+		713CA76F1BB973EC007CE980 /* AKMListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMListView.m; sourceTree = "<group>"; };
+		713CA7701BB973EC007CE980 /* AKMListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMListViewController.h; sourceTree = "<group>"; };
+		713CA7711BB973EC007CE980 /* AKMListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMListViewController.m; sourceTree = "<group>"; };
+		713CA7721BB973EC007CE980 /* AKMListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKMListViewController.xib; sourceTree = "<group>"; };
+		713CA7741BB973EC007CE980 /* AKMListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMListCell.h; sourceTree = "<group>"; };
+		713CA7751BB973EC007CE980 /* AKMListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMListCell.m; sourceTree = "<group>"; };
+		713CA7761BB973EC007CE980 /* AKMListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKMListCell.xib; sourceTree = "<group>"; };
+		713CA77D1BB977F3007CE980 /* AKMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMTableViewCell.h; path = AKMTableViewCell/AKMTableViewCell.h; sourceTree = "<group>"; };
+		713CA77E1BB977F3007CE980 /* AKMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMTableViewCell.m; path = AKMTableViewCell/AKMTableViewCell.m; sourceTree = "<group>"; };
+		713CA7821BB98689007CE980 /* AKMItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMItem.h; path = AKMItem/AKMItem.h; sourceTree = "<group>"; };
+		713CA7831BB98689007CE980 /* AKMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMItem.m; path = AKMItem/AKMItem.m; sourceTree = "<group>"; };
+		713CA7861BB986C4007CE980 /* AKMItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMItems.h; path = AKMItems/AKMItems.h; sourceTree = "<group>"; };
+		713CA7871BB986C4007CE980 /* AKMItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMItems.m; path = AKMItems/AKMItems.m; sourceTree = "<group>"; };
 		71A4B5F61BB03F4A003DB838 /* UITask2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITask2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A4B5FA1BB03F4A003DB838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71A4B5FB1BB03F4A003DB838 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		71A4B5FD1BB03F4A003DB838 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		71A4B5FE1BB03F4A003DB838 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		71A4B5FD1BB03F4A003DB838 /* AKMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKMAppDelegate.h; sourceTree = "<group>"; };
+		71A4B5FE1BB03F4A003DB838 /* AKMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AKMAppDelegate.m; sourceTree = "<group>"; };
 		71A4B6061BB03F4A003DB838 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		71A4B60F1BB03F4A003DB838 /* UITask2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITask2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A4B6141BB03F4A003DB838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71A4B6151BB03F4A003DB838 /* UITask2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITask2Tests.m; sourceTree = "<group>"; };
-		71EC0A671BB0AA93002C417D /* AKMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMTableViewController.h; path = Source/AKMTableViewController/AKMTableViewController.h; sourceTree = "<group>"; };
-		71EC0A681BB0AA93002C417D /* AKMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMTableViewController.m; path = Source/AKMTableViewController/AKMTableViewController.m; sourceTree = "<group>"; };
-		71EC0A691BB0AA93002C417D /* AKMTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AKMTableViewController.xib; path = Source/AKMTableViewController/AKMTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +84,9 @@
 		71389B181BB0464A0095313B /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				713CA7811BB985E2007CE980 /* Models */,
 				71389B191BB046700095313B /* Library */,
-				71EC0A671BB0AA93002C417D /* AKMTableViewController.h */,
-				71EC0A681BB0AA93002C417D /* AKMTableViewController.m */,
-				71EC0A691BB0AA93002C417D /* AKMTableViewController.xib */,
+				71EBAE7D1BB72D2700E63807 /* UI */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -78,6 +94,7 @@
 		71389B191BB046700095313B /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				713CA77C1BB977A7007CE980 /* Classes */,
 				71389B1A1BB0467D0095313B /* Categories */,
 			);
 			name = Library;
@@ -111,6 +128,76 @@
 			name = "NSString+AKMExtensions";
 			sourceTree = "<group>";
 		};
+		713CA76D1BB973EC007CE980 /* AKMTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				713CA76E1BB973EC007CE980 /* AKMListView.h */,
+				713CA76F1BB973EC007CE980 /* AKMListView.m */,
+				713CA7701BB973EC007CE980 /* AKMListViewController.h */,
+				713CA7711BB973EC007CE980 /* AKMListViewController.m */,
+				713CA7721BB973EC007CE980 /* AKMListViewController.xib */,
+				713CA7731BB973EC007CE980 /* Views */,
+			);
+			name = AKMTableViewController;
+			path = Source/UI/AKMTableViewController;
+			sourceTree = "<group>";
+		};
+		713CA7731BB973EC007CE980 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				713CA7741BB973EC007CE980 /* AKMListCell.h */,
+				713CA7751BB973EC007CE980 /* AKMListCell.m */,
+				713CA7761BB973EC007CE980 /* AKMListCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		713CA77C1BB977A7007CE980 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				713CA7801BB97801007CE980 /* AKMTableViewCell */,
+			);
+			name = Classes;
+			path = Source/Library/Classes;
+			sourceTree = "<group>";
+		};
+		713CA7801BB97801007CE980 /* AKMTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				713CA77D1BB977F3007CE980 /* AKMTableViewCell.h */,
+				713CA77E1BB977F3007CE980 /* AKMTableViewCell.m */,
+			);
+			name = AKMTableViewCell;
+			sourceTree = "<group>";
+		};
+		713CA7811BB985E2007CE980 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				713CA7851BB9868D007CE980 /* AKMItem */,
+				713CA7891BB986C8007CE980 /* AKMItems */,
+			);
+			name = Models;
+			path = Source/Models;
+			sourceTree = "<group>";
+		};
+		713CA7851BB9868D007CE980 /* AKMItem */ = {
+			isa = PBXGroup;
+			children = (
+				713CA7821BB98689007CE980 /* AKMItem.h */,
+				713CA7831BB98689007CE980 /* AKMItem.m */,
+			);
+			name = AKMItem;
+			sourceTree = "<group>";
+		};
+		713CA7891BB986C8007CE980 /* AKMItems */ = {
+			isa = PBXGroup;
+			children = (
+				713CA7861BB986C4007CE980 /* AKMItems.h */,
+				713CA7871BB986C4007CE980 /* AKMItems.m */,
+			);
+			name = AKMItems;
+			sourceTree = "<group>";
+		};
 		71A4B5ED1BB03F4A003DB838 = {
 			isa = PBXGroup;
 			children = (
@@ -133,8 +220,8 @@
 		71A4B5F81BB03F4A003DB838 /* UITask2 */ = {
 			isa = PBXGroup;
 			children = (
-				71A4B5FD1BB03F4A003DB838 /* AppDelegate.h */,
-				71A4B5FE1BB03F4A003DB838 /* AppDelegate.m */,
+				71A4B5FD1BB03F4A003DB838 /* AKMAppDelegate.h */,
+				71A4B5FE1BB03F4A003DB838 /* AKMAppDelegate.m */,
 				71A4B6061BB03F4A003DB838 /* Images.xcassets */,
 				71A4B5F91BB03F4A003DB838 /* Supporting Files */,
 			);
@@ -165,6 +252,14 @@
 				71A4B6141BB03F4A003DB838 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71EBAE7D1BB72D2700E63807 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				713CA76D1BB973EC007CE980 /* AKMTableViewController */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +342,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				713CA7791BB973EC007CE980 /* AKMListViewController.xib in Resources */,
+				713CA77B1BB973EC007CE980 /* AKMListCell.xib in Resources */,
 				71A4B6071BB03F4A003DB838 /* Images.xcassets in Resources */,
-				71EC0A6B1BB0AA93002C417D /* AKMTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,10 +362,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71A4B5FF1BB03F4A003DB838 /* AppDelegate.m in Sources */,
-				71EC0A6A1BB0AA93002C417D /* AKMTableViewController.m in Sources */,
+				713CA7881BB986C4007CE980 /* AKMItems.m in Sources */,
+				713CA7771BB973EC007CE980 /* AKMListView.m in Sources */,
+				713CA77F1BB977F3007CE980 /* AKMTableViewCell.m in Sources */,
+				71A4B5FF1BB03F4A003DB838 /* AKMAppDelegate.m in Sources */,
 				71389B1E1BB046D90095313B /* UIWindow+AKMExtensions.m in Sources */,
 				71A4B5FC1BB03F4A003DB838 /* main.m in Sources */,
+				713CA77A1BB973EC007CE980 /* AKMListCell.m in Sources */,
+				713CA7781BB973EC007CE980 /* AKMListViewController.m in Sources */,
+				713CA7841BB98689007CE980 /* AKMItem.m in Sources */,
 				71389B211BB0493C0095313B /* NSString+AKMExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

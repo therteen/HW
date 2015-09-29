@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+#import "AKMAppDelegate.h"
 
 //Задание 2.
 //Написать UI приложение в один вид:
