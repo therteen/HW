@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (NSString_AKMExtensions)
+@interface NSString (AKMExtensions)
 
 + (NSString *)randomStringWithLength:(int) len;
 

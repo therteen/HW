@@ -28,6 +28,5 @@ typedef NS_ENUM(NSUInteger, AKMSquareViewPosition) {
 - (void)setSquarePosition:(AKMSquareViewPosition)position
                 animation:(BOOL)animated
                completion:(void (^)(void))completionHandler;
-- (void)movingCyclicSquare;
 
 @end

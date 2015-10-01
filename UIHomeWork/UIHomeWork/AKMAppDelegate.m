@@ -8,7 +8,9 @@
 
 #import "AKMAppDelegate.h"
 #import "AKMMovingViewController.h"
+
 #import "UIWindow+AKMExtensions.h"
+#import "UIViewController+AKMExtensions.h"
 
 @interface AKMAppDelegate ()
 
@@ -21,7 +23,7 @@
     UIWindow *window = [UIWindow window];
     self.window = window;
     
-    window.rootViewController = [AKMMovingViewController new];
+    window.rootViewController = [AKMMovingViewController controller];
     [window makeKeyAndVisible];
     
     return YES;

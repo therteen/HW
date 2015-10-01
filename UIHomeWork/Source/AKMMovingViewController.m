@@ -7,25 +7,30 @@
 //
 
 #import "AKMMovingViewController.h"
+#import "AKMMovingView.h"
 
-@interface AKMMovingViewController ()
+#import "AKMMacros.h"
 
-@end
+AKMViewControllerMainViewProperty(AKMMovingViewController, mainView, AKMMovingView)
 
+//@interface AKMMovingViewController ()
+//
+//@end
+//
 @implementation AKMMovingViewController
-
-@dynamic mainView;
+//
+//@dynamic mainView;
 
 #pragma mark -
 #pragma mark Accessors
 
-- (AKMMovingView *)mainView {
-    if ([self isViewLoaded] && [self.view isKindOfClass:[AKMMovingView class]]) {
-        return (AKMMovingView *)self.view;
-    }
-    
-    return nil;
-}
+//- (AKMMovingView *)mainView {
+//    if ([self isViewLoaded] && [self.view isKindOfClass:[AKMMovingView class]]) {
+//        return (AKMMovingView *)self.view;
+//    }
+//    
+//    return nil;
+//}
 
 #pragma mark -
 #pragma mark Public

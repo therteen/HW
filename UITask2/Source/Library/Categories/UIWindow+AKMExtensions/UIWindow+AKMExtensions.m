@@ -8,7 +8,7 @@
 
 #import "UIWindow+AKMExtensions.h"
 
-@implementation UIWindow (UIWindow_AKMExtensions)
+@implementation UIWindow (AKMExtensions)
 
 + (instancetype)window {
     return [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

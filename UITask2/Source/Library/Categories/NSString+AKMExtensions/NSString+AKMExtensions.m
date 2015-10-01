@@ -8,21 +8,20 @@
 
 #import "NSString+AKMExtensions.h"
 
-@implementation NSString (NSString_AKMExtensions)
+static const NSString *AKMletters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+@implementation NSString (AKMExtensions)
 
 #pragma mark -
 #pragma mark Class Methods
 
-NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
 + (NSString *)randomStringWithLength:(int)len {
     NSMutableString *randomString = [NSMutableString stringWithCapacity:len];
     for (int i = 0; i < len; i++) {
-        [randomString appendFormat: @"%C", [letters characterAtIndex:arc4random_uniform(((uint32_t)[letters length]))]];
+        [randomString appendFormat: @"%C", [AKMletters characterAtIndex:arc4random_uniform(((uint32_t)[AKMletters length]))]];
     }
     
     return randomString;
 }
-
 
 @end

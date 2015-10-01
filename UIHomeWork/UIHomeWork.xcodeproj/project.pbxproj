@@ -11,9 +11,9 @@
 		71501AB91B9F6B6B00795AC4 /* UIHomeWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501AB81B9F6B6B00795AC4 /* UIHomeWorkTests.m */; };
 		71501AC81B9F772900795AC4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71501AC51B9F772900795AC4 /* LaunchScreen.xib */; };
 		71501AD01B9F7D9800795AC4 /* AKMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71501ACF1B9F7D9800795AC4 /* AKMAppDelegate.m */; };
+		7158893F1BBD15C1001768E3 /* UIViewController+AKMExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7158893E1BBD15C1001768E3 /* UIViewController+AKMExtensions.m */; };
 		7195FBB31BA77CE500D1E285 /* AKMMovingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7195FBB21BA77CE500D1E285 /* AKMMovingView.xib */; };
 		71A1E69C1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A1E69B1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.m */; };
-		71ABBB881BB346FF001E6815 /* UINib+AKMExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 71ABBB871BB346FF001E6815 /* UINib+AKMExtensions.m */; };
 		71B9EA261BA4DECB009E248A /* AKMMovingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */; };
 		71B9EA2A1BA4E077009E248A /* AKMMovingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B9EA291BA4E077009E248A /* AKMMovingView.m */; };
 /* End PBXBuildFile section */
@@ -38,11 +38,11 @@
 		71501AC51B9F772900795AC4 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		71501ACE1B9F7D9800795AC4 /* AKMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMAppDelegate.h; sourceTree = "<group>"; };
 		71501ACF1B9F7D9800795AC4 /* AKMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMAppDelegate.m; sourceTree = "<group>"; };
+		7158893D1BBD15C1001768E3 /* UIViewController+AKMExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AKMExtensions.h"; sourceTree = "<group>"; };
+		7158893E1BBD15C1001768E3 /* UIViewController+AKMExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AKMExtensions.m"; sourceTree = "<group>"; };
 		7195FBB21BA77CE500D1E285 /* AKMMovingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKMMovingView.xib; sourceTree = "<group>"; };
 		71A1E69A1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIWindow+AKMExtensions.h"; path = "Categories/UIWindow+AKMExtensions/UIWindow+AKMExtensions.h"; sourceTree = "<group>"; };
 		71A1E69B1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIWindow+AKMExtensions.m"; path = "Categories/UIWindow+AKMExtensions/UIWindow+AKMExtensions.m"; sourceTree = "<group>"; };
-		71ABBB861BB346FF001E6815 /* UINib+AKMExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINib+AKMExtensions.h"; path = "Categories/UINib+AKMExtensions/UINib+AKMExtensions.h"; sourceTree = "<group>"; };
-		71ABBB871BB346FF001E6815 /* UINib+AKMExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINib+AKMExtensions.m"; path = "Categories/UINib+AKMExtensions/UINib+AKMExtensions.m"; sourceTree = "<group>"; };
 		71B9EA231BA4DECB009E248A /* AKMMovingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMMovingViewController.h; sourceTree = "<group>"; };
 		71B9EA241BA4DECB009E248A /* AKMMovingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMMovingViewController.m; sourceTree = "<group>"; };
 		71B9EA281BA4E077009E248A /* AKMMovingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMMovingView.h; sourceTree = "<group>"; };
@@ -155,6 +155,16 @@
 			name = AKMMovingViewController;
 			sourceTree = "<group>";
 		};
+		7158893C1BBD15C1001768E3 /* UIViewController+AKMExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				7158893D1BBD15C1001768E3 /* UIViewController+AKMExtensions.h */,
+				7158893E1BBD15C1001768E3 /* UIViewController+AKMExtensions.m */,
+			);
+			name = "UIViewController+AKMExtensions";
+			path = "Categories/UIViewController+AKMExtensions";
+			sourceTree = "<group>";
+		};
 		718B54B91BB1F12000C409E6 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +176,7 @@
 		718B54BA1BB1F12E00C409E6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				71A6D2BC1BB2F19200F6A461 /* UINib+AKMExtensions */,
+				7158893C1BBD15C1001768E3 /* UIViewController+AKMExtensions */,
 				71A1E69D1BAF353400C6B3C9 /* UIWindow+AKMExtensions */,
 			);
 			name = Categories;
@@ -179,15 +189,6 @@
 				71A1E69B1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.m */,
 			);
 			name = "UIWindow+AKMExtensions";
-			sourceTree = "<group>";
-		};
-		71A6D2BC1BB2F19200F6A461 /* UINib+AKMExtensions */ = {
-			isa = PBXGroup;
-			children = (
-				71ABBB861BB346FF001E6815 /* UINib+AKMExtensions.h */,
-				71ABBB871BB346FF001E6815 /* UINib+AKMExtensions.m */,
-			);
-			name = "UINib+AKMExtensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,10 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7158893F1BBD15C1001768E3 /* UIViewController+AKMExtensions.m in Sources */,
 				71B9EA2A1BA4E077009E248A /* AKMMovingView.m in Sources */,
 				71B9EA261BA4DECB009E248A /* AKMMovingViewController.m in Sources */,
 				71A1E69C1BAF352D00C6B3C9 /* UIWindow+AKMExtensions.m in Sources */,
-				71ABBB881BB346FF001E6815 /* UINib+AKMExtensions.m in Sources */,
 				71501A9F1B9F6B6A00795AC4 /* main.m in Sources */,
 				71501AD01B9F7D9800795AC4 /* AKMAppDelegate.m in Sources */,
 			);

@@ -10,8 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AKMItem : NSObject
-
-@property (nonatomic,copy)  NSString    *itemName;
-@property (nonatomic,copy)  UIImage     *itemImage;
+@property (nonatomic,copy)  NSString    *name;
+@property (nonatomic,copy)  UIImage     *image;
 
 @end

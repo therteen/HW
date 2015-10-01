@@ -15,14 +15,14 @@ static const NSString *kAKMItemImage = @"image";
 
 @implementation AKMItem
 
-@dynamic itemImage;
+@dynamic image;
 
 #pragma mark -
 #pragma mark Initialization and deallocation
 
 - (instancetype)init {
     self = [super init];
-    self.itemName = [NSString randomStringWithLength:kAKMItemNameLenght];
+    self.name = [NSString randomStringWithLength:kAKMItemNameLenght];
     
     return self;
 }
@@ -30,7 +30,7 @@ static const NSString *kAKMItemImage = @"image";
 #pragma mark -
 #pragma mark Initialization and deallocation
 
-- (UIImage *)itemImage {
+- (UIImage *)image {
    return [UIImage imageNamed:kAKMItemImage];
 }
 

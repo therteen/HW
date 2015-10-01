@@ -17,6 +17,7 @@ static const NSTimeInterval kAKMAnimationDelay = 0;
 @property (nonatomic, assign)   BOOL    animating;
 
 - (CGRect)frameForSquarePosition:(AKMSquareViewPosition)position;
+- (void)movingCyclicSquare;
 
 @end
 
@@ -68,8 +69,8 @@ static const NSTimeInterval kAKMAnimationDelay = 0;
     CGRect view = self.frame;
     CGPoint point = CGPointZero;
     
-    CGFloat x = view.size.width - square.size.width;
-    CGFloat y = view.size.height - square.size.height;
+    CGFloat x =  CGRectGetMaxX(view) - CGRectGetMaxX(square);
+    CGFloat y = CGRectGetMaxY(view) - CGRectGetMaxY(square);
     
     
     switch (position) {
@@ -98,7 +99,7 @@ static const NSTimeInterval kAKMAnimationDelay = 0;
     if (self.moving == YES) {
         self.animating = YES;
         AKMweakify(self);
-        [self setSquarePosition:((AKMSquareViewPositionCount + self.squarePosition + 1) % AKMSquareViewPositionCount)
+        [self setSquarePosition:((self.squarePosition + 1) % AKMSquareViewPositionCount)
                       animation:YES
                      completion:^{
                          AKMstrongify(self);

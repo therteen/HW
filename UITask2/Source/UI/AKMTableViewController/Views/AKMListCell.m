@@ -7,7 +7,6 @@
 //
 
 #import "AKMListCell.h"
-
 #import "AKMItem.h"
 
 @implementation AKMListCell
@@ -20,8 +19,8 @@
 }
 
 - (void)fillWithModel:(AKMItem *)item {
-    self.item.itemName = item.itemName;
-    self.item.itemImage = item.itemImage;
+    self.item.name = item.name;
+    self.item.image = item.image;
 }
 
 @end

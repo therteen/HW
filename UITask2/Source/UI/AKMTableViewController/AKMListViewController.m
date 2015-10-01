@@ -7,7 +7,6 @@
 //
 
 #import "AKMListViewController.h"
-
 #import "AKMListCell.h"
 
 @interface AKMListViewController ()
@@ -44,9 +43,7 @@
         
         cell = [cells firstObject];
         cell.item = self.item;
-        
     }
-    
     
     return cell;
 }
