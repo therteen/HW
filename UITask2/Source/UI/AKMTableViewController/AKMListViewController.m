@@ -8,6 +8,8 @@
 
 #import "AKMListViewController.h"
 #import "AKMListCell.h"
+#import "AKMItem.h"
+#import "AKMListView.h"
 
 @interface AKMListViewController ()
 
@@ -17,12 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.item = [[AKMItem alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark -
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -30,9 +34,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return 10;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellclass = NSStringFromClass([AKMListCell class]);

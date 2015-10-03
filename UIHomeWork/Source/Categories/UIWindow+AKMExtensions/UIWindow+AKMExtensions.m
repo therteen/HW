@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Anton Kostenko. All rights reserved.
 //
 
-#import "UINib+AKMExtensions.h"
+#import "UIWindow+AKMExtensions.h"
 
 @implementation UIWindow (AKMExtensions)
 

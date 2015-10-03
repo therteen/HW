@@ -19,8 +19,8 @@
 }
 
 - (void)fillWithModel:(AKMItem *)item {
-    self.item.name = item.name;
-    self.item.image = item.image;
+    self.itemLabel.text = item.name;
+    self.itemImage.image = item.image;
 }
 
 @end

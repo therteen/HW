@@ -11,6 +11,7 @@
 #import "AKMListViewController.h"
 
 #import "UIWindow+AKMExtensions.h"
+#import "UIViewController+AKMExtensions.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +24,7 @@
     UIWindow *window = [UIWindow window];
     self.window = window;
     
-    window.rootViewController = [AKMListViewController new];
+    window.rootViewController = [AKMListViewController controller];
     [window makeKeyAndVisible];
     
     return YES;

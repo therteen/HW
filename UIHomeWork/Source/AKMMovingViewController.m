@@ -13,24 +13,7 @@
 
 AKMViewControllerMainViewProperty(AKMMovingViewController, mainView, AKMMovingView)
 
-//@interface AKMMovingViewController ()
-//
-//@end
-//
 @implementation AKMMovingViewController
-//
-//@dynamic mainView;
-
-#pragma mark -
-#pragma mark Accessors
-
-//- (AKMMovingView *)mainView {
-//    if ([self isViewLoaded] && [self.view isKindOfClass:[AKMMovingView class]]) {
-//        return (AKMMovingView *)self.view;
-//    }
-//    
-//    return nil;
-//}
 
 #pragma mark -
 #pragma mark Public

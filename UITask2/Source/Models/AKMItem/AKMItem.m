@@ -28,7 +28,7 @@ static const NSString *kAKMItemImage = @"image";
 }
 
 #pragma mark -
-#pragma mark Initialization and deallocation
+#pragma mark Accessors
 
 - (UIImage *)image {
    return [UIImage imageNamed:kAKMItemImage];

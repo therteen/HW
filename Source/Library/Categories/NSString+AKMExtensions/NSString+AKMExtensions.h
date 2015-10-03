@@ -12,5 +12,4 @@
 
 + (NSString *)randomStringWithLength:(int) len;
 
-
 @end
