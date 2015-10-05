@@ -11,7 +11,7 @@
 #import "NSString+AKMExtensions.h"
 
 static const int kAKMItemNameLenght = 10;
-static const NSString *kAKMItemImage = @"image";
+static const NSString *kAKMItemImage = @"cat";
 
 @implementation AKMItem
 
@@ -22,7 +22,9 @@ static const NSString *kAKMItemImage = @"image";
 
 - (instancetype)init {
     self = [super init];
-    self.name = [NSString randomStringWithLength:kAKMItemNameLenght];
+    if (self) {
+        _name = [NSString randomStringWithLength:kAKMItemNameLenght];
+    }
     
     return self;
 }
@@ -31,7 +33,8 @@ static const NSString *kAKMItemImage = @"image";
 #pragma mark Accessors
 
 - (UIImage *)image {
-   return [UIImage imageNamed:kAKMItemImage];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"cat" ofType:@"jpg"];
+   return [UIImage imageWithContentsOfFile:path];
 }
 
 @end

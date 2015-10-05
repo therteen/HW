@@ -8,6 +8,27 @@
 
 #import "AKMItems.h"
 
+#import "AKMItem.h"
+
 @implementation AKMItems
+
+#pragma mark -
+#pragma mark Initialization and deallocation
+
+- (instancetype)init {
+    self = [super init];
+    [self fillWithModels:kAKMModelsCount];
+    
+    return self;
+}
+
+#pragma mark -
+#pragma mark Private
+
+- (void)fillWithModels:(NSUInteger)modelsCount {
+    for (int index = 0 ; index < modelsCount ; index++) {
+        [self addModel:[AKMItem new]];
+    }
+}
 
 @end

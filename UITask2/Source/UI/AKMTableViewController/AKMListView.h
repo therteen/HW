@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface AKMListView : UIView
-@property (nonatomic, strong)   IBOutlet    UITableView *tableView;
+@property (nonatomic, strong)   IBOutlet    UITableView     *tableView;
+@property (nonatomic, strong)   IBOutlet    UINavigationBar *navigationBar;
+
+@property (nonatomic, getter=isEditing) BOOL    editing;
 
 @end

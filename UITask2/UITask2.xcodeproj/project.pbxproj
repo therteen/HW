@@ -14,6 +14,8 @@
 		713CA77B1BB973EC007CE980 /* AKMListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713CA7761BB973EC007CE980 /* AKMListCell.xib */; };
 		713CA7841BB98689007CE980 /* AKMItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CA7831BB98689007CE980 /* AKMItem.m */; };
 		713CA7881BB986C4007CE980 /* AKMItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CA7871BB986C4007CE980 /* AKMItems.m */; };
+		714CD4791BC15882007FA652 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 714CD4771BC15882007FA652 /* cat.jpg */; };
+		714CD47A1BC15882007FA652 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714CD4781BC15882007FA652 /* Images.xcassets */; };
 		719C5FFD1BBEBD9A00135DA3 /* NSString+AKMExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 719C5FDE1BBEBD9A00135DA3 /* NSString+AKMExtensions.m */; };
 		719C5FFE1BBEBD9A00135DA3 /* UIViewController+AKMExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 719C5FE11BBEBD9A00135DA3 /* UIViewController+AKMExtensions.m */; };
 		719C5FFF1BBEBD9A00135DA3 /* UIWindow+AKMExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 719C5FE41BBEBD9A00135DA3 /* UIWindow+AKMExtensions.m */; };
@@ -21,7 +23,6 @@
 		719C600B1BBEC03B00135DA3 /* AKMObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 719C600A1BBEC03B00135DA3 /* AKMObservableObject.m */; };
 		71A4B5FC1BB03F4A003DB838 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A4B5FB1BB03F4A003DB838 /* main.m */; };
 		71A4B5FF1BB03F4A003DB838 /* AKMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A4B5FE1BB03F4A003DB838 /* AKMAppDelegate.m */; };
-		71A4B6071BB03F4A003DB838 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71A4B6061BB03F4A003DB838 /* Images.xcassets */; };
 		71A4B6161BB03F4A003DB838 /* UITask2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A4B6151BB03F4A003DB838 /* UITask2Tests.m */; };
 		71D5FF1E1BC0159300A17359 /* AKMArrayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D5FF1D1BC0159300A17359 /* AKMArrayModel.m */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,8 @@
 		713CA7831BB98689007CE980 /* AKMItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMItem.m; path = AKMItem/AKMItem.m; sourceTree = "<group>"; };
 		713CA7861BB986C4007CE980 /* AKMItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMItems.h; path = AKMItems/AKMItems.h; sourceTree = "<group>"; };
 		713CA7871BB986C4007CE980 /* AKMItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMItems.m; path = AKMItems/AKMItems.m; sourceTree = "<group>"; };
+		714CD4771BC15882007FA652 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
+		714CD4781BC15882007FA652 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		719C5FCC1BBEBA6A00135DA3 /* AKMMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMMacros.h; path = ../Source/AKMMacros.h; sourceTree = "<group>"; };
 		719C5FDD1BBEBD9A00135DA3 /* NSString+AKMExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AKMExtensions.h"; sourceTree = "<group>"; };
 		719C5FDE1BBEBD9A00135DA3 /* NSString+AKMExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AKMExtensions.m"; sourceTree = "<group>"; };
@@ -65,7 +68,6 @@
 		71A4B5FB1BB03F4A003DB838 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71A4B5FD1BB03F4A003DB838 /* AKMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKMAppDelegate.h; sourceTree = "<group>"; };
 		71A4B5FE1BB03F4A003DB838 /* AKMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AKMAppDelegate.m; sourceTree = "<group>"; };
-		71A4B6061BB03F4A003DB838 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		71A4B60F1BB03F4A003DB838 /* UITask2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITask2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A4B6141BB03F4A003DB838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71A4B6151BB03F4A003DB838 /* UITask2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITask2Tests.m; sourceTree = "<group>"; };
@@ -154,6 +156,23 @@
 			name = AKMItems;
 			sourceTree = "<group>";
 		};
+		714CD4751BC15882007FA652 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				714CD4761BC15882007FA652 /* Images */,
+				714CD4781BC15882007FA652 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		714CD4761BC15882007FA652 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				714CD4771BC15882007FA652 /* cat.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		719C5FDA1BBEBD9A00135DA3 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +253,7 @@
 			children = (
 				71389B181BB0464A0095313B /* Source */,
 				71A4B5F81BB03F4A003DB838 /* UITask2 */,
+				714CD4751BC15882007FA652 /* Resources */,
 				71A4B6121BB03F4A003DB838 /* UITask2Tests */,
 				71A4B5F71BB03F4A003DB838 /* Products */,
 			);
@@ -253,7 +273,6 @@
 			children = (
 				71A4B5FD1BB03F4A003DB838 /* AKMAppDelegate.h */,
 				71A4B5FE1BB03F4A003DB838 /* AKMAppDelegate.m */,
-				71A4B6061BB03F4A003DB838 /* Images.xcassets */,
 				71A4B5F91BB03F4A003DB838 /* Supporting Files */,
 			);
 			path = UITask2;
@@ -382,9 +401,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714CD4791BC15882007FA652 /* cat.jpg in Resources */,
+				714CD47A1BC15882007FA652 /* Images.xcassets in Resources */,
 				713CA7791BB973EC007CE980 /* AKMListViewController.xib in Resources */,
 				713CA77B1BB973EC007CE980 /* AKMListCell.xib in Resources */,
-				71A4B6071BB03F4A003DB838 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

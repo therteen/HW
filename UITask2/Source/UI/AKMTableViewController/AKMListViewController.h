@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class AKMItem;
+@class AKMItems;
+@class AKMListView;
 
 @interface AKMListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong)   AKMItem *item;
+@property (nonatomic, strong)   AKMItems    *items;
 
 @end

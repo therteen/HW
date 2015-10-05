@@ -8,8 +8,12 @@
 
 #import "AKMListViewController.h"
 #import "AKMListCell.h"
+#import "AKMItems.h"
 #import "AKMItem.h"
 #import "AKMListView.h"
+#import "AKMMacros.h"
+
+AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 
 @interface AKMListViewController ()
 
@@ -17,9 +21,25 @@
 
 @implementation AKMListViewController
 
+#pragma mark -
+#pragma mark Interface handling
+
+- (void)onAddButton:(id)sender {
+    [self.items addModel:[AKMItem new]];
+}
+
+- (void)onEditButton:(id)sender {
+    [self.tableview setEditing:(!self.tableview.editing)];
+}
+
+#pragma mark -
+#pragma mark View Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.item = [[AKMItem alloc] init];
+    self.items = [[AKMItems alloc] init];
+    [self createNavigationBar];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,57 +54,61 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return kAKMModelsCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellclass = NSStringFromClass([AKMListCell class]);
-    AKMListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellclass forIndexPath:indexPath];
+    AKMListCell *cell = [tableView dequeueReusableCellWithIdentifier:cellclass];
     if (!cell) {
         UINib *nib = [UINib nibWithNibName:cellclass bundle:nil];
         NSArray *cells = [nib instantiateWithOwner:nil options:nil];
         
         cell = [cells firstObject];
-        cell.item = self.item;
+        cell.item = [self.items objectAtIndexedSubscript:(indexPath.row)];
     }
     
     return cell;
 }
 
-
-/*
-// Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
-// Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+    [self.items moveObjectAtIndex:fromIndexPath.row toIndex:toIndexPath.row];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
+
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
+
+#pragma mark -
+#pragma mark Private
+
+- (void)createNavigationBar {
+    self.navigationItem = [[UINavigationBar alloc] init];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"addItem"
+                                                                  style:UIBarButtonItemStylePlain
+                                                                 target:self
+                                                                 action:@selector(onAddButton:)];
+    self.navigationItem.rightBarButtonItem = addButton;
+    
+    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit"
+                                                                  style:UIBarButtonItemStylePlain
+                                                                 target:self
+                                                                 action:@selector(onEditButton:)];
+    self.navigationItem.leftBarButtonItem = editButton;
+}
 
 /*
 #pragma mark - Table view delegate
@@ -113,3 +137,5 @@
 */
 
 @end
+
+

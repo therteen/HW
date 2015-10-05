@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AKMItems : NSObject
+#import "AKMArrayModel.h"
+
+
+static const NSUInteger kAKMModelsCount = 20;
+
+@interface AKMItems : AKMArrayModel
 
 @end
