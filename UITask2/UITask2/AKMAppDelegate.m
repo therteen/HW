@@ -9,11 +9,13 @@
 #import "AKMAppDelegate.h"
 
 #import "AKMListViewController.h"
+#import "AKMItems.h"
 
 #import "UIWindow+AKMExtensions.h"
 #import "UIViewController+AKMExtensions.h"
 
 @interface AppDelegate ()
+@property (nonatomic, strong)   AKMItems    *items;
 
 @end
 
@@ -24,7 +26,14 @@
     UIWindow *window = [UIWindow window];
     self.window = window;
     
-    window.rootViewController = [AKMListViewController controller];
+    AKMItems *items = [[AKMItems alloc] init];
+    self.items = items;
+    
+    AKMListViewController *rootViewController = [AKMListViewController controller];
+    rootViewController.items = items;
+    
+    window.rootViewController = rootViewController;
+    
     [window makeKeyAndVisible];
     
     return YES;

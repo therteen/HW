@@ -29,7 +29,8 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 }
 
 - (void)onEditButton:(id)sender {
-    [self.tableview setEditing:(!self.tableview.editing)];
+    AKMListView *listView = self.tableview;
+    [listView setEditing:(![listView isEditing])];
 }
 
 #pragma mark -
@@ -37,7 +38,8 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.items = [[AKMItems alloc] init];
+    [self.tableview.navigationBar pushNavigationItem:self.navigationItem animated:YES];
+
     [self createNavigationBar];
     
 }
@@ -54,7 +56,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return kAKMModelsCount;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -92,12 +94,17 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
     return YES;
 }
 
+
+
+- (void)setItems:(AKMItems *)items {
+    _items = items;
+}
+
 #pragma mark -
 #pragma mark Private
 
 - (void)createNavigationBar {
-    self.navigationItem = [[UINavigationBar alloc] init];
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"addItem"
+      UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"addItem"
                                                                   style:UIBarButtonItemStylePlain
                                                                  target:self
                                                                  action:@selector(onAddButton:)];

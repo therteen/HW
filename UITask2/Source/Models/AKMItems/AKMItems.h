@@ -10,9 +10,6 @@
 
 #import "AKMArrayModel.h"
 
-
-static const NSUInteger kAKMModelsCount = 20;
-
 @interface AKMItems : AKMArrayModel
 
 @end

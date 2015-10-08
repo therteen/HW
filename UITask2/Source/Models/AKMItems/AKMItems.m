@@ -10,6 +10,8 @@
 
 #import "AKMItem.h"
 
+static const NSUInteger kAKMModelsCount = 20;
+
 @implementation AKMItems
 
 #pragma mark -

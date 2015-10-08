@@ -10,18 +10,24 @@
 
 @implementation AKMListView
 
+@dynamic editing;
+
 #pragma mark -
 #pragma mark Accessors
 
-- (void)setEditing:(BOOL)editing {
-    [self setEditing:editing animated:YES];
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
+    [self.tableView setEditing:editing animated:animated];
+}
+
+-(BOOL)isEditing {
+    return self.tableView.editing;
 }
 
 #pragma mark -
 #pragma mark Public
 
-- (void)setEditing:(BOOL)editing animated:(BOOL)animated {
-    [self.tableView setEditing:editing animated:animated];
+- (void)setEditing:(BOOL)editing {
+    [self setEditing:editing animated:YES];
 }
 
 @end

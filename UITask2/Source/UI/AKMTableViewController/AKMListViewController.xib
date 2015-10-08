@@ -24,7 +24,7 @@
                     </connections>
                 </tableView>
                 <navigationBar contentMode="scaleToFill" id="two-mz-3ko">
-                    <rect key="frame" x="-14" y="0.0" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <items>
                         <navigationItem title="Title" id="mNG-e6-SSd">

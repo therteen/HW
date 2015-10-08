@@ -12,6 +12,8 @@
 @class AKMListView;
 
 @interface AKMListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong)   AKMItems    *items;
+@property (nonatomic, readonly) AKMItems *items;
+
+- (void)setItems:(AKMItems *)items;
 
 @end
