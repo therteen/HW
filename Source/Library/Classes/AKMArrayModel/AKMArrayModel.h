@@ -11,9 +11,6 @@
 @interface AKMArrayModel : AKMObservableObject <NSFastEnumeration, NSCoding>
 @property (nonatomic, readonly) NSUInteger count;
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder;
-- (void)encodeWithCoder:(NSCoder *)aCoder;
-
 - (id)modelAtIndex:(NSUInteger)index;
 - (void)addModel:(id)model;
 - (void)removeModel:(id)model;
@@ -26,5 +23,8 @@
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
                                   objects:(__unsafe_unretained id [])buffer
                                     count:(NSUInteger)len;
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder;
+- (void)encodeWithCoder:(NSCoder *)aCoder;
 
 @end

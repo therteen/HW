@@ -17,6 +17,9 @@
 
 #import "NSIndexPath+AKMExtensions.h"
 
+static NSString *const kAKMAddItem = @"AddItem";
+static NSString *const kAKMEdit = @"Edit";
+
 AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 
 @interface AKMListViewController ()
@@ -33,7 +36,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
     NSIndexPath *path = [NSIndexPath indexPathForRow:items.count];
     [items addModel:[AKMItem new]];
     
-    [(UITableView *)self.tableview insertRowsAtIndexPaths:[[NSArray alloc] initWithObjects:path, nil]
+    [(UITableView *)self.tableview.tableView insertRowsAtIndexPaths:[[NSArray alloc] initWithObjects:path, nil]
                                          withRowAnimation:YES];
 }
 
@@ -48,7 +51,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableview.navigationBar pushNavigationItem:self.navigationItem animated:YES];
-    [self createNavigationBar];
+    [self setupNavigationBar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -109,14 +112,14 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 #pragma mark -
 #pragma mark Private
 
-- (void)createNavigationBar {
-      UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:@"addItem"
+- (void)setupNavigationBar {
+      UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:kAKMAddItem
                                                                   style:UIBarButtonItemStylePlain
                                                                  target:self
                                                                  action:@selector(onAddButton:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit"
+    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:kAKMEdit
                                                                   style:UIBarButtonItemStylePlain
                                                                  target:self
                                                                  action:@selector(onEditButton:)];

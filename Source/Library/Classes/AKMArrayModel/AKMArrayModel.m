@@ -40,20 +40,6 @@ static NSString *const kAKMModelsArrayName = @"array";
     self.array = nil;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
-    self = [self init];
-    if (self) {
-        self.array = [[NSMutableArray alloc]initWithArray:[aDecoder decodeObjectForKey:kAKMModelsArrayName]
-                                                copyItems:YES];
-    }
-    
-    return self;
-}
-
-- (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:self.array forKey:kAKMModelsArrayName];
-}
-
 #pragma mark -
 #pragma mark Accessors
 
@@ -105,6 +91,22 @@ static NSString *const kAKMModelsArrayName = @"array";
                                   objects:(__unsafe_unretained id [])buffer
                                     count:(NSUInteger)len {
     return [self.array countByEnumeratingWithState:state objects:buffer count:len];
+}
+
+#pragma mark -
+#pragma mark NSCoding
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [self init];
+    if (self) {
+        self.array = [[aDecoder decodeObjectForKey:kAKMModelsArrayName] mutableCopy];
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.array forKey:kAKMModelsArrayName];
 }
 
 @end

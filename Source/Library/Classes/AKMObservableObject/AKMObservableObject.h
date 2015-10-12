@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface AKMObservableObject : NSObject
-@property (nonatomic, readonly) NSSet       *observerSet;
+@property (nonatomic, readonly) NSSet   *observerSet;
 
 - (void)addObserver:(id)observer;
 - (void)removeObserver:(id)observer;

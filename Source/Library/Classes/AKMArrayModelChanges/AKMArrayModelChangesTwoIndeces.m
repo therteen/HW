@@ -8,12 +8,6 @@
 
 #import "AKMArrayModelChangesTwoIndeces.h"
 
-@interface AKMArrayModelChangesTwoIndeces()
-@property (nonatomic, assign) NSUInteger fromIndex;
-@property (nonatomic, assign) NSUInteger toIndex;
-
-@end
-
 @implementation AKMArrayModelChangesTwoIndeces
 
 + (instancetype)modelWithState:(AKMArrayModelChangeType)state

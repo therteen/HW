@@ -11,7 +11,12 @@
 #import "NSString+AKMExtensions.h"
 
 static int const kAKMItemNameLenght = 10;
-static NSString *const kAKMItemImage = @"cat";
+static NSString *const kAKMItemImage = @"cat.jpg";
+
+@interface AKMItem()
+@property (nonatomic, readwrite)  NSString    *name;
+
+@end
 
 @implementation AKMItem
 
@@ -23,7 +28,7 @@ static NSString *const kAKMItemImage = @"cat";
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _name = [NSString randomStringWithLength:kAKMItemNameLenght];
+        self.name = [NSString randomStringWithLength:kAKMItemNameLenght];
     }
     
     return self;

@@ -15,7 +15,6 @@
 
 @implementation AKMObservableObject
 
-
 #pragma mark -
 #pragma mark Initializations and Deallocations
 
@@ -24,6 +23,7 @@
     if (self) {
         self.observers = [NSHashTable weakObjectsHashTable];
     }
+    
     return self;
 }
 
@@ -32,6 +32,7 @@
 
 - (NSSet *)observerSet {
     @synchronized(self.observers) {
+        
         return [self.observers copy];
     }
 }
@@ -53,6 +54,7 @@
 
 - (BOOL)isObservedByObject:(id)observer {
     @synchronized(self.observers) {
+        
         return [self.observers containsObject:observer];
     }
 }

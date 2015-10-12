@@ -14,12 +14,12 @@
 #import "UIWindow+AKMExtensions.h"
 #import "UIViewController+AKMExtensions.h"
 
-@interface AppDelegate ()
+@interface AKMAppDelegate ()
 @property (nonatomic, strong)   AKMItems    *items;
 
 @end
 
-@implementation AppDelegate
+@implementation AKMAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
