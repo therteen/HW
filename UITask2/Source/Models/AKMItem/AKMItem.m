@@ -11,7 +11,7 @@
 #import "NSString+AKMExtensions.h"
 
 static int const kAKMItemNameLenght = 10;
-static NSString const *kAKMItemImage = @"cat";
+static NSString *const kAKMItemImage = @"cat";
 
 @implementation AKMItem
 
@@ -33,8 +33,7 @@ static NSString const *kAKMItemImage = @"cat";
 #pragma mark Accessors
 
 - (UIImage *)image {
-    NSString *path = [[NSBundle mainBundle] pathForResource:kAKMItemImage ofType:@"jpg"];
-   return [UIImage imageWithContentsOfFile:path];
+    return [UIImage imageNamed:kAKMItemImage];
 }
 
 @end

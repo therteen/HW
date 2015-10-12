@@ -8,12 +8,21 @@
 
 #import "AKMArrayModel.h"
 
+#import "AKMArrayModelChangesOneIndex.h"
+#import "AKMArrayModelChangesTwoIndeces.h"
+
+#import "NSIndexPath+AKMExtensions.h"
+
+static NSString *const kAKMModelsArrayName = @"array";
+
 @interface AKMArrayModel()
 @property (nonatomic, strong)   NSMutableArray  *array;
 
 @end
 
 @implementation AKMArrayModel
+
+@dynamic count;
 
 #pragma mark -
 #pragma mark Initialization and Deallocation
@@ -27,8 +36,30 @@
     return self;
 }
 
+- (void)dealloc {
+    self.array = nil;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [self init];
+    if (self) {
+        self.array = [[NSMutableArray alloc]initWithArray:[aDecoder decodeObjectForKey:kAKMModelsArrayName]
+                                                copyItems:YES];
+    }
+    
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.array forKey:kAKMModelsArrayName];
+}
+
 #pragma mark -
 #pragma mark Accessors
+
+- (NSUInteger)count {
+    return self.array.count;
+}
 
 - (id)modelAtIndex:(NSUInteger)index {
     return [self.array objectAtIndex:index];
@@ -36,6 +67,9 @@
 
 - (void)addModel:(id)model {
     [self.array addObject:(model)];
+//    [self notifyForChangedStateWithSelector:@selector(AKMArrayModelChanged)
+//                                 withObject:[AKMArrayModelChangesOneIndex modelWithState:AKMArrayModelChangeAdded
+//                                                                                   index:self.array.count]];
 }
 
 - (void)removeModel:(id)model {
@@ -65,6 +99,12 @@
 
 - (id)objectAtIndexedSubscript:(NSUInteger)index {
     return [self.array objectAtIndexedSubscript:index];
+}
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
+                                  objects:(__unsafe_unretained id [])buffer
+                                    count:(NSUInteger)len {
+    return [self.array countByEnumeratingWithState:state objects:buffer count:len];
 }
 
 @end

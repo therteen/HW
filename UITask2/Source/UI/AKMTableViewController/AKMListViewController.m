@@ -7,11 +7,15 @@
 //
 
 #import "AKMListViewController.h"
+
 #import "AKMListCell.h"
 #import "AKMItems.h"
 #import "AKMItem.h"
 #import "AKMListView.h"
+
 #import "AKMMacros.h"
+
+#import "NSIndexPath+AKMExtensions.h"
 
 AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 
@@ -25,7 +29,12 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 #pragma mark Interface handling
 
 - (void)onAddButton:(id)sender {
-    [self.items addModel:[AKMItem new]];
+    AKMItems *items = self.items;
+    NSIndexPath *path = [NSIndexPath indexPathForRow:items.count];
+    [items addModel:[AKMItem new]];
+    
+    [(UITableView *)self.tableview insertRowsAtIndexPaths:[[NSArray alloc] initWithObjects:path, nil]
+                                         withRowAnimation:YES];
 }
 
 - (void)onEditButton:(id)sender {
@@ -39,9 +48,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableview.navigationBar pushNavigationItem:self.navigationItem animated:YES];
-
     [self createNavigationBar];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,6 +86,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.items removeModelAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         
@@ -89,15 +97,13 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
     [self.items moveObjectAtIndex:fromIndexPath.row toIndex:toIndexPath.row];
 }
 
-
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
 
-
-
 - (void)setItems:(AKMItems *)items {
     _items = items;
+    [items addObserver:self.view];
 }
 
 #pragma mark -

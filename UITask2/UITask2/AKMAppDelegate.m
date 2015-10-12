@@ -31,7 +31,7 @@
     
     AKMListViewController *rootViewController = [AKMListViewController controller];
     rootViewController.items = items;
-    
+      
     window.rootViewController = rootViewController;
     
     [window makeKeyAndVisible];
