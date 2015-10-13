@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AKMItem : NSObject
-@property (nonatomic, readonly)  NSString    *name;
+@property (nonatomic, copy, readonly)  NSString    *name;
 @property (nonatomic, readonly)  UIImage     *image;
 
 @end

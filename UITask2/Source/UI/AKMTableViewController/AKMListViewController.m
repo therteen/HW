@@ -37,7 +37,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
     [items addModel:[AKMItem new]];
     
     [(UITableView *)self.tableview.tableView insertRowsAtIndexPaths:[[NSArray alloc] initWithObjects:path, nil]
-                                         withRowAnimation:YES];
+                                                   withRowAnimation:YES];
 }
 
 - (void)onEditButton:(id)sender {
@@ -114,15 +114,15 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 
 - (void)setupNavigationBar {
       UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:kAKMAddItem
-                                                                  style:UIBarButtonItemStylePlain
-                                                                 target:self
-                                                                 action:@selector(onAddButton:)];
+                                                                    style:UIBarButtonItemStylePlain
+                                                                   target:self
+                                                                   action:@selector(onAddButton:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:kAKMEdit
-                                                                  style:UIBarButtonItemStylePlain
-                                                                 target:self
-                                                                 action:@selector(onEditButton:)];
+    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]  initWithTitle:kAKMEdit
+                                                                    style:UIBarButtonItemStylePlain
+                                                                   target:self
+                                                                   action:@selector(onEditButton:)];
     self.navigationItem.leftBarButtonItem = editButton;
 }
 

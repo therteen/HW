@@ -14,7 +14,7 @@ static int const kAKMItemNameLenght = 10;
 static NSString *const kAKMItemImage = @"cat.jpg";
 
 @interface AKMItem()
-@property (nonatomic, readwrite)  NSString    *name;
+@property (nonatomic, copy)  NSString    *name;
 
 @end
 

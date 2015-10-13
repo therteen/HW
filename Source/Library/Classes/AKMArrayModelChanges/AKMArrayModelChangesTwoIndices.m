@@ -6,15 +6,15 @@
 //  Copyright (c) 2015 Anton Kostenko. All rights reserved.
 //
 
-#import "AKMArrayModelChangesTwoIndeces.h"
+#import "AKMArrayModelChangesTwoIndices.h"
 
-@implementation AKMArrayModelChangesTwoIndeces
+@implementation AKMArrayModelChangesTwoIndices
 
 + (instancetype)modelWithState:(AKMArrayModelChangeType)state
                      fromIndex:(NSUInteger)fromIndex
                        toIndex:(NSUInteger)toIndex
 {
-    AKMArrayModelChangesTwoIndeces *result = [super modelWithState:state] ;
+    AKMArrayModelChangesTwoIndices *result = [super modelWithState:state] ;
     if (result) {
         result.fromIndex = fromIndex;
         result.toIndex = toIndex;

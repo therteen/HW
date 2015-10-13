@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7138124E1BCAF62D00AFBE8F /* AKMArrayModelChanges.m in Sources */ = {isa = PBXBuildFile; fileRef = 7138124D1BCAF62D00AFBE8F /* AKMArrayModelChanges.m */; };
 		713812521BCAFB5400AFBE8F /* AKMArrayModelChangesOneIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 713812511BCAFB5400AFBE8F /* AKMArrayModelChangesOneIndex.m */; };
-		713812551BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndeces.m in Sources */ = {isa = PBXBuildFile; fileRef = 713812541BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndeces.m */; };
+		713812551BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndices.m in Sources */ = {isa = PBXBuildFile; fileRef = 713812541BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndices.m */; };
 		713CA7771BB973EC007CE980 /* AKMListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CA76F1BB973EC007CE980 /* AKMListView.m */; };
 		713CA7781BB973EC007CE980 /* AKMListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CA7711BB973EC007CE980 /* AKMListViewController.m */; };
 		713CA7791BB973EC007CE980 /* AKMListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 713CA7721BB973EC007CE980 /* AKMListViewController.xib */; };
@@ -46,8 +46,8 @@
 		7138124D1BCAF62D00AFBE8F /* AKMArrayModelChanges.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMArrayModelChanges.m; path = AKMArrayModelChanges/AKMArrayModelChanges.m; sourceTree = "<group>"; };
 		713812501BCAFB5400AFBE8F /* AKMArrayModelChangesOneIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMArrayModelChangesOneIndex.h; path = AKMArrayModelChanges/AKMArrayModelChangesOneIndex.h; sourceTree = "<group>"; };
 		713812511BCAFB5400AFBE8F /* AKMArrayModelChangesOneIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMArrayModelChangesOneIndex.m; path = AKMArrayModelChanges/AKMArrayModelChangesOneIndex.m; sourceTree = "<group>"; };
-		713812531BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndeces.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMArrayModelChangesTwoIndeces.h; path = AKMArrayModelChanges/AKMArrayModelChangesTwoIndeces.h; sourceTree = "<group>"; };
-		713812541BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndeces.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMArrayModelChangesTwoIndeces.m; path = AKMArrayModelChanges/AKMArrayModelChangesTwoIndeces.m; sourceTree = "<group>"; };
+		713812531BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMArrayModelChangesTwoIndices.h; path = AKMArrayModelChanges/AKMArrayModelChangesTwoIndices.h; sourceTree = "<group>"; };
+		713812541BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMArrayModelChangesTwoIndices.m; path = AKMArrayModelChanges/AKMArrayModelChangesTwoIndices.m; sourceTree = "<group>"; };
 		713CA76E1BB973EC007CE980 /* AKMListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMListView.h; sourceTree = "<group>"; };
 		713CA76F1BB973EC007CE980 /* AKMListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKMListView.m; sourceTree = "<group>"; };
 		713CA7701BB973EC007CE980 /* AKMListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKMListViewController.h; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 				7138124D1BCAF62D00AFBE8F /* AKMArrayModelChanges.m */,
 				713812501BCAFB5400AFBE8F /* AKMArrayModelChangesOneIndex.h */,
 				713812511BCAFB5400AFBE8F /* AKMArrayModelChangesOneIndex.m */,
-				713812531BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndeces.h */,
-				713812541BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndeces.m */,
+				713812531BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndices.h */,
+				713812541BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndices.m */,
 			);
 			name = AKMArrayModelChanges;
 			sourceTree = "<group>";
@@ -469,7 +469,7 @@
 				714E1B7D1BCAC90600950348 /* NSIndexPath+AKMExtensions.m in Sources */,
 				713CA77A1BB973EC007CE980 /* AKMListCell.m in Sources */,
 				71D5FF1E1BC0159300A17359 /* AKMArrayModel.m in Sources */,
-				713812551BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndeces.m in Sources */,
+				713812551BCAFB8300AFBE8F /* AKMArrayModelChangesTwoIndices.m in Sources */,
 				713CA7781BB973EC007CE980 /* AKMListViewController.m in Sources */,
 				719C5FFF1BBEBD9A00135DA3 /* UIWindow+AKMExtensions.m in Sources */,
 				719C600B1BBEC03B00135DA3 /* AKMObservableObject.m in Sources */,
