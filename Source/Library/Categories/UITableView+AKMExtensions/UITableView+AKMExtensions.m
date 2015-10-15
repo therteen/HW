@@ -18,7 +18,7 @@
 - (void)applyChanges:(AKMArrayModelChanges *)changes toView:(UITableView *)view {
     NSIndexPath *path   = [NSIndexPath indexPathForRow:((AKMArrayModelChangesOneIndex *)changes).index];
     
-    AKMArrayModelChangesTwoIndeces *moveChanges = (AKMArrayModelChangesTwoIndeces *)changes;
+    AKMArrayModelChangesTwoIndices *moveChanges = (AKMArrayModelChangesTwoIndices *)changes;
     NSIndexPath *from   = [NSIndexPath indexPathForRow:moveChanges.fromIndex];
     NSIndexPath *to     = [NSIndexPath indexPathForRow:moveChanges.toIndex];
     

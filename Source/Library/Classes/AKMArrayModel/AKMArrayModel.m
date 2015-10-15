@@ -10,7 +10,7 @@
 
 #import "AKMArrayModelChanges.h"
 #import "AKMArrayModelChangesOneIndex.h"
-#import "AKMArrayModelChangesTwoIndeces.h"
+#import "AKMArrayModelChangesTwoIndices.h"
 #import "AKMListViewController.h"
 
 #import "NSIndexPath+AKMExtensions.h"

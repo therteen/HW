@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "AKMArrayModelChangesOneIndex.h"
-#import "AKMArrayModelChangesTwoIndeces.h"
+#import "AKMArrayModelChangesTwoIndices.h"
 
 @interface UITableView (AKMExtensions)
 
