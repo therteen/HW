@@ -21,7 +21,7 @@
 static NSString *const kAKMAddItem  = @"AddItem";
 static NSString *const kAKMEdit     = @"Edit";
 
-AKMViewControllerMainViewProperty(AKMListViewController, listview, AKMListView)
+AKMViewControllerMainViewProperty(AKMListViewController, listView, AKMListView)
 
 @interface AKMListViewController ()
 
@@ -41,8 +41,8 @@ AKMViewControllerMainViewProperty(AKMListViewController, listview, AKMListView)
 }
 
 - (void)onEditButton:(id)sender {
-    AKMListView *listView = self.listview;
-    [listView setEditing:(![listView isEditing])];
+    AKMListView *listView = self.listView;
+    listView.editing = ![listView isEditing];
 }
 
 #pragma mark -
@@ -50,7 +50,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, listview, AKMListView)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.listview.navigationBar pushNavigationItem:self.navigationItem animated:YES];
+    [self.listView.navigationBar pushNavigationItem:self.navigationItem animated:YES];
     [self setupNavigationBar];
 }
 
@@ -70,7 +70,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, listview, AKMListView)
 }
 
 - (void)applyChanges:(AKMArrayModelChanges *)changes {
-    UITableView *view = self.listview.tableView;
+    UITableView *view = self.listView.tableView;
     [view applyChanges:changes toView:view];
 }
 
