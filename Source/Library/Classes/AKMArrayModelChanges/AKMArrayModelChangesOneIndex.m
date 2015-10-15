@@ -16,7 +16,7 @@
 @implementation AKMArrayModelChangesOneIndex
 
 + (instancetype)modelWithState:(AKMArrayModelChangeType)state index:(NSUInteger)index {
-    AKMArrayModelChangesOneIndex *result = [super modelWithState:state] ;
+    AKMArrayModelChangesOneIndex *result = [self modelWithState:state];
     if (result) {
         result.index = index;
     }

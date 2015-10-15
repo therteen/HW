@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AKMArrayModelChanges.h"
+
 @class AKMItems;
 @class AKMListView;
 
@@ -15,5 +17,6 @@
 @property (nonatomic, readonly) AKMItems *items;
 
 - (void)setItems:(AKMItems *)items;
+- (void)applyChanges:(AKMArrayModelChanges *)changes;
 
 @end

@@ -8,8 +8,10 @@
 
 #import "AKMArrayModel.h"
 
+#import "AKMArrayModelChanges.h"
 #import "AKMArrayModelChangesOneIndex.h"
-#import "AKMArrayModelChangesTwoIndices.h"
+#import "AKMArrayModelChangesTwoIndeces.h"
+#import "AKMListViewController.h"
 
 #import "NSIndexPath+AKMExtensions.h"
 
@@ -52,10 +54,10 @@ static NSString *const kAKMModelsArrayName = @"array";
 }
 
 - (void)addModel:(id)model {
+    AKMArrayModelChangesOneIndex *change = [AKMArrayModelChangesOneIndex modelWithState:AKMArrayModelChangeAdded index:self.array.count];
     [self.array addObject:(model)];
-//    [self notifyForChangedStateWithSelector:@selector(AKMArrayModelChanged)
-//                                 withObject:[AKMArrayModelChangesOneIndex modelWithState:AKMArrayModelChangeAdded
-//                                                                                   index:self.array.count]];
+
+    [self notifyForChangedStateWithSelector:@selector(applyChanges) withObject:change];
 }
 
 - (void)removeModel:(id)model {

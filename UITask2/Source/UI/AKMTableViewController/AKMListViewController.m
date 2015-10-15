@@ -16,11 +16,12 @@
 #import "AKMMacros.h"
 
 #import "NSIndexPath+AKMExtensions.h"
+#import "UITableView+AKMExtensions.h"
 
-static NSString *const kAKMAddItem = @"AddItem";
-static NSString *const kAKMEdit = @"Edit";
+static NSString *const kAKMAddItem  = @"AddItem";
+static NSString *const kAKMEdit     = @"Edit";
 
-AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
+AKMViewControllerMainViewProperty(AKMListViewController, listview, AKMListView)
 
 @interface AKMListViewController ()
 
@@ -33,15 +34,14 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 
 - (void)onAddButton:(id)sender {
     AKMItems *items = self.items;
-    NSIndexPath *path = [NSIndexPath indexPathForRow:items.count];
+//    NSIndexPath *path = [NSIndexPath indexPathForRow:items.count];
     [items addModel:[AKMItem new]];
     
-    [(UITableView *)self.tableview.tableView insertRowsAtIndexPaths:[[NSArray alloc] initWithObjects:path, nil]
-                                                   withRowAnimation:YES];
+//    [self.listview.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:YES];
 }
 
 - (void)onEditButton:(id)sender {
-    AKMListView *listView = self.tableview;
+    AKMListView *listView = self.listview;
     [listView setEditing:(![listView isEditing])];
 }
 
@@ -50,7 +50,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.tableview.navigationBar pushNavigationItem:self.navigationItem animated:YES];
+    [self.listview.navigationBar pushNavigationItem:self.navigationItem animated:YES];
     [self setupNavigationBar];
 }
 
@@ -67,6 +67,11 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.items.count;
+}
+
+- (void)applyChanges:(AKMArrayModelChanges *)changes {
+    UITableView *view = self.listview.tableView;
+    [view applyChanges:changes toView:view];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -87,16 +92,22 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+-   (void)tableView:(UITableView *)tableView
+ commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+  forRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.items removeModelAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         
     }
 }
 
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+-   (void)tableView:(UITableView *)tableView
+ moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
+        toIndexPath:(NSIndexPath *)toIndexPath
+{
     [self.items moveObjectAtIndex:fromIndexPath.row toIndex:toIndexPath.row];
 }
 
@@ -113,16 +124,16 @@ AKMViewControllerMainViewProperty(AKMListViewController, tableview, AKMListView)
 #pragma mark Private
 
 - (void)setupNavigationBar {
-      UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:kAKMAddItem
-                                                                    style:UIBarButtonItemStylePlain
-                                                                   target:self
-                                                                   action:@selector(onAddButton:)];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithTitle:kAKMAddItem
+                                                                  style:UIBarButtonItemStylePlain
+                                                                 target:self
+                                                                 action:@selector(onAddButton:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    UIBarButtonItem *editButton = [[UIBarButtonItem alloc]  initWithTitle:kAKMEdit
-                                                                    style:UIBarButtonItemStylePlain
-                                                                   target:self
-                                                                   action:@selector(onEditButton:)];
+    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:kAKMEdit
+                                                                   style:UIBarButtonItemStylePlain
+                                                                  target:self
+                                                                  action:@selector(onEditButton:)];
     self.navigationItem.leftBarButtonItem = editButton;
 }
 

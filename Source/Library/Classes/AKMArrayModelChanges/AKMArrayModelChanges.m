@@ -16,7 +16,7 @@
 @implementation AKMArrayModelChanges
 
 + (instancetype)modelWithState:(AKMArrayModelChangeType)state {
-    AKMArrayModelChanges *result = [AKMArrayModelChanges new];
+    AKMArrayModelChanges *result = [self new];
     if (result) {
         result.state = state;
     }
