@@ -13,3 +13,14 @@
 @property (nonatomic, assign) NSUInteger toIndex;
 
 @end
+
+@interface AKMArrayModelChangesTwoIndices (AKMIndexPath)
+
+@property (nonatomic, readonly) NSIndexPath *fromPath;
+@property (nonatomic, readonly) NSIndexPath *toPath;
+
++ (instancetype)modelWithState:(AKMArrayModelChangeType)state
+                      fromPath:(NSIndexPath *)fromPath
+                        toPath:(NSIndexPath *)toPath;
+
+@end

@@ -15,6 +15,8 @@
 - (void)removeObserver:(id)observer;
 - (BOOL)isObservedByObject:(id)observer;
 
-- (void)notifyForChangedStateWithSelector:(SEL)selector withObject:(id)object;
+- (void)notifyOfChangedStateWithSelector:(SEL)selector withObject:(id)object;
+
+- (SEL)selectorForState:(NSUInteger)state;
 
 @end

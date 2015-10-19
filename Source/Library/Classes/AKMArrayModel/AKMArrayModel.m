@@ -54,10 +54,11 @@ static NSString *const kAKMModelsArrayName = @"array";
 }
 
 - (void)addModel:(id)model {
-    AKMArrayModelChangesOneIndex *change = [AKMArrayModelChangesOneIndex modelWithState:AKMArrayModelChangeAdded index:self.array.count];
+    AKMArrayModelChangesOneIndex *change = [AKMArrayModelChangesOneIndex modelWithState:AKMArrayModelChangeAdded
+                                                                                  index:self.array.count];
     [self.array addObject:(model)];
 
-    [self notifyForChangedStateWithSelector:@selector(applyChanges) withObject:change];
+    [self notifyOfChangedStateWithModel:change];
 }
 
 - (void)removeModel:(id)model {
@@ -93,6 +94,13 @@ static NSString *const kAKMModelsArrayName = @"array";
                                   objects:(__unsafe_unretained id [])buffer
                                     count:(NSUInteger)len {
     return [self.array countByEnumeratingWithState:state objects:buffer count:len];
+}
+
+#pragma mark -
+#pragma mark Observable methods
+
+- (void)notifyOfChangedStateWithModel:(AKMArrayModelChanges *)model {
+    [self notifyOfChangedStateWithSelector:@selector(applyChanges:) withObject:model];
 }
 
 #pragma mark -

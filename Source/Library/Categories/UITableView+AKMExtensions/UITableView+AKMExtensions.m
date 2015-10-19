@@ -15,23 +15,18 @@
 
 @implementation UITableView (AKMExtensions)
 
-- (void)applyChanges:(AKMArrayModelChanges *)changes toView:(UITableView *)view {
-    NSIndexPath *path   = [NSIndexPath indexPathForRow:((AKMArrayModelChangesOneIndex *)changes).index];
-    
-    AKMArrayModelChangesTwoIndices *moveChanges = (AKMArrayModelChangesTwoIndices *)changes;
-    NSIndexPath *from   = [NSIndexPath indexPathForRow:moveChanges.fromIndex];
-    NSIndexPath *to     = [NSIndexPath indexPathForRow:moveChanges.toIndex];
-    
-    switch (changes.state) {
+- (void)applyChanges:(id)changes {
+    switch ([changes state]) {
         case AKMArrayModelChangeAdded:
-            [view insertRowsAtIndexPaths:@[path] withRowAnimation:YES];
+            [self insertRowsAtIndexPaths:@[[changes indexPath]] withRowAnimation:YES];
             break;
             
         case AKMArrayModelChangeRemoved:
-            [view deleteRowsAtIndexPaths:@[path] withRowAnimation:YES];
+            [self deleteRowsAtIndexPaths:@[[changes indexPath]] withRowAnimation:YES];
+            break;
             
         case AKMArrayModelChangeMoved:
-            [view moveRowAtIndexPath:from toIndexPath:to];
+            [self moveRowAtIndexPath:[changes fromPath] toIndexPath:[changes toPath]];
     }
 }
 

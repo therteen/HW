@@ -15,6 +15,9 @@
 
 @implementation AKMArrayModelChanges
 
+#pragma mark --
+#pragma mark Class methods
+
 + (instancetype)modelWithState:(AKMArrayModelChangeType)state {
     AKMArrayModelChanges *result = [self new];
     if (result) {
@@ -22,6 +25,13 @@
     }
     
     return result;
+}
+
+#pragma mark --
+#pragma mark Public
+
+- (void)applyChangesToView:(UITableView *)view {
+    
 }
 
 @end

@@ -42,7 +42,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, listView, AKMListView)
 
 - (void)onEditButton:(id)sender {
     AKMListView *listView = self.listView;
-    listView.editing = ![listView isEditing];
+    listView.editing = !listView.editing;
 }
 
 #pragma mark -
@@ -70,8 +70,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, listView, AKMListView)
 }
 
 - (void)applyChanges:(AKMArrayModelChanges *)changes {
-    UITableView *view = self.listView.tableView;
-    [view applyChanges:changes toView:view];
+    [self.listView.tableView applyChanges:changes];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -116,8 +115,11 @@ AKMViewControllerMainViewProperty(AKMListViewController, listView, AKMListView)
 }
 
 - (void)setItems:(AKMItems *)items {
-    _items = items;
-    [items addObserver:self.view];
+    if (_items != items) {
+        [_items removeObserver:self];
+        _items = items;
+        [items addObserver:self];
+    }
 }
 
 #pragma mark -

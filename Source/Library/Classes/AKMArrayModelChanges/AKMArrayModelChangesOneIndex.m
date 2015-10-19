@@ -8,6 +8,8 @@
 
 #import "AKMArrayModelChangesOneIndex.h"
 
+#import "NSIndexPath+AKMExtensions.h"
+
 @interface AKMArrayModelChangesOneIndex()
 @property (nonatomic, assign) NSUInteger index;
 
@@ -22,6 +24,23 @@
     }
     
     return result;
+}
+
+@end
+
+@implementation AKMArrayModelChangesOneIndex (AKMIndexPath)
+
+@dynamic indexPath;
+
++ (instancetype)modelWithState:(AKMArrayModelChangeType)state indexPath:(NSIndexPath *)indexPath {
+    return [self modelWithState:state indexPath:indexPath];
+}
+
+#pragma mark -
+#pragma mark Accessors
+
+- (NSIndexPath *)indexPath {
+    return [NSIndexPath indexPathForRow:self.index];
 }
 
 @end

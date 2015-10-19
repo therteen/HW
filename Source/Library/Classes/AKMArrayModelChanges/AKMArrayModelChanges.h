@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Anton Kostenko. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSUInteger, AKMArrayModelChangeType) {
     AKMArrayModelChangeAdded,
@@ -18,5 +18,7 @@ typedef NS_ENUM(NSUInteger, AKMArrayModelChangeType) {
 @property (nonatomic, readonly) AKMArrayModelChangeType state;
 
 + (instancetype)modelWithState:(AKMArrayModelChangeType)state;
+
+- (void)applyChangesToView:(UITableView *)view;
 
 @end

@@ -8,6 +8,8 @@
 
 #import "AKMArrayModelChangesTwoIndices.h"
 
+#import "NSIndexPath+AKMExtensions.h"
+
 @implementation AKMArrayModelChangesTwoIndices
 
 + (instancetype)modelWithState:(AKMArrayModelChangeType)state
@@ -21,6 +23,31 @@
     }
     
     return result;
+}
+
+@end
+
+@implementation AKMArrayModelChangesTwoIndices (AKMIndexPath)
+
+@dynamic fromPath;
+@dynamic toPath;
+
++ (instancetype)modelWithState:(AKMArrayModelChangeType)state
+                      fromPath:(NSIndexPath *)fromPath
+                        toPath:(NSIndexPath *)toPath
+{
+    return [self modelWithState:state fromPath:fromPath toPath:toPath];
+}
+
+#pragma mark -
+#pragma mark Accessors
+
+- (NSIndexPath *)fromPath {
+    return [NSIndexPath indexPathForRow:self.fromIndex];
+}
+
+- (NSIndexPath *)toPath {
+    return [NSIndexPath indexPathForRow:self.toIndex];
 }
 
 @end

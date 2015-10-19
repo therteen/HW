@@ -59,13 +59,17 @@
     }
 }
 
-- (void)notifyForChangedStateWithSelector:(SEL)selector withObject:(id)object {
+- (void)notifyOfChangedStateWithSelector:(SEL)selector withObject:(id)object {
     NSHashTable *observers = self.observers;
     for (id observer in observers) {
         if ([observer respondsToSelector:selector]) {
             [observer performSelector:selector withObject:self withObject:object];
         }
     }
+}
+
+- (SEL)selectorForState:(NSUInteger)state {
+    return nil;
 }
 
 @end

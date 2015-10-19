@@ -9,8 +9,16 @@
 #import "AKMArrayModelChanges.h"
 
 @interface AKMArrayModelChangesOneIndex : AKMArrayModelChanges
-@property (nonatomic, readonly, assign) NSUInteger index;
+@property (nonatomic, readonly) NSUInteger index;
 
 + (instancetype)modelWithState:(AKMArrayModelChangeType)state index:(NSUInteger)index;
 
 @end
+
+@interface AKMArrayModelChangesOneIndex (AKMIndexPath)
+@property (nonatomic, readonly) NSIndexPath *indexPath;
+
++ (instancetype)modelWithState:(AKMArrayModelChangeType)state indexPath:(NSIndexPath *)indexPath;
+
+@end
+
