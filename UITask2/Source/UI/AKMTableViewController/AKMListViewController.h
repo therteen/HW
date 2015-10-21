@@ -17,6 +17,6 @@
 @property (nonatomic, readonly) AKMItems *items;
 
 - (void)setItems:(AKMItems *)items;
-- (void)applyChanges:(AKMArrayModelChanges *)changes;
+- (void)model:(id)model didChange:(AKMArrayModelChanges *)changes;
 
 @end

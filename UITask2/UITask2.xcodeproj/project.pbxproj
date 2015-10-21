@@ -29,6 +29,7 @@
 		71A4B5FC1BB03F4A003DB838 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A4B5FB1BB03F4A003DB838 /* main.m */; };
 		71A4B5FF1BB03F4A003DB838 /* AKMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A4B5FE1BB03F4A003DB838 /* AKMAppDelegate.m */; };
 		71A4B6161BB03F4A003DB838 /* UITask2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A4B6151BB03F4A003DB838 /* UITask2Tests.m */; };
+		71C3E2441BD57EC8000E8AB7 /* AKMArrayModelChanges+AKMExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3E2431BD57EC8000E8AB7 /* AKMArrayModelChanges+AKMExtensions.m */; };
 		71D5FF1E1BC0159300A17359 /* AKMArrayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D5FF1D1BC0159300A17359 /* AKMArrayModel.m */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,8 @@
 		71A4B60F1BB03F4A003DB838 /* UITask2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITask2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A4B6141BB03F4A003DB838 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71A4B6151BB03F4A003DB838 /* UITask2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITask2Tests.m; sourceTree = "<group>"; };
+		71C3E2421BD57EC8000E8AB7 /* AKMArrayModelChanges+AKMExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AKMArrayModelChanges+AKMExtensions.h"; path = "AKMArrayModelChanges+AKMExtensions/AKMArrayModelChanges+AKMExtensions.h"; sourceTree = "<group>"; };
+		71C3E2431BD57EC8000E8AB7 /* AKMArrayModelChanges+AKMExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AKMArrayModelChanges+AKMExtensions.m"; path = "AKMArrayModelChanges+AKMExtensions/AKMArrayModelChanges+AKMExtensions.m"; sourceTree = "<group>"; };
 		71D5FF1C1BC0159300A17359 /* AKMArrayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKMArrayModel.h; path = AKMArrayModel/AKMArrayModel.h; sourceTree = "<group>"; };
 		71D5FF1D1BC0159300A17359 /* AKMArrayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKMArrayModel.m; path = AKMArrayModel/AKMArrayModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +240,7 @@
 				719C5FDF1BBEBD9A00135DA3 /* UIViewController+AKMExtensions */,
 				719C5FE21BBEBD9A00135DA3 /* UIWindow+AKMExtensions */,
 				71744C691BCE690100963657 /* UITableView+AKMExtensions */,
+				71C3E2451BD57ECC000E8AB7 /* AKMArrayModelChanges+AKMExtensions */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -351,6 +355,15 @@
 				71A4B6141BB03F4A003DB838 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71C3E2451BD57ECC000E8AB7 /* AKMArrayModelChanges+AKMExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				71C3E2421BD57EC8000E8AB7 /* AKMArrayModelChanges+AKMExtensions.h */,
+				71C3E2431BD57EC8000E8AB7 /* AKMArrayModelChanges+AKMExtensions.m */,
+			);
+			name = "AKMArrayModelChanges+AKMExtensions";
 			sourceTree = "<group>";
 		};
 		71D5FF1F1BC0159A00A17359 /* AKMArrayModel */ = {
@@ -477,6 +490,7 @@
 				71744C681BCE5F8200963657 /* UITableView+AKMExtensions.m in Sources */,
 				719C60001BBEBD9A00135DA3 /* AKMTableViewCell.m in Sources */,
 				713CA7771BB973EC007CE980 /* AKMListView.m in Sources */,
+				71C3E2441BD57EC8000E8AB7 /* AKMArrayModelChanges+AKMExtensions.m in Sources */,
 				713812521BCAFB5400AFBE8F /* AKMArrayModelChangesOneIndex.m in Sources */,
 				71A4B5FF1BB03F4A003DB838 /* AKMAppDelegate.m in Sources */,
 				71A4B5FC1BB03F4A003DB838 /* main.m in Sources */,

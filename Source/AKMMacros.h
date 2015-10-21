@@ -15,16 +15,16 @@
 #define AKMstrongify(VAR) \
     __strong __typeof(VAR) VAR = __AKMWeak##VAR
 
-#define AKMstrongifyAndReturnIfNil(VAR) \
+#define empty
+
+#define AKMstrongifyAndReturnIfNil(VAR, empty) \
     AKMstrongify(VAR); \
     if(VAR == nil) { \
-        return; \
+        return empty; \
     }
 
 #define AKMstrongifyAndReturnNilIfNil(VAR) \
-    AKMstrongify(VAR); \
-    if(VAR == nil) { \
-        return nil; \
+    AKMstrongifyAndReturnIfNil(VAR, nil) \
     }
 
 #define AKMDefineMainViewProperty(propertyName, viewClass) \

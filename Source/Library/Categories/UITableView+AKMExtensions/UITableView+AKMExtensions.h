@@ -13,6 +13,4 @@
 
 @interface UITableView (AKMExtensions)
 
-- (void)applyChanges:(id)changes;
-
 @end

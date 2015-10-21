@@ -15,19 +15,4 @@
 
 @implementation UITableView (AKMExtensions)
 
-- (void)applyChanges:(id)changes {
-    switch ([changes state]) {
-        case AKMArrayModelChangeAdded:
-            [self insertRowsAtIndexPaths:@[[changes indexPath]] withRowAnimation:YES];
-            break;
-            
-        case AKMArrayModelChangeRemoved:
-            [self deleteRowsAtIndexPaths:@[[changes indexPath]] withRowAnimation:YES];
-            break;
-            
-        case AKMArrayModelChangeMoved:
-            [self moveRowAtIndexPath:[changes fromPath] toIndexPath:[changes toPath]];
-    }
-}
-
 @end

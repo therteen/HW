@@ -10,6 +10,7 @@
 
 @interface AKMObservableObject : NSObject
 @property (nonatomic, readonly) NSSet   *observerSet;
+@property (nonatomic, assign) NSUInteger  *state;
 
 - (void)addObserver:(id)observer;
 - (void)removeObserver:(id)observer;

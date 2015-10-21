@@ -40,6 +40,13 @@
 #pragma mark -
 #pragma mark Public
 
+- (void)setState:(NSUInteger *)state {
+    if (_state != state) {
+        _state = state;
+        [self notifyOfChangedStateWithSelector:[self selectorForState:*state] withObject:self];
+    }
+}
+
 - (void)addObserver:(id)observer {
     @synchronized(self.observers) {
         [self.observers addObject:observer];

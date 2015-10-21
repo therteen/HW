@@ -27,11 +27,4 @@
     return result;
 }
 
-#pragma mark --
-#pragma mark Public
-
-- (void)applyChangesToView:(UITableView *)view {
-    
-}
-
 @end

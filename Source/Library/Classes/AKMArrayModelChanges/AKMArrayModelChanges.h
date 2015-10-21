@@ -19,6 +19,4 @@ typedef NS_ENUM(NSUInteger, AKMArrayModelChangeType) {
 
 + (instancetype)modelWithState:(AKMArrayModelChangeType)state;
 
-- (void)applyChangesToView:(UITableView *)view;
-
 @end

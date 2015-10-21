@@ -15,8 +15,8 @@
 
 #import "AKMMacros.h"
 
-#import "NSIndexPath+AKMExtensions.h"
-#import "UITableView+AKMExtensions.h"
+//#import "NSIndexPath+AKMExtensions.h"
+#import "AKMArrayModelChanges+AKMExtensions.h"
 
 static NSString *const kAKMAddItem  = @"AddItem";
 static NSString *const kAKMEdit     = @"Edit";
@@ -33,11 +33,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, listView, AKMListView)
 #pragma mark Interface handling
 
 - (void)onAddButton:(id)sender {
-    AKMItems *items = self.items;
-//    NSIndexPath *path = [NSIndexPath indexPathForRow:items.count];
-    [items addModel:[AKMItem new]];
-    
-//    [self.listview.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:YES];
+    [self.items addModel:[AKMItem new]];
 }
 
 - (void)onEditButton:(id)sender {
@@ -69,8 +65,8 @@ AKMViewControllerMainViewProperty(AKMListViewController, listView, AKMListView)
     return self.items.count;
 }
 
-- (void)applyChanges:(AKMArrayModelChanges *)changes {
-    [self.listView.tableView applyChanges:changes];
+- (void)model:(id)model didChange:(id)changes {
+    [changes applyChangesToView:self.listView.tableView];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
