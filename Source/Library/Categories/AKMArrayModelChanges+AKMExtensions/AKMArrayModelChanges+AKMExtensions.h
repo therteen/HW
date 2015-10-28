@@ -10,6 +10,6 @@
 
 @interface AKMArrayModelChanges (AKMExtensions)
 
-- (void)applyChangesToView:(UITableView *)view;
+//- (void)applyChangesToView:(UITableView *)view;
 
 @end

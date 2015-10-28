@@ -50,4 +50,13 @@
     return [NSIndexPath indexPathForRow:self.toIndex];
 }
 
+#pragma mark -
+#pragma mark table methods
+
+- (void)applyChangesToView:(UITableView *)view {
+    NSIndexPath *from = self.fromPath;
+    NSIndexPath *to = self.toPath;
+    [view moveRowAtIndexPath:from toIndexPath:to];
+}
+
 @end

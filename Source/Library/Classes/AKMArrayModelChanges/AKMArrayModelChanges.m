@@ -27,4 +27,11 @@
     return result;
 }
 
+#pragma mark --
+#pragma mark instance methods
+
+- (void)applyChangesToView:(UITableView *)view {
+    
+}
+
 @end
