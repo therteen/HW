@@ -57,7 +57,7 @@ static NSString *const kAKMModelsArrayName = @"array";
     [self.array addObject:(model)];
     
     [self notifyOfChangedStateWithModel:[AKMArrayModelChangesOneIndex modelWithState:AKMArrayModelChangeAdded
-                                                                               index:self.array.count]];
+                                                                               index:(self.array.count - 1)]];
 }
 
 - (void)removeModel:(id)model {

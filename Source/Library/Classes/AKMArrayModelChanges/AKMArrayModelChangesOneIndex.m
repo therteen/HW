@@ -43,24 +43,4 @@
     return [NSIndexPath indexPathForRow:self.index];
 }
 
-#pragma mark -
-#pragma mark table methods
-
-- (void)applyChangesToView:(UITableView *)view {
-    NSIndexPath *path = self.indexPath;
-    
-    switch ([self state]) {
-        case AKMArrayModelChangeAdded:
-            [view insertRowsAtIndexPaths:@[path] withRowAnimation:YES];
-            break;
-            
-        case AKMArrayModelChangeRemoved:
-            [view deleteRowsAtIndexPaths:@[path] withRowAnimation:YES];
-            break;
-            
-        default:
-            break;
-    }
-}
-
 @end

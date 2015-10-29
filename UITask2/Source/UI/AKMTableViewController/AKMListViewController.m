@@ -16,7 +16,7 @@
 #import "AKMMacros.h"
 
 //#import "NSIndexPath+AKMExtensions.h"
-#import "AKMArrayModelChanges+AKMExtensions.h"
+#import "UITableView+AKMExtensions.h"
 
 static NSString *const kAKMAddItem  = @"AddItem";
 static NSString *const kAKMEdit     = @"Edit";
@@ -66,7 +66,7 @@ AKMViewControllerMainViewProperty(AKMListViewController, listView, AKMListView)
 }
 
 - (void)model:(id)model didChange:(id)changes {
-    [changes applyChangesToView:self.listView.tableView];
+    [self.listView.tableView applyChanges:changes];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

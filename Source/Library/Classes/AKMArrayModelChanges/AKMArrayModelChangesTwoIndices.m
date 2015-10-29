@@ -16,7 +16,7 @@
                      fromIndex:(NSUInteger)fromIndex
                        toIndex:(NSUInteger)toIndex
 {
-    AKMArrayModelChangesTwoIndices *result = [super modelWithState:state] ;
+    AKMArrayModelChangesTwoIndices *result = [super modelWithState:state];
     if (result) {
         result.fromIndex = fromIndex;
         result.toIndex = toIndex;
@@ -48,15 +48,6 @@
 
 - (NSIndexPath *)toPath {
     return [NSIndexPath indexPathForRow:self.toIndex];
-}
-
-#pragma mark -
-#pragma mark table methods
-
-- (void)applyChangesToView:(UITableView *)view {
-    NSIndexPath *from = self.fromPath;
-    NSIndexPath *to = self.toPath;
-    [view moveRowAtIndexPath:from toIndexPath:to];
 }
 
 @end

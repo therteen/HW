@@ -8,8 +8,8 @@
 
 #import "AKMArrayModelChanges.h"
 
-@interface AKMArrayModelChanges (AKMExtensions)
+@interface AKMArrayModelChanges (UITableView)
 
-//- (void)applyChangesToView:(UITableView *)view;
+- (void)applyToTableView:(UITableView *)tableView;
 
 @end

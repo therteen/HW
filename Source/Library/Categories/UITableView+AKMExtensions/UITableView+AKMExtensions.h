@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AKMArrayModelChangesOneIndex.h"
-#import "AKMArrayModelChangesTwoIndices.h"
+@class AKMArrayModelChanges;
 
 @interface UITableView (AKMExtensions)
+
+- (void)applyChanges:(AKMArrayModelChanges *)changes;
 
 @end

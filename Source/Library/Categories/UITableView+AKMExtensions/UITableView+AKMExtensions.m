@@ -7,12 +7,15 @@
 //
 
 #import "UITableView+AKMExtensions.h"
-#import "NSIndexPath+AKMExtensions.h"
 
-@interface UITableView ()
-
-@end
+#import "AKMArrayModelChanges+AKMExtensions.h"
 
 @implementation UITableView (AKMExtensions)
+
+- (void)applyChanges:(AKMArrayModelChanges *)changes {
+    [self beginUpdates];
+    [changes applyToTableView:self];
+    [self endUpdates];
+}
 
 @end

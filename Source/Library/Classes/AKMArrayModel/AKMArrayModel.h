@@ -20,11 +20,4 @@
 - (void)setObject:(id)model atIndexedSubscript:(NSUInteger)index;
 - (id)objectAtIndexedSubscript:(NSUInteger)index;
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
-                                  objects:(__unsafe_unretained id [])buffer
-                                    count:(NSUInteger)len;
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder;
-- (void)encodeWithCoder:(NSCoder *)aCoder;
-
 @end
