@@ -8,7 +8,7 @@
 
 #import "UITableView+AKMExtensions.h"
 
-#import "AKMArrayModelChanges+AKMExtensions.h"
+#import "AKMArrayModelChanges+UITableView.h"
 
 @implementation UITableView (AKMExtensions)
 

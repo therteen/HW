@@ -6,7 +6,7 @@
 ////  Copyright (c) 2015 Anton Kostenko. All rights reserved.
 //
 
-#import "AKMArrayModelChanges+AKMExtensions.h"
+#import "AKMArrayModelChanges+UITableView.h"
 
 #import "AKMArrayModelChangesOneIndex.h"
 #import "AKMArrayModelChangesTwoIndices.h"
