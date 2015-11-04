@@ -19,5 +19,7 @@
 - (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
 - (void)setObject:(id)model atIndexedSubscript:(NSUInteger)index;
 - (id)objectAtIndexedSubscript:(NSUInteger)index;
+- (void)saveData;
+- (void)loadData;
 
 @end

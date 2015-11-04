@@ -121,4 +121,22 @@ static NSString *const kAKMModelsArrayName = @"array";
     [aCoder encodeObject:self.array forKey:kAKMModelsArrayName];
 }
 
+- (void)saveData {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectoryPath = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:@"appData"];
+    
+    [NSKeyedArchiver archiveRootObject:self.array toFile:filePath];
+}
+
+- (void)loadData {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectoryPath = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:@"appData"];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        self.array = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+    }
+}
+
 @end

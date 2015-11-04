@@ -14,6 +14,8 @@
 #import "UIWindow+AKMExtensions.h"
 #import "UIViewController+AKMExtensions.h"
 
+
+
 @interface AKMAppDelegate ()
 @property (nonatomic, strong)   AKMItems    *items;
 
@@ -25,8 +27,12 @@
     UIWindow *window = [UIWindow window];
     self.window = window;
     
-    AKMItems *items = [[AKMItems alloc] init];
-    self.items = items;
+    [self.items loadData];
+    AKMItems *items = self.items;
+    if (items == nil) {
+        items = [AKMItems new];
+        self.items = items;
+    }
     
     AKMListViewController *rootViewController = [AKMListViewController controller];
     rootViewController.items = items;
@@ -39,6 +45,7 @@
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    [self.items saveData];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -51,6 +58,7 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    [self.items saveData];
 }
 
 @end
